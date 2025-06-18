@@ -1,0 +1,169 @@
+version: '3.8'
+
+services:
+  gpu-ocr-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gpu-ocr-server:latest
+    container_name: gpu-ocr-server
+    
+    # GPU support with enhanced configuration
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    
+    # Enhanced runtime configuration for RTX 4090
+    runtime: nvidia
+    
+    # IPC mode for better shared memory performance
+    ipc: host
+    
+    # Ulimits for GPU memory
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      stack:
+        soft: 67108864
+        hard: 67108864
+    
+    # Environment variables
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0
+      - CUDA_VISIBLE_DEVICES=0
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics
+      - NVIDIA_DISABLE_REQUIRE=true
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEFAULT_DPI=120
+      - MAX_BATCH_SIZE=50
+      - TENSORRT_PRECISION=FP16
+      - GPU_MEMORY_BUFFER_MB=500
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    
+    # Port mapping
+    ports:
+      - "8000:8000"
+    
+    # Volume mounts
+    volumes:
+      # Application code (for development)
+      - ./src:/app/src:ro
+      - ./tests:/app/tests:ro
+      
+      # Persistent data
+      - ocr-cache:/app/cache
+      - ocr-models:/app/model_cache
+      - ocr-logs:/app/logs
+      - ocr-uploads:/app/uploads
+      
+      # Optional: Mount local models to avoid re-downloading
+      # - ~/.paddleocr:/root/.paddleocr
+    
+    # Resource limits
+    mem_limit: 16g
+    memswap_limit: 16g
+    shm_size: 8g
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+    
+    # Networks
+    networks:
+      - ocr-network
+    
+    # Dependencies
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: ocr-redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    networks:
+      - ocr-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Optional: Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: ocr-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - ocr-network
+    depends_on:
+      - gpu-ocr-server
+    profiles:
+      - production
+
+  # Optional: Monitoring with Prometheus + Grafana
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: ocr-prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - ocr-network
+    profiles:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ocr-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    networks:
+      - ocr-network
+    profiles:
+      - monitoring
+
+volumes:
+  ocr-cache:
+  ocr-models:
+  ocr-logs:
+  ocr-uploads:
+  redis-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  ocr-network:
+    driver: bridge
