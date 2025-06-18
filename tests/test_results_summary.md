@@ -193,4 +193,4 @@ With 24GB VRAM available:
 ---
 
 *Last Updated: 2025-01-19*
-*Test Environment: Linux, Python 3.12, NVIDIA RTX 4090*
+*Test Environment: Linux, Python 3.10 (Docker) / 3.12 (Dev), NVIDIA RTX 4090*

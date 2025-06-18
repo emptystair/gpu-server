@@ -355,10 +355,13 @@ class ProcessingStats:
 
 **External libraries:**
 - fastapi==0.104.1
-- uvicorn==0.24.0
+- uvicorn[standard]==0.24.0
 - numpy==1.24.3
-- pynvml==11.5.0
+- nvidia-ml-py==12.535.133
 - python-multipart==0.0.6
+- pydantic==2.5.0
+- python-dotenv==1.0.0
+- loguru==0.7.2
 
 **Calls into:**
 - All subdirectory components

@@ -455,9 +455,10 @@ class ModelInfo:
 - `../gpu_monitor` - For optimization decisions
 
 **External libraries:**
-- paddlepaddle-gpu==2.5.1
-- paddleocr==2.7.0
+- paddlepaddle-gpu==2.5.2.post120
+- paddleocr==2.7.0.3
 - onnx==1.14.1
+- onnxruntime-gpu==1.16.3
 - paddle2onnx==1.0.6
 - tensorrt==8.6.1.6
 - pycuda==2022.2.2
