@@ -274,6 +274,11 @@ class ServiceStatus(BaseModel):
     status: str = Field(..., pattern="^(up|down|degraded)$")
     message: Optional[str]
     last_check: datetime
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.isoformat()
+        }
 
 
 class HealthResponse(BaseModel):
@@ -413,13 +418,6 @@ class HealthCheckResponse(BaseModel):
     gpu_info: Optional[Dict[str, Any]] = None
     models_loaded: bool
     cache_enabled: bool
-
-
-class ServiceStatus(BaseModel):
-    """Service status information"""
-    status: str = Field(..., pattern="^(up|down|degraded)$")
-    message: Optional[str] = None
-    last_check: datetime
 
 
 class HealthResponse(BaseModel):
