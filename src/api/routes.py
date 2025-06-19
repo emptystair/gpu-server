@@ -1220,21 +1220,24 @@ async def get_gpu_status(
         gpu_util = monitor.get_gpu_utilization()
         device_info = monitor.get_device_info()
         
-        return {
-            "available": device_info.get("available", False),
-            "device_count": 1 if device_info.get("available") else 0,
-            "devices": [
-                {
-                    "device_id": device_info.get("device_id", 0),
-                    "device_name": device_info.get("name", "Unknown"),
-                    "memory_used_mb": memory_info.used_mb,
-                    "memory_total_mb": memory_info.total_mb,
-                    "temperature_celsius": gpu_util.temperature_celsius,
-                    "utilization_percent": gpu_util.compute_percent,
-                    "power_draw_watts": gpu_util.power_draw_watts
-                }
-            ] if device_info.get("available") else []
-        }
+        return GPUStatusResponse(
+            device_id=device_info.get("device_id", 0),
+            device_name=device_info.get("name", "No GPU"),
+            memory=MemoryStatus(
+                total_mb=memory_info.total_mb,
+                used_mb=memory_info.used_mb,
+                free_mb=memory_info.free_mb,
+                reserved_mb=0  # Not tracked separately in current implementation
+            ),
+            utilization=UtilizationStatus(
+                compute_percent=gpu_util.compute_percent,
+                memory_percent=gpu_util.memory_percent,
+                encoder_percent=None,
+                decoder_percent=None
+            ),
+            temperature_celsius=gpu_util.temperature_celsius,
+            power_draw_watts=gpu_util.power_draw_watts
+        )
         
     except Exception as e:
         logger.error(f"Failed to get GPU status: {e}")
