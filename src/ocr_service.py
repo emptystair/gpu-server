@@ -113,24 +113,26 @@ class OCRService:
     with GPU optimization, batch processing, and error recovery.
     """
     
-    def __init__(self, config: Config):
+    def __init__(self, config: Config, gpu_monitor: Optional[GPUMonitor] = None, cache_manager: Optional[CacheManager] = None):
         """
         Initialize the OCR orchestration service.
         
         Args:
             config: Application configuration
+            gpu_monitor: Optional pre-initialized GPU monitor
+            cache_manager: Optional pre-initialized cache manager
         """
         self.config = config
         self.ocr_config = config.ocr
         
         # Initialize components
-        self.gpu_monitor = GPUMonitor(device_id=config.gpu.device_id)
+        self.gpu_monitor = gpu_monitor or GPUMonitor(device_id=config.gpu.device_id)
         self.paddle_ocr = PaddleOCRWrapper(config=config.ocr)
         self.tensorrt_optimizer = TensorRTOptimizer(precision=config.ocr.tensorrt_precision)
         self.pdf_processor = PDFProcessor(config=config.ocr)
         self.image_processor = ImageProcessor()
         self.result_formatter = ResultFormatter(format_config=None)  # Use default config
-        self.cache_manager = CacheManager(config=config.cache)
+        self.cache_manager = cache_manager or CacheManager(config=config.cache)
         
         # Processing statistics
         self.stats = ProcessingStats()
@@ -174,7 +176,8 @@ class OCRService:
             self._initializing = True
             
             # Start GPU monitoring
-            self.gpu_monitor.start_monitoring()
+            if self.gpu_monitor:
+                self.gpu_monitor.start_monitoring()
             
             # Initialize cache
             self.cache_manager.initialize()

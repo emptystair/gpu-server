@@ -176,7 +176,7 @@ async def initialize_gpu_monitor(config: Config) -> GPUMonitor:
     """Initialize GPU monitoring with error handling"""
     try:
         logger.info("Initializing GPU monitor...")
-        monitor = GPUMonitor(config.gpu)
+        monitor = GPUMonitor(config.gpu.device_id)
         await monitor.initialize()
         
         # Get initial GPU status
@@ -189,7 +189,7 @@ async def initialize_gpu_monitor(config: Config) -> GPUMonitor:
         return monitor
         
     except Exception as e:
-        logger.error(f"Failed to initialize GPU monitor: {e}")
+        logger.error(f"Failed to initialize GPU monitor: {e}", exc_info=True)
         if config.environment == Environment.PRODUCTION:
             # In production, GPU is required
             raise
@@ -235,7 +235,7 @@ async def initialize_ocr_service(
         logger.info("Initializing OCR service...")
         
         # Create OCR service
-        service = OCRService(config)
+        service = OCRService(config, gpu_monitor=gpu_monitor, cache_manager=cache_manager)
         
         # Initialize models
         logger.info("Loading OCR models...")
