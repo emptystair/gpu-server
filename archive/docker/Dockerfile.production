@@ -1,0 +1,85 @@
+# Production Dockerfile for GPU OCR Server
+# Optimized for NVIDIA RTX 4090 with CUDA 12.1
+
+FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04
+
+# Set environment
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    CUDA_DEVICE_ORDER=PCI_BUS_ID \
+    ENVIRONMENT=production \
+    NVIDIA_VISIBLE_DEVICES=0 \
+    NVIDIA_DRIVER_CAPABILITIES=compute,utility
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3.10 \
+    python3.10-dev \
+    python3-pip \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libgomp1 \
+    libglib2.0-0 \
+    libgtk-3-0 \
+    libnotify4 \
+    libsdl2-2.0-0 \
+    libwebpdemux2 \
+    libtiff5 \
+    libpng16-16 \
+    libjpeg-turbo8 \
+    libopenjp2-7 \
+    tesseract-ocr \
+    wget \
+    curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user
+RUN useradd -m -u 1000 -s /bin/bash ocr-service
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements first for better caching
+COPY requirements.txt requirements-api.txt ./
+RUN pip3 install --no-cache-dir -r requirements.txt -r requirements-api.txt
+
+# Install production dependencies
+RUN pip3 install --no-cache-dir \
+    gunicorn \
+    prometheus-client \
+    structlog \
+    setproctitle
+
+# Copy application code
+COPY --chown=ocr-service:ocr-service . .
+
+# Create necessary directories
+RUN mkdir -p \
+    /app/logs \
+    /app/cache \
+    /app/uploads \
+    /app/temp \
+    /app/model_cache \
+    /app/tensorrt_engines \
+    && chown -R ocr-service:ocr-service /app
+
+# Download models during build (optional, for faster startup)
+# RUN python3 -c "from paddleocr import PaddleOCR; PaddleOCR(use_angle_cls=True, lang='en')"
+
+# Switch to non-root user
+USER ocr-service
+
+# Expose ports
+EXPOSE 8000 9090
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -f http://localhost:8000/api/v1/health || exit 1
+
+# Run production script
+CMD ["python3", "scripts/run_production.py"]

@@ -1,0 +1,38 @@
+# API Dependencies for GPU OCR Server
+
+# Core web framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6  # For file uploads
+
+# Async support
+aiofiles>=23.2.1
+aiohttp>=3.9.0  # For client testing
+
+# File type detection
+python-magic>=0.4.27
+python-magic-bin>=0.4.14  # Windows support
+
+# Request validation
+pydantic>=2.4.0
+pydantic-settings>=2.0.0
+
+# Middleware support
+starlette>=0.27.0
+python-jose[cryptography]>=3.3.0  # For JWT if needed
+
+# Monitoring and metrics
+prometheus-client>=0.18.0  # Optional for Prometheus metrics
+
+# Rate limiting
+redis>=5.0.0  # For distributed rate limiting
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+httpx>=0.25.0  # For API testing
+
+# Development
+black>=23.10.0
+flake8>=6.1.0
+mypy>=1.6.0

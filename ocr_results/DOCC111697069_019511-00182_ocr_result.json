@@ -1,0 +1,2544 @@
+{
+  "request_id": "87a303d4-6b08-478a-87b1-606018972840",
+  "status": "completed",
+  "timestamp": "2025-06-19T19:08:38.167562",
+  "processing_time": 3409.245252609253,
+  "total_regions": 125,
+  "average_confidence": 0.9551909451947076,
+  "language_detected": "en",
+  "cache_hit": true,
+  "regions": [
+    {
+      "text": "BK019511PG00183",
+      "confidence": 0.9998794794082642,
+      "bbox": {
+        "x1": 21,
+        "y1": 9,
+        "x2": 234,
+        "y2": 33
+      }
+    },
+    {
+      "text": "NORTH CAROLINA",
+      "confidence": 0.9983964562416077,
+      "bbox": {
+        "x1": 525,
+        "y1": 500,
+        "x2": 750,
+        "y2": 524
+      }
+    },
+    {
+      "text": "STATUTORY FORM POWER OF ATTORNEY",
+      "confidence": 0.9898256063461304,
+      "bbox": {
+        "x1": 383,
+        "y1": 541,
+        "x2": 892,
+        "y2": 565
+      }
+    },
+    {
+      "text": "Prepared By and Return To:",
+      "confidence": 0.9999157190322876,
+      "bbox": {
+        "x1": 487,
+        "y1": 603,
+        "x2": 788,
+        "y2": 634
+      }
+    },
+    {
+      "text": "William D. Ramos, Esq.",
+      "confidence": 0.9992273449897766,
+      "bbox": {
+        "x1": 518,
+        "y1": 682,
+        "x2": 757,
+        "y2": 715
+      }
+    },
+    {
+      "text": "Ramos Law, P.A.",
+      "confidence": 0.9950054883956909,
+      "bbox": {
+        "x1": 553,
+        "y1": 727,
+        "x2": 722,
+        "y2": 751
+      }
+    },
+    {
+      "text": "300 S. Main Street, Suite 212, Holly Springs, North Carolina 27540-",
+      "confidence": 0.9834533333778381,
+      "bbox": {
+        "x1": 305,
+        "y1": 768,
+        "x2": 968,
+        "y2": 792
+      }
+    },
+    {
+      "text": "NOTICE",
+      "confidence": 0.9984915256500244,
+      "bbox": {
+        "x1": 586,
+        "y1": 844,
+        "x2": 689,
+        "y2": 873
+      }
+    },
+    {
+      "text": "THE POWERS GRANTED BY THIS DOCUMENT ARE BROAD AND SWEEPING.",
+      "confidence": 0.9871560335159302,
+      "bbox": {
+        "x1": 239,
+        "y1": 909,
+        "x2": 1107,
+        "y2": 933
+      }
+    },
+    {
+      "text": "THEY ARE DEFINED IN CHAPTER 32C OF THE NORTH CAROLINA GENERAL",
+      "confidence": 0.9615028500556946,
+      "bbox": {
+        "x1": 168,
+        "y1": 954,
+        "x2": 1110,
+        "y2": 976
+      }
+    },
+    {
+      "text": "STATUTES, WHICH EXPRESSLY PERMITS THE USE OF ANY OTHER OR DIFFERENT",
+      "confidence": 0.9461290836334229,
+      "bbox": {
+        "x1": 166,
+        "y1": 997,
+        "x2": 1110,
+        "y2": 1019
+      }
+    },
+    {
+      "text": "POEEEEEER PERREEP PER EE PEERREE POREREEE PR PNEEP PR PEEP",
+      "confidence": 0.5193198919296265,
+      "bbox": {
+        "x1": 166,
+        "y1": 1038,
+        "x2": 1000,
+        "y2": 1062
+      }
+    },
+    {
+      "text": "IMPORTANT INFORMATION",
+      "confidence": 0.9941784143447876,
+      "bbox": {
+        "x1": 469,
+        "y1": 1105,
+        "x2": 807,
+        "y2": 1129
+      }
+    },
+    {
+      "text": "This power of attorney authorizes another person (your agent) to make decisions",
+      "confidence": 0.9705058932304382,
+      "bbox": {
+        "x1": 239,
+        "y1": 1170,
+        "x2": 1110,
+        "y2": 1195
+      }
+    },
+    {
+      "text": "concerning your property for you (the principal). Your agent will be able to make decisions and",
+      "confidence": 0.9973281025886536,
+      "bbox": {
+        "x1": 163,
+        "y1": 1208,
+        "x2": 1112,
+        "y2": 1239
+      }
+    },
+    {
+      "text": "act with respect to your property (including your money) whether or not you are able to act for",
+      "confidence": 0.9952378273010254,
+      "bbox": {
+        "x1": 166,
+        "y1": 1255,
+        "x2": 1110,
+        "y2": 1279
+      }
+    },
+    {
+      "text": "yourself. The meaning of authority over subjects listed on this form is explained in the North",
+      "confidence": 0.9932859539985657,
+      "bbox": {
+        "x1": 166,
+        "y1": 1296,
+        "x2": 1110,
+        "y2": 1320
+      }
+    },
+    {
+      "text": "Carolina Uniform Power of Attorney Act..",
+      "confidence": 0.9875398874282837,
+      "bbox": {
+        "x1": 166,
+        "y1": 1335,
+        "x2": 573,
+        "y2": 1363
+      }
+    },
+    {
+      "text": "This power of attorney does not authorize the agent to make health care decisions for you",
+      "confidence": 0.9955663084983826,
+      "bbox": {
+        "x1": 239,
+        "y1": 1390,
+        "x2": 1107,
+        "y2": 1415
+      }
+    },
+    {
+      "text": "DURABLE POWER OF ATTORNEY - TYLER AUSTIN CAHOON",
+      "confidence": 0.9730778932571411,
+      "bbox": {
+        "x1": 177,
+        "y1": 1495,
+        "x2": 695,
+        "y2": 1518
+      }
+    },
+    {
+      "text": "RAMOS LAW, P.A.",
+      "confidence": 0.9937106966972351,
+      "bbox": {
+        "x1": 553,
+        "y1": 1531,
+        "x2": 707,
+        "y2": 1554
+      }
+    },
+    {
+      "text": "BK019511PG00184",
+      "confidence": 0.9999116659164429,
+      "bbox": {
+        "x1": 21,
+        "y1": 9,
+        "x2": 234,
+        "y2": 33
+      }
+    },
+    {
+      "text": "You should select someone you trust to serve as your agent. Unless you specify otherwise,",
+      "confidence": 0.9933041930198669,
+      "bbox": {
+        "x1": 236,
+        "y1": 174,
+        "x2": 1110,
+        "y2": 205
+      }
+    },
+    {
+      "text": "generally the agent's authority will continue until you die or revoke the power of attorney or the",
+      "confidence": 0.9914743304252625,
+      "bbox": {
+        "x1": 165,
+        "y1": 222,
+        "x2": 1110,
+        "y2": 246
+      }
+    },
+    {
+      "text": "agent resigns or is unable to act for you..",
+      "confidence": 0.9828059077262878,
+      "bbox": {
+        "x1": 165,
+        "y1": 261,
+        "x2": 556,
+        "y2": 290
+      }
+    },
+    {
+      "text": "Your agent is entitled to rcasonable compensation unless you state otherwise in the",
+      "confidence": 0.9925533533096313,
+      "bbox": {
+        "x1": 236,
+        "y1": 313,
+        "x2": 1112,
+        "y2": 346
+      }
+    },
+    {
+      "text": "Additional Provisions and Exclusions.",
+      "confidence": 0.9890402555465698,
+      "bbox": {
+        "x1": 166,
+        "y1": 359,
+        "x2": 537,
+        "y2": 383
+      }
+    },
+    {
+      "text": "This form provides for designation of one agent, successor agent, and second successor.",
+      "confidence": 0.9941965937614441,
+      "bbox": {
+        "x1": 239,
+        "y1": 414,
+        "x2": 1110,
+        "y2": 438
+      }
+    },
+    {
+      "text": "agent. If you wish to name more than one agent, successor agent, and second successor agent, you",
+      "confidence": 0.9873111844062805,
+      "bbox": {
+        "x1": 163,
+        "y1": 457,
+        "x2": 1112,
+        "y2": 481
+      }
+    },
+    {
+      "text": "may name a co-agent, successor co-agent, or second successor co-agent in the Additional",
+      "confidence": 0.9902023673057556,
+      "bbox": {
+        "x1": 161,
+        "y1": 495,
+        "x2": 1112,
+        "y2": 528
+      }
+    },
+    {
+      "text": "Provisions and Exclusions. Co-agents, successor co-agents, or second successor co-agents are not",
+      "confidence": 0.998570442199707,
+      "bbox": {
+        "x1": 163,
+        "y1": 540,
+        "x2": 1110,
+        "y2": 565
+      }
+    },
+    {
+      "text": "required to act together unless you include that requirement in the Additional Provisions and",
+      "confidence": 0.9956200122833252,
+      "bbox": {
+        "x1": 165,
+        "y1": 584,
+        "x2": 1110,
+        "y2": 608
+      }
+    },
+    {
+      "text": "Exclusions.",
+      "confidence": 0.9993321895599365,
+      "bbox": {
+        "x1": 163,
+        "y1": 622,
+        "x2": 281,
+        "y2": 652
+      }
+    },
+    {
+      "text": "If your agent is unable or unwilling to act for you, your power of attorney will end unless.",
+      "confidence": 0.9841982126235962,
+      "bbox": {
+        "x1": 239,
+        "y1": 681,
+        "x2": 1110,
+        "y2": 705
+      }
+    },
+    {
+      "text": "you have named a successor agent. You may also name a second successor agent.",
+      "confidence": 0.992680013179779,
+      "bbox": {
+        "x1": 165,
+        "y1": 724,
+        "x2": 961,
+        "y2": 748
+      }
+    },
+    {
+      "text": "This power of attorney becomes effective immediately unless you state otherwise in the",
+      "confidence": 0.9872020483016968,
+      "bbox": {
+        "x1": 239,
+        "y1": 777,
+        "x2": 1107,
+        "y2": 799
+      }
+    },
+    {
+      "text": "Additional Provisions and Exclusions.",
+      "confidence": 0.9981611371040344,
+      "bbox": {
+        "x1": 166,
+        "y1": 818,
+        "x2": 537,
+        "y2": 842
+      }
+    },
+    {
+      "text": "If you have questions about the power of attorney or the authority you are granting.",
+      "confidence": 0.9863463044166565,
+      "bbox": {
+        "x1": 237,
+        "y1": 873,
+        "x2": 1109,
+        "y2": 897
+      }
+    },
+    {
+      "text": "to your agent, you should seek legal advice before signing this form.",
+      "confidence": 0.9998096823692322,
+      "bbox": {
+        "x1": 163,
+        "y1": 914,
+        "x2": 863,
+        "y2": 940
+      }
+    },
+    {
+      "text": "DURABLE POWER OF ATTORNEY-TYLER AUSTIN CAHOON",
+      "confidence": 0.9576076865196228,
+      "bbox": {
+        "x1": 177,
+        "y1": 1497,
+        "x2": 695,
+        "y2": 1519
+      }
+    },
+    {
+      "text": "RAMOSLAW, P.A.",
+      "confidence": 0.9598403573036194,
+      "bbox": {
+        "x1": 554,
+        "y1": 1533,
+        "x2": 709,
+        "y2": 1555
+      }
+    },
+    {
+      "text": "BK019511PG00185",
+      "confidence": 0.9999030232429504,
+      "bbox": {
+        "x1": 21,
+        "y1": 9,
+        "x2": 234,
+        "y2": 33
+      }
+    },
+    {
+      "text": "DESIGNATION OFAGENT",
+      "confidence": 0.9683626294136047,
+      "bbox": {
+        "x1": 490,
+        "y1": 175,
+        "x2": 792,
+        "y2": 199
+      }
+    },
+    {
+      "text": "I, Tyler Austin Cahoonname the following person as my Agent",
+      "confidence": 0.9611408710479736,
+      "bbox": {
+        "x1": 163,
+        "y1": 223,
+        "x2": 813,
+        "y2": 256
+      }
+    },
+    {
+      "text": "Name of Agent Shelby Eloise Cahoon",
+      "confidence": 0.9427613615989685,
+      "bbox": {
+        "x1": 166,
+        "y1": 282,
+        "x2": 572,
+        "y2": 306
+      }
+    },
+    {
+      "text": "Agent's Address:171 Dunloe Loop,Raleigh,North Carolina 27603",
+      "confidence": 0.9317315220832825,
+      "bbox": {
+        "x1": 168,
+        "y1": 337,
+        "x2": 826,
+        "y2": 361
+      }
+    },
+    {
+      "text": "Agent's Telephone Number:(479)409.2024",
+      "confidence": 0.9366086721420288,
+      "bbox": {
+        "x1": 166,
+        "y1": 392,
+        "x2": 606,
+        "y2": 416
+      }
+    },
+    {
+      "text": "DESIGNATION OF SUCCESSOR AGENT(S)",
+      "confidence": 0.9641962647438049,
+      "bbox": {
+        "x1": 397,
+        "y1": 457,
+        "x2": 882,
+        "y2": 483
+      }
+    },
+    {
+      "text": "(OPTIONAL)",
+      "confidence": 0.995867133140564,
+      "bbox": {
+        "x1": 563,
+        "y1": 483,
+        "x2": 717,
+        "y2": 516
+      }
+    },
+    {
+      "text": "If my Agent is unable or unwilling to act for me, I name as my successor Agent",
+      "confidence": 0.9289795160293579,
+      "bbox": {
+        "x1": 165,
+        "y1": 536,
+        "x2": 946,
+        "y2": 567
+      }
+    },
+    {
+      "text": "Name of Successor Agent: Ross Patrick Cahoon",
+      "confidence": 0.9417222738265991,
+      "bbox": {
+        "x1": 168,
+        "y1": 595,
+        "x2": 657,
+        "y2": 619
+      }
+    },
+    {
+      "text": "Successor Agent's Address:159th Avenue NEWoodinvilleWashington 98072",
+      "confidence": 0.9506370425224304,
+      "bbox": {
+        "x1": 168,
+        "y1": 648,
+        "x2": 951,
+        "y2": 672
+      }
+    },
+    {
+      "text": "Successor Agent's TelephoneNumber:(252)671-4861",
+      "confidence": 0.9434345960617065,
+      "bbox": {
+        "x1": 168,
+        "y1": 703,
+        "x2": 705,
+        "y2": 727
+      }
+    },
+    {
+      "text": "INITIAL below if you want to give an Agent the power to name a successor Agent",
+      "confidence": 0.951956033706665,
+      "bbox": {
+        "x1": 166,
+        "y1": 808,
+        "x2": 979,
+        "y2": 839
+      }
+    },
+    {
+      "text": " give to my acting Agent the full power to appoint another to act as my Agent, and ful",
+      "confidence": 0.9439018368721008,
+      "bbox": {
+        "x1": 217,
+        "y1": 865,
+        "x2": 1112,
+        "y2": 894
+      }
+    },
+    {
+      "text": "power to revoke such appointment if no Agent named by me above iswilling or able to act",
+      "confidence": 0.9365696310997009,
+      "bbox": {
+        "x1": 166,
+        "y1": 908,
+        "x2": 1057,
+        "y2": 932
+      }
+    },
+    {
+      "text": "GRANTOF GENERALAUTHORITY",
+      "confidence": 0.9759801030158997,
+      "bbox": {
+        "x1": 437,
+        "y1": 987,
+        "x2": 844,
+        "y2": 1011
+      }
+    },
+    {
+      "text": "I grant my Agent and any successor Agent general authority to act for me with respect to the",
+      "confidence": 0.9503328204154968,
+      "bbox": {
+        "x1": 163,
+        "y1": 1036,
+        "x2": 1112,
+        "y2": 1067
+      }
+    },
+    {
+      "text": "following subjects as defined in the North Carolina Uniform Power of Attorney Act, Chapter 32C",
+      "confidence": 0.961875855922699,
+      "bbox": {
+        "x1": 165,
+        "y1": 1078,
+        "x2": 1112,
+        "y2": 1109
+      }
+    },
+    {
+      "text": "of the General Statutes",
+      "confidence": 0.9436755776405334,
+      "bbox": {
+        "x1": 163,
+        "y1": 1122,
+        "x2": 399,
+        "y2": 1150
+      }
+    },
+    {
+      "text": "INITIAL each subject you want to include in the Agent's general authority.If you wish to",
+      "confidence": 0.9560902118682861,
+      "bbox": {
+        "x1": 165,
+        "y1": 1176,
+        "x2": 1112,
+        "y2": 1207
+      }
+    },
+    {
+      "text": "grant general authority over all of the subjects you may initial \"All Preceding Subjects",
+      "confidence": 0.942566454410553,
+      "bbox": {
+        "x1": 166,
+        "y1": 1222,
+        "x2": 1109,
+        "y2": 1246
+      }
+    },
+    {
+      "text": "instead of initialing each subject.)",
+      "confidence": 0.9355953931808472,
+      "bbox": {
+        "x1": 166,
+        "y1": 1263,
+        "x2": 515,
+        "y2": 1287
+      }
+    },
+    {
+      "text": "Real Property",
+      "confidence": 0.9765428304672241,
+      "bbox": {
+        "x1": 225,
+        "y1": 1311,
+        "x2": 392,
+        "y2": 1344
+      }
+    },
+    {
+      "text": "Tangible Personal Property",
+      "confidence": 0.9588229060173035,
+      "bbox": {
+        "x1": 225,
+        "y1": 1368,
+        "x2": 521,
+        "y2": 1397
+      }
+    },
+    {
+      "text": ") Stocks and Bonds",
+      "confidence": 0.9033888578414917,
+      "bbox": {
+        "x1": 223,
+        "y1": 1420,
+        "x2": 433,
+        "y2": 1451
+      }
+    },
+    {
+      "text": "DURABLEPOWER OFATTORNEY-TYLERAUSTINCAHOON",
+      "confidence": 0.9658581614494324,
+      "bbox": {
+        "x1": 177,
+        "y1": 1497,
+        "x2": 693,
+        "y2": 1519
+      }
+    },
+    {
+      "text": "+3",
+      "confidence": 0.5124152898788452,
+      "bbox": {
+        "x1": 1046,
+        "y1": 1497,
+        "x2": 1090,
+        "y2": 1523
+      }
+    },
+    {
+      "text": "RAMOS LAWP.A",
+      "confidence": 0.9218383431434631,
+      "bbox": {
+        "x1": 551,
+        "y1": 1530,
+        "x2": 710,
+        "y2": 1556
+      }
+    },
+    {
+      "text": "BK019511PG00186",
+      "confidence": 0.9998493194580078,
+      "bbox": {
+        "x1": 21,
+        "y1": 9,
+        "x2": 234,
+        "y2": 33
+      }
+    },
+    {
+      "text": ") Commodities and Options",
+      "confidence": 0.9537178874015808,
+      "bbox": {
+        "x1": 223,
+        "y1": 170,
+        "x2": 513,
+        "y2": 201
+      }
+    },
+    {
+      "text": " Banks and Other Financial Institutions",
+      "confidence": 0.9501436948776245,
+      "bbox": {
+        "x1": 223,
+        "y1": 229,
+        "x2": 629,
+        "y2": 253
+      }
+    },
+    {
+      "text": " Operation of Entity or Business",
+      "confidence": 0.9345309734344482,
+      "bbox": {
+        "x1": 201,
+        "y1": 284,
+        "x2": 563,
+        "y2": 308
+      }
+    },
+    {
+      "text": ")Insurance and Annuities",
+      "confidence": 0.967022716999054,
+      "bbox": {
+        "x1": 229,
+        "y1": 337,
+        "x2": 494,
+        "y2": 361
+      }
+    },
+    {
+      "text": ")Estates,Trusts,and Other Beneficial Interests",
+      "confidence": 0.9480440616607666,
+      "bbox": {
+        "x1": 229,
+        "y1": 392,
+        "x2": 700,
+        "y2": 416
+      }
+    },
+    {
+      "text": ")Claims and Litigation",
+      "confidence": 0.9337716698646545,
+      "bbox": {
+        "x1": 227,
+        "y1": 442,
+        "x2": 468,
+        "y2": 473
+      }
+    },
+    {
+      "text": "Personal and Family Maintenance",
+      "confidence": 0.9662399888038635,
+      "bbox": {
+        "x1": 227,
+        "y1": 500,
+        "x2": 584,
+        "y2": 524
+      }
+    },
+    {
+      "text": ") Benefits from Governmental Programs or Civil or Military Service",
+      "confidence": 0.9337857961654663,
+      "bbox": {
+        "x1": 229,
+        "y1": 555,
+        "x2": 904,
+        "y2": 579
+      }
+    },
+    {
+      "text": "Retirement Plans",
+      "confidence": 0.9727257490158081,
+      "bbox": {
+        "x1": 229,
+        "y1": 610,
+        "x2": 423,
+        "y2": 634
+      }
+    },
+    {
+      "text": ")Taxes",
+      "confidence": 0.8826833367347717,
+      "bbox": {
+        "x1": 228,
+        "y1": 658,
+        "x2": 318,
+        "y2": 693
+      }
+    },
+    {
+      "text": "All Preceding Subjects",
+      "confidence": 0.9536517858505249,
+      "bbox": {
+        "x1": 235,
+        "y1": 713,
+        "x2": 480,
+        "y2": 748
+      }
+    },
+    {
+      "text": "GRANT OF SPECIFIC AUTHORITY (OPTIONAL)",
+      "confidence": 0.9564706087112427,
+      "bbox": {
+        "x1": 362,
+        "y1": 784,
+        "x2": 915,
+        "y2": 810
+      }
+    },
+    {
+      "text": "My Agent MA Y NOT do any of the following specific acts for me UNLESS I have INITIALED",
+      "confidence": 0.9523046016693115,
+      "bbox": {
+        "x1": 161,
+        "y1": 834,
+        "x2": 1112,
+        "y2": 865
+      }
+    },
+    {
+      "text": "the specific authority listed below;",
+      "confidence": 0.938981294631958,
+      "bbox": {
+        "x1": 165,
+        "y1": 880,
+        "x2": 502,
+        "y2": 904
+      }
+    },
+    {
+      "text": "CAUTION: Granting any of the following will give your Agent the authority to take actions",
+      "confidence": 0.9550683498382568,
+      "bbox": {
+        "x1": 163,
+        "y1": 930,
+        "x2": 1114,
+        "y2": 961
+      }
+    },
+    {
+      "text": "that could significantly reduce your property or change how your property is distributed at",
+      "confidence": 0.9734649658203125,
+      "bbox": {
+        "x1": 161,
+        "y1": 973,
+        "x2": 1114,
+        "y2": 1004
+      }
+    },
+    {
+      "text": "your death. INITIAL ONLY the specific authority you WANT to give your Agent.)",
+      "confidence": 0.9527215361595154,
+      "bbox": {
+        "x1": 161,
+        "y1": 1016,
+        "x2": 1031,
+        "y2": 1047
+      }
+    },
+    {
+      "text": ".Make a gift, subject to thelimitations provided in G.S.32C-2-217",
+      "confidence": 0.9502641558647156,
+      "bbox": {
+        "x1": 203,
+        "y1": 1069,
+        "x2": 897,
+        "y2": 1100
+      }
+    },
+    {
+      "text": "Create or change rights of survivorship",
+      "confidence": 0.9718489050865173,
+      "bbox": {
+        "x1": 227,
+        "y1": 1127,
+        "x2": 634,
+        "y2": 1152
+      }
+    },
+    {
+      "text": "Create or change a beneficiary designation",
+      "confidence": 0.9601181745529175,
+      "bbox": {
+        "x1": 215,
+        "y1": 1181,
+        "x2": 669,
+        "y2": 1205
+      }
+    },
+    {
+      "text": ") Authorize another person to exercise the authority granted under this power of attorney.",
+      "confidence": 0.9660988450050354,
+      "bbox": {
+        "x1": 213,
+        "y1": 1232,
+        "x2": 1102,
+        "y2": 1265
+      }
+    },
+    {
+      "text": " Waive my right to be a beneficiary of a joint and survivor annuity, including a survivor",
+      "confidence": 0.9462372660636902,
+      "bbox": {
+        "x1": 203,
+        "y1": 1287,
+        "x2": 1112,
+        "y2": 1317
+      }
+    },
+    {
+      "text": "benefit under a retirement plan",
+      "confidence": 0.9703953862190247,
+      "bbox": {
+        "x1": 165,
+        "y1": 1327,
+        "x2": 468,
+        "y2": 1358
+      }
+    },
+    {
+      "text": ") Exercise fiduciary powers that I haye authority to delegate",
+      "confidence": 0.9360592365264893,
+      "bbox": {
+        "x1": 223,
+        "y1": 1382,
+        "x2": 823,
+        "y2": 1413
+      }
+    },
+    {
+      "text": " Disclaim or refuse an interest in property including a power of appointment",
+      "confidence": 0.950332522392273,
+      "bbox": {
+        "x1": 225,
+        "y1": 1435,
+        "x2": 994,
+        "y2": 1466
+      }
+    },
+    {
+      "text": "DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON",
+      "confidence": 0.9682130217552185,
+      "bbox": {
+        "x1": 177,
+        "y1": 1494,
+        "x2": 695,
+        "y2": 1516
+      }
+    },
+    {
+      "text": "4",
+      "confidence": 0.670199453830719,
+      "bbox": {
+        "x1": 1048,
+        "y1": 1494,
+        "x2": 1088,
+        "y2": 1519
+      }
+    },
+    {
+      "text": "RAMOSLAWPA.",
+      "confidence": 0.9412347674369812,
+      "bbox": {
+        "x1": 551,
+        "y1": 1526,
+        "x2": 712,
+        "y2": 1552
+      }
+    },
+    {
+      "text": "BK019511PG00187",
+      "confidence": 0.9999043345451355,
+      "bbox": {
+        "x1": 19,
+        "y1": 7,
+        "x2": 230,
+        "y2": 31
+      }
+    },
+    {
+      "text": "a9",
+      "confidence": 0.5404391288757324,
+      "bbox": {
+        "x1": 73,
+        "y1": 172,
+        "x2": 83,
+        "y2": 187
+      }
+    },
+    {
+      "text": "Access the content of electronic communications",
+      "confidence": 0.9648188352584839,
+      "bbox": {
+        "x1": 249,
+        "y1": 174,
+        "x2": 735,
+        "y2": 199
+      }
+    },
+    {
+      "text": "EXERCISE OFSPECIFICAUTHORITY",
+      "confidence": 0.9768580198287964,
+      "bbox": {
+        "x1": 419,
+        "y1": 254,
+        "x2": 856,
+        "y2": 277
+      }
+    },
+    {
+      "text": "(OPTIONAL)",
+      "confidence": 0.9916931986808777,
+      "bbox": {
+        "x1": 561,
+        "y1": 278,
+        "x2": 716,
+        "y2": 311
+      }
+    },
+    {
+      "text": "UNLESS INITIALED,an Agent shall exercise any of the grants of specific authority",
+      "confidence": 0.935560405254364,
+      "bbox": {
+        "x1": 206,
+        "y1": 332,
+        "x2": 1109,
+        "y2": 363
+      }
+    },
+    {
+      "text": "initialed above in favor of the Agent or an individual to who is dependent upon the Agent,equally",
+      "confidence": 0.9475831985473633,
+      "bbox": {
+        "x1": 161,
+        "y1": 378,
+        "x2": 1109,
+        "y2": 402
+      }
+    },
+    {
+      "text": "ADDITIONAL PROVISIONS AND EXCLUSIONS",
+      "confidence": 0.964726448059082,
+      "bbox": {
+        "x1": 371,
+        "y1": 454,
+        "x2": 906,
+        "y2": 480
+      }
+    },
+    {
+      "text": "(OPTIONAL)",
+      "confidence": 0.9964281320571899,
+      "bbox": {
+        "x1": 563,
+        "y1": 483,
+        "x2": 715,
+        "y2": 512
+      }
+    },
+    {
+      "text": "You may give special instructions on the following lines:",
+      "confidence": 0.958767831325531,
+      "bbox": {
+        "x1": 163,
+        "y1": 533,
+        "x2": 724,
+        "y2": 564
+      }
+    },
+    {
+      "text": "This power of attorney shall be effective oni my incapacity.as evidenced by a written statement of",
+      "confidence": 0.9315847158432007,
+      "bbox": {
+        "x1": 166,
+        "y1": 591,
+        "x2": 1112,
+        "y2": 615
+      }
+    },
+    {
+      "text": "my attending physician and one other physician who has personally examined me.certifying that",
+      "confidence": 0.9521327614784241,
+      "bbox": {
+        "x1": 166,
+        "y1": 634,
+        "x2": 1110,
+        "y2": 658
+      }
+    },
+    {
+      "text": "I am unable to manage property or business affairs",
+      "confidence": 0.9564530253410339,
+      "bbox": {
+        "x1": 166,
+        "y1": 677,
+        "x2": 660,
+        "y2": 701
+      }
+    },
+    {
+      "text": "EFFECTIVEDATE",
+      "confidence": 0.991498589515686,
+      "bbox": {
+        "x1": 532,
+        "y1": 742,
+        "x2": 747,
+        "y2": 767
+      }
+    },
+    {
+      "text": "Thispower of attorney is effective upon incapacity as I have stated in the Additional Provisions",
+      "confidence": 0.9424216747283936,
+      "bbox": {
+        "x1": 168,
+        "y1": 796,
+        "x2": 1110,
+        "y2": 820
+      }
+    },
+    {
+      "text": "and Exclusions.",
+      "confidence": 0.9749599695205688,
+      "bbox": {
+        "x1": 163,
+        "y1": 833,
+        "x2": 321,
+        "y2": 863
+      }
+    },
+    {
+      "text": "NOMINATION OF GUARDIAN",
+      "confidence": 0.9495420455932617,
+      "bbox": {
+        "x1": 468,
+        "y1": 904,
+        "x2": 812,
+        "y2": 926
+      }
+    },
+    {
+      "text": "(OPTIONAL)",
+      "confidence": 0.9568142890930176,
+      "bbox": {
+        "x1": 565,
+        "y1": 930,
+        "x2": 715,
+        "y2": 959
+      }
+    },
+    {
+      "text": "INITIALbelow ONLY if you WANT your acting Agent to be your Guardian.",
+      "confidence": 0.9332242012023926,
+      "bbox": {
+        "x1": 168,
+        "y1": 985,
+        "x2": 972,
+        "y2": 1009
+      }
+    },
+    {
+      "text": "If it becomes necessary for a court to appoint a guardian of my estate or a general",
+      "confidence": 0.9412304759025574,
+      "bbox": {
+        "x1": 244,
+        "y1": 1035,
+        "x2": 1112,
+        "y2": 1066
+      }
+    },
+    {
+      "text": "guardianI nominate my Agent acting under this power of attorney to be the guardian to serve",
+      "confidence": 0.9517319202423096,
+      "bbox": {
+        "x1": 165,
+        "y1": 1078,
+        "x2": 1114,
+        "y2": 1109
+      }
+    },
+    {
+      "text": "without bond or other security.",
+      "confidence": 0.9417576789855957,
+      "bbox": {
+        "x1": 166,
+        "y1": 1124,
+        "x2": 468,
+        "y2": 1148
+      }
+    },
+    {
+      "text": "RELIANCE ONTHIS POWER OFATTORNEY",
+      "confidence": 0.9622665047645569,
+      "bbox": {
+        "x1": 383,
+        "y1": 1189,
+        "x2": 897,
+        "y2": 1213
+      }
+    },
+    {
+      "text": "Any person including my Agent, may rely upon the validity of this power of attorney or a copy",
+      "confidence": 0.9462877511978149,
+      "bbox": {
+        "x1": 166,
+        "y1": 1239,
+        "x2": 1112,
+        "y2": 1270
+      }
+    },
+    {
+      "text": "of it unless that person knowsithas terminated or is invalid.",
+      "confidence": 0.9461233615875244,
+      "bbox": {
+        "x1": 166,
+        "y1": 1284,
+        "x2": 752,
+        "y2": 1308
+      }
+    },
+    {
+      "text": "DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON",
+      "confidence": 0.9582644701004028,
+      "bbox": {
+        "x1": 178,
+        "y1": 1494,
+        "x2": 695,
+        "y2": 1516
+      }
+    },
+    {
+      "text": "RAMOSLAW.PA",
+      "confidence": 0.9253306984901428,
+      "bbox": {
+        "x1": 556,
+        "y1": 1530,
+        "x2": 710,
+        "y2": 1552
+      }
+    }
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "BK019511PG00183 NORTH CAROLINA STATUTORY FORM POWER OF ATTORNEY Prepared By and Return To: William D. Ramos, Esq. Ramos Law, P.A. 300 S. Main Street, Suite 212, Holly Springs, North Carolina 27540- NOTICE THE POWERS GRANTED BY THIS DOCUMENT ARE BROAD AND SWEEPING. THEY ARE DEFINED IN CHAPTER 32C OF THE NORTH CAROLINA GENERAL STATUTES, WHICH EXPRESSLY PERMITS THE USE OF ANY OTHER OR DIFFERENT POEEEEEER PERREEP PER EE PEERREE POREREEE PR PNEEP PR PEEP IMPORTANT INFORMATION This power of attorney authorizes another person (your agent) to make decisions concerning your property for you (the principal). Your agent will be able to make decisions and act with respect to your property (including your money) whether or not you are able to act for yourself. The meaning of authority over subjects listed on this form is explained in the North Carolina Uniform Power of Attorney Act.. This power of attorney does not authorize the agent to make health care decisions for you DURABLE POWER OF ATTORNEY - TYLER AUSTIN CAHOON RAMOS LAW, P.A.",
+      "regions": [
+        {
+          "text": "BK019511PG00183",
+          "confidence": 0.9998794794082642,
+          "bbox": {
+            "x1": 21,
+            "y1": 9,
+            "x2": 234,
+            "y2": 33
+          }
+        },
+        {
+          "text": "NORTH CAROLINA",
+          "confidence": 0.9983964562416077,
+          "bbox": {
+            "x1": 525,
+            "y1": 500,
+            "x2": 750,
+            "y2": 524
+          }
+        },
+        {
+          "text": "STATUTORY FORM POWER OF ATTORNEY",
+          "confidence": 0.9898256063461304,
+          "bbox": {
+            "x1": 383,
+            "y1": 541,
+            "x2": 892,
+            "y2": 565
+          }
+        },
+        {
+          "text": "Prepared By and Return To:",
+          "confidence": 0.9999157190322876,
+          "bbox": {
+            "x1": 487,
+            "y1": 603,
+            "x2": 788,
+            "y2": 634
+          }
+        },
+        {
+          "text": "William D. Ramos, Esq.",
+          "confidence": 0.9992273449897766,
+          "bbox": {
+            "x1": 518,
+            "y1": 682,
+            "x2": 757,
+            "y2": 715
+          }
+        },
+        {
+          "text": "Ramos Law, P.A.",
+          "confidence": 0.9950054883956909,
+          "bbox": {
+            "x1": 553,
+            "y1": 727,
+            "x2": 722,
+            "y2": 751
+          }
+        },
+        {
+          "text": "300 S. Main Street, Suite 212, Holly Springs, North Carolina 27540-",
+          "confidence": 0.9834533333778381,
+          "bbox": {
+            "x1": 305,
+            "y1": 768,
+            "x2": 968,
+            "y2": 792
+          }
+        },
+        {
+          "text": "NOTICE",
+          "confidence": 0.9984915256500244,
+          "bbox": {
+            "x1": 586,
+            "y1": 844,
+            "x2": 689,
+            "y2": 873
+          }
+        },
+        {
+          "text": "THE POWERS GRANTED BY THIS DOCUMENT ARE BROAD AND SWEEPING.",
+          "confidence": 0.9871560335159302,
+          "bbox": {
+            "x1": 239,
+            "y1": 909,
+            "x2": 1107,
+            "y2": 933
+          }
+        },
+        {
+          "text": "THEY ARE DEFINED IN CHAPTER 32C OF THE NORTH CAROLINA GENERAL",
+          "confidence": 0.9615028500556946,
+          "bbox": {
+            "x1": 168,
+            "y1": 954,
+            "x2": 1110,
+            "y2": 976
+          }
+        },
+        {
+          "text": "STATUTES, WHICH EXPRESSLY PERMITS THE USE OF ANY OTHER OR DIFFERENT",
+          "confidence": 0.9461290836334229,
+          "bbox": {
+            "x1": 166,
+            "y1": 997,
+            "x2": 1110,
+            "y2": 1019
+          }
+        },
+        {
+          "text": "POEEEEEER PERREEP PER EE PEERREE POREREEE PR PNEEP PR PEEP",
+          "confidence": 0.5193198919296265,
+          "bbox": {
+            "x1": 166,
+            "y1": 1038,
+            "x2": 1000,
+            "y2": 1062
+          }
+        },
+        {
+          "text": "IMPORTANT INFORMATION",
+          "confidence": 0.9941784143447876,
+          "bbox": {
+            "x1": 469,
+            "y1": 1105,
+            "x2": 807,
+            "y2": 1129
+          }
+        },
+        {
+          "text": "This power of attorney authorizes another person (your agent) to make decisions",
+          "confidence": 0.9705058932304382,
+          "bbox": {
+            "x1": 239,
+            "y1": 1170,
+            "x2": 1110,
+            "y2": 1195
+          }
+        },
+        {
+          "text": "concerning your property for you (the principal). Your agent will be able to make decisions and",
+          "confidence": 0.9973281025886536,
+          "bbox": {
+            "x1": 163,
+            "y1": 1208,
+            "x2": 1112,
+            "y2": 1239
+          }
+        },
+        {
+          "text": "act with respect to your property (including your money) whether or not you are able to act for",
+          "confidence": 0.9952378273010254,
+          "bbox": {
+            "x1": 166,
+            "y1": 1255,
+            "x2": 1110,
+            "y2": 1279
+          }
+        },
+        {
+          "text": "yourself. The meaning of authority over subjects listed on this form is explained in the North",
+          "confidence": 0.9932859539985657,
+          "bbox": {
+            "x1": 166,
+            "y1": 1296,
+            "x2": 1110,
+            "y2": 1320
+          }
+        },
+        {
+          "text": "Carolina Uniform Power of Attorney Act..",
+          "confidence": 0.9875398874282837,
+          "bbox": {
+            "x1": 166,
+            "y1": 1335,
+            "x2": 573,
+            "y2": 1363
+          }
+        },
+        {
+          "text": "This power of attorney does not authorize the agent to make health care decisions for you",
+          "confidence": 0.9955663084983826,
+          "bbox": {
+            "x1": 239,
+            "y1": 1390,
+            "x2": 1107,
+            "y2": 1415
+          }
+        },
+        {
+          "text": "DURABLE POWER OF ATTORNEY - TYLER AUSTIN CAHOON",
+          "confidence": 0.9730778932571411,
+          "bbox": {
+            "x1": 177,
+            "y1": 1495,
+            "x2": 695,
+            "y2": 1518
+          }
+        },
+        {
+          "text": "RAMOS LAW, P.A.",
+          "confidence": 0.9937106966972351,
+          "bbox": {
+            "x1": 553,
+            "y1": 1531,
+            "x2": 707,
+            "y2": 1554
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "text": "BK019511PG00184 You should select someone you trust to serve as your agent. Unless you specify otherwise, generally the agent's authority will continue until you die or revoke the power of attorney or the agent resigns or is unable to act for you.. Your agent is entitled to rcasonable compensation unless you state otherwise in the Additional Provisions and Exclusions. This form provides for designation of one agent, successor agent, and second successor. agent. If you wish to name more than one agent, successor agent, and second successor agent, you may name a co-agent, successor co-agent, or second successor co-agent in the Additional Provisions and Exclusions. Co-agents, successor co-agents, or second successor co-agents are not required to act together unless you include that requirement in the Additional Provisions and Exclusions. If your agent is unable or unwilling to act for you, your power of attorney will end unless. you have named a successor agent. You may also name a second successor agent. This power of attorney becomes effective immediately unless you state otherwise in the Additional Provisions and Exclusions. If you have questions about the power of attorney or the authority you are granting. to your agent, you should seek legal advice before signing this form. DURABLE POWER OF ATTORNEY-TYLER AUSTIN CAHOON RAMOSLAW, P.A.",
+      "regions": [
+        {
+          "text": "BK019511PG00184",
+          "confidence": 0.9999116659164429,
+          "bbox": {
+            "x1": 21,
+            "y1": 9,
+            "x2": 234,
+            "y2": 33
+          }
+        },
+        {
+          "text": "You should select someone you trust to serve as your agent. Unless you specify otherwise,",
+          "confidence": 0.9933041930198669,
+          "bbox": {
+            "x1": 236,
+            "y1": 174,
+            "x2": 1110,
+            "y2": 205
+          }
+        },
+        {
+          "text": "generally the agent's authority will continue until you die or revoke the power of attorney or the",
+          "confidence": 0.9914743304252625,
+          "bbox": {
+            "x1": 165,
+            "y1": 222,
+            "x2": 1110,
+            "y2": 246
+          }
+        },
+        {
+          "text": "agent resigns or is unable to act for you..",
+          "confidence": 0.9828059077262878,
+          "bbox": {
+            "x1": 165,
+            "y1": 261,
+            "x2": 556,
+            "y2": 290
+          }
+        },
+        {
+          "text": "Your agent is entitled to rcasonable compensation unless you state otherwise in the",
+          "confidence": 0.9925533533096313,
+          "bbox": {
+            "x1": 236,
+            "y1": 313,
+            "x2": 1112,
+            "y2": 346
+          }
+        },
+        {
+          "text": "Additional Provisions and Exclusions.",
+          "confidence": 0.9890402555465698,
+          "bbox": {
+            "x1": 166,
+            "y1": 359,
+            "x2": 537,
+            "y2": 383
+          }
+        },
+        {
+          "text": "This form provides for designation of one agent, successor agent, and second successor.",
+          "confidence": 0.9941965937614441,
+          "bbox": {
+            "x1": 239,
+            "y1": 414,
+            "x2": 1110,
+            "y2": 438
+          }
+        },
+        {
+          "text": "agent. If you wish to name more than one agent, successor agent, and second successor agent, you",
+          "confidence": 0.9873111844062805,
+          "bbox": {
+            "x1": 163,
+            "y1": 457,
+            "x2": 1112,
+            "y2": 481
+          }
+        },
+        {
+          "text": "may name a co-agent, successor co-agent, or second successor co-agent in the Additional",
+          "confidence": 0.9902023673057556,
+          "bbox": {
+            "x1": 161,
+            "y1": 495,
+            "x2": 1112,
+            "y2": 528
+          }
+        },
+        {
+          "text": "Provisions and Exclusions. Co-agents, successor co-agents, or second successor co-agents are not",
+          "confidence": 0.998570442199707,
+          "bbox": {
+            "x1": 163,
+            "y1": 540,
+            "x2": 1110,
+            "y2": 565
+          }
+        },
+        {
+          "text": "required to act together unless you include that requirement in the Additional Provisions and",
+          "confidence": 0.9956200122833252,
+          "bbox": {
+            "x1": 165,
+            "y1": 584,
+            "x2": 1110,
+            "y2": 608
+          }
+        },
+        {
+          "text": "Exclusions.",
+          "confidence": 0.9993321895599365,
+          "bbox": {
+            "x1": 163,
+            "y1": 622,
+            "x2": 281,
+            "y2": 652
+          }
+        },
+        {
+          "text": "If your agent is unable or unwilling to act for you, your power of attorney will end unless.",
+          "confidence": 0.9841982126235962,
+          "bbox": {
+            "x1": 239,
+            "y1": 681,
+            "x2": 1110,
+            "y2": 705
+          }
+        },
+        {
+          "text": "you have named a successor agent. You may also name a second successor agent.",
+          "confidence": 0.992680013179779,
+          "bbox": {
+            "x1": 165,
+            "y1": 724,
+            "x2": 961,
+            "y2": 748
+          }
+        },
+        {
+          "text": "This power of attorney becomes effective immediately unless you state otherwise in the",
+          "confidence": 0.9872020483016968,
+          "bbox": {
+            "x1": 239,
+            "y1": 777,
+            "x2": 1107,
+            "y2": 799
+          }
+        },
+        {
+          "text": "Additional Provisions and Exclusions.",
+          "confidence": 0.9981611371040344,
+          "bbox": {
+            "x1": 166,
+            "y1": 818,
+            "x2": 537,
+            "y2": 842
+          }
+        },
+        {
+          "text": "If you have questions about the power of attorney or the authority you are granting.",
+          "confidence": 0.9863463044166565,
+          "bbox": {
+            "x1": 237,
+            "y1": 873,
+            "x2": 1109,
+            "y2": 897
+          }
+        },
+        {
+          "text": "to your agent, you should seek legal advice before signing this form.",
+          "confidence": 0.9998096823692322,
+          "bbox": {
+            "x1": 163,
+            "y1": 914,
+            "x2": 863,
+            "y2": 940
+          }
+        },
+        {
+          "text": "DURABLE POWER OF ATTORNEY-TYLER AUSTIN CAHOON",
+          "confidence": 0.9576076865196228,
+          "bbox": {
+            "x1": 177,
+            "y1": 1497,
+            "x2": 695,
+            "y2": 1519
+          }
+        },
+        {
+          "text": "RAMOSLAW, P.A.",
+          "confidence": 0.9598403573036194,
+          "bbox": {
+            "x1": 554,
+            "y1": 1533,
+            "x2": 709,
+            "y2": 1555
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "text": "BK019511PG00185 DESIGNATION OFAGENT I, Tyler Austin Cahoonname the following person as my Agent Name of Agent Shelby Eloise Cahoon Agent's Address:171 Dunloe Loop,Raleigh,North Carolina 27603 Agent's Telephone Number:(479)409.2024 DESIGNATION OF SUCCESSOR AGENT(S) (OPTIONAL) If my Agent is unable or unwilling to act for me, I name as my successor Agent Name of Successor Agent: Ross Patrick Cahoon Successor Agent's Address:159th Avenue NEWoodinvilleWashington 98072 Successor Agent's TelephoneNumber:(252)671-4861 INITIAL below if you want to give an Agent the power to name a successor Agent  give to my acting Agent the full power to appoint another to act as my Agent, and ful power to revoke such appointment if no Agent named by me above iswilling or able to act GRANTOF GENERALAUTHORITY I grant my Agent and any successor Agent general authority to act for me with respect to the following subjects as defined in the North Carolina Uniform Power of Attorney Act, Chapter 32C of the General Statutes INITIAL each subject you want to include in the Agent's general authority.If you wish to grant general authority over all of the subjects you may initial \"All Preceding Subjects instead of initialing each subject.) Real Property Tangible Personal Property ) Stocks and Bonds DURABLEPOWER OFATTORNEY-TYLERAUSTINCAHOON +3 RAMOS LAWP.A",
+      "regions": [
+        {
+          "text": "BK019511PG00185",
+          "confidence": 0.9999030232429504,
+          "bbox": {
+            "x1": 21,
+            "y1": 9,
+            "x2": 234,
+            "y2": 33
+          }
+        },
+        {
+          "text": "DESIGNATION OFAGENT",
+          "confidence": 0.9683626294136047,
+          "bbox": {
+            "x1": 490,
+            "y1": 175,
+            "x2": 792,
+            "y2": 199
+          }
+        },
+        {
+          "text": "I, Tyler Austin Cahoonname the following person as my Agent",
+          "confidence": 0.9611408710479736,
+          "bbox": {
+            "x1": 163,
+            "y1": 223,
+            "x2": 813,
+            "y2": 256
+          }
+        },
+        {
+          "text": "Name of Agent Shelby Eloise Cahoon",
+          "confidence": 0.9427613615989685,
+          "bbox": {
+            "x1": 166,
+            "y1": 282,
+            "x2": 572,
+            "y2": 306
+          }
+        },
+        {
+          "text": "Agent's Address:171 Dunloe Loop,Raleigh,North Carolina 27603",
+          "confidence": 0.9317315220832825,
+          "bbox": {
+            "x1": 168,
+            "y1": 337,
+            "x2": 826,
+            "y2": 361
+          }
+        },
+        {
+          "text": "Agent's Telephone Number:(479)409.2024",
+          "confidence": 0.9366086721420288,
+          "bbox": {
+            "x1": 166,
+            "y1": 392,
+            "x2": 606,
+            "y2": 416
+          }
+        },
+        {
+          "text": "DESIGNATION OF SUCCESSOR AGENT(S)",
+          "confidence": 0.9641962647438049,
+          "bbox": {
+            "x1": 397,
+            "y1": 457,
+            "x2": 882,
+            "y2": 483
+          }
+        },
+        {
+          "text": "(OPTIONAL)",
+          "confidence": 0.995867133140564,
+          "bbox": {
+            "x1": 563,
+            "y1": 483,
+            "x2": 717,
+            "y2": 516
+          }
+        },
+        {
+          "text": "If my Agent is unable or unwilling to act for me, I name as my successor Agent",
+          "confidence": 0.9289795160293579,
+          "bbox": {
+            "x1": 165,
+            "y1": 536,
+            "x2": 946,
+            "y2": 567
+          }
+        },
+        {
+          "text": "Name of Successor Agent: Ross Patrick Cahoon",
+          "confidence": 0.9417222738265991,
+          "bbox": {
+            "x1": 168,
+            "y1": 595,
+            "x2": 657,
+            "y2": 619
+          }
+        },
+        {
+          "text": "Successor Agent's Address:159th Avenue NEWoodinvilleWashington 98072",
+          "confidence": 0.9506370425224304,
+          "bbox": {
+            "x1": 168,
+            "y1": 648,
+            "x2": 951,
+            "y2": 672
+          }
+        },
+        {
+          "text": "Successor Agent's TelephoneNumber:(252)671-4861",
+          "confidence": 0.9434345960617065,
+          "bbox": {
+            "x1": 168,
+            "y1": 703,
+            "x2": 705,
+            "y2": 727
+          }
+        },
+        {
+          "text": "INITIAL below if you want to give an Agent the power to name a successor Agent",
+          "confidence": 0.951956033706665,
+          "bbox": {
+            "x1": 166,
+            "y1": 808,
+            "x2": 979,
+            "y2": 839
+          }
+        },
+        {
+          "text": " give to my acting Agent the full power to appoint another to act as my Agent, and ful",
+          "confidence": 0.9439018368721008,
+          "bbox": {
+            "x1": 217,
+            "y1": 865,
+            "x2": 1112,
+            "y2": 894
+          }
+        },
+        {
+          "text": "power to revoke such appointment if no Agent named by me above iswilling or able to act",
+          "confidence": 0.9365696310997009,
+          "bbox": {
+            "x1": 166,
+            "y1": 908,
+            "x2": 1057,
+            "y2": 932
+          }
+        },
+        {
+          "text": "GRANTOF GENERALAUTHORITY",
+          "confidence": 0.9759801030158997,
+          "bbox": {
+            "x1": 437,
+            "y1": 987,
+            "x2": 844,
+            "y2": 1011
+          }
+        },
+        {
+          "text": "I grant my Agent and any successor Agent general authority to act for me with respect to the",
+          "confidence": 0.9503328204154968,
+          "bbox": {
+            "x1": 163,
+            "y1": 1036,
+            "x2": 1112,
+            "y2": 1067
+          }
+        },
+        {
+          "text": "following subjects as defined in the North Carolina Uniform Power of Attorney Act, Chapter 32C",
+          "confidence": 0.961875855922699,
+          "bbox": {
+            "x1": 165,
+            "y1": 1078,
+            "x2": 1112,
+            "y2": 1109
+          }
+        },
+        {
+          "text": "of the General Statutes",
+          "confidence": 0.9436755776405334,
+          "bbox": {
+            "x1": 163,
+            "y1": 1122,
+            "x2": 399,
+            "y2": 1150
+          }
+        },
+        {
+          "text": "INITIAL each subject you want to include in the Agent's general authority.If you wish to",
+          "confidence": 0.9560902118682861,
+          "bbox": {
+            "x1": 165,
+            "y1": 1176,
+            "x2": 1112,
+            "y2": 1207
+          }
+        },
+        {
+          "text": "grant general authority over all of the subjects you may initial \"All Preceding Subjects",
+          "confidence": 0.942566454410553,
+          "bbox": {
+            "x1": 166,
+            "y1": 1222,
+            "x2": 1109,
+            "y2": 1246
+          }
+        },
+        {
+          "text": "instead of initialing each subject.)",
+          "confidence": 0.9355953931808472,
+          "bbox": {
+            "x1": 166,
+            "y1": 1263,
+            "x2": 515,
+            "y2": 1287
+          }
+        },
+        {
+          "text": "Real Property",
+          "confidence": 0.9765428304672241,
+          "bbox": {
+            "x1": 225,
+            "y1": 1311,
+            "x2": 392,
+            "y2": 1344
+          }
+        },
+        {
+          "text": "Tangible Personal Property",
+          "confidence": 0.9588229060173035,
+          "bbox": {
+            "x1": 225,
+            "y1": 1368,
+            "x2": 521,
+            "y2": 1397
+          }
+        },
+        {
+          "text": ") Stocks and Bonds",
+          "confidence": 0.9033888578414917,
+          "bbox": {
+            "x1": 223,
+            "y1": 1420,
+            "x2": 433,
+            "y2": 1451
+          }
+        },
+        {
+          "text": "DURABLEPOWER OFATTORNEY-TYLERAUSTINCAHOON",
+          "confidence": 0.9658581614494324,
+          "bbox": {
+            "x1": 177,
+            "y1": 1497,
+            "x2": 693,
+            "y2": 1519
+          }
+        },
+        {
+          "text": "+3",
+          "confidence": 0.5124152898788452,
+          "bbox": {
+            "x1": 1046,
+            "y1": 1497,
+            "x2": 1090,
+            "y2": 1523
+          }
+        },
+        {
+          "text": "RAMOS LAWP.A",
+          "confidence": 0.9218383431434631,
+          "bbox": {
+            "x1": 551,
+            "y1": 1530,
+            "x2": 710,
+            "y2": 1556
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 4,
+      "text": "BK019511PG00186 ) Commodities and Options  Banks and Other Financial Institutions  Operation of Entity or Business )Insurance and Annuities )Estates,Trusts,and Other Beneficial Interests )Claims and Litigation Personal and Family Maintenance ) Benefits from Governmental Programs or Civil or Military Service Retirement Plans )Taxes All Preceding Subjects GRANT OF SPECIFIC AUTHORITY (OPTIONAL) My Agent MA Y NOT do any of the following specific acts for me UNLESS I have INITIALED the specific authority listed below; CAUTION: Granting any of the following will give your Agent the authority to take actions that could significantly reduce your property or change how your property is distributed at your death. INITIAL ONLY the specific authority you WANT to give your Agent.) .Make a gift, subject to thelimitations provided in G.S.32C-2-217 Create or change rights of survivorship Create or change a beneficiary designation ) Authorize another person to exercise the authority granted under this power of attorney.  Waive my right to be a beneficiary of a joint and survivor annuity, including a survivor benefit under a retirement plan ) Exercise fiduciary powers that I haye authority to delegate  Disclaim or refuse an interest in property including a power of appointment DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON 4 RAMOSLAWPA.",
+      "regions": [
+        {
+          "text": "BK019511PG00186",
+          "confidence": 0.9998493194580078,
+          "bbox": {
+            "x1": 21,
+            "y1": 9,
+            "x2": 234,
+            "y2": 33
+          }
+        },
+        {
+          "text": ") Commodities and Options",
+          "confidence": 0.9537178874015808,
+          "bbox": {
+            "x1": 223,
+            "y1": 170,
+            "x2": 513,
+            "y2": 201
+          }
+        },
+        {
+          "text": " Banks and Other Financial Institutions",
+          "confidence": 0.9501436948776245,
+          "bbox": {
+            "x1": 223,
+            "y1": 229,
+            "x2": 629,
+            "y2": 253
+          }
+        },
+        {
+          "text": " Operation of Entity or Business",
+          "confidence": 0.9345309734344482,
+          "bbox": {
+            "x1": 201,
+            "y1": 284,
+            "x2": 563,
+            "y2": 308
+          }
+        },
+        {
+          "text": ")Insurance and Annuities",
+          "confidence": 0.967022716999054,
+          "bbox": {
+            "x1": 229,
+            "y1": 337,
+            "x2": 494,
+            "y2": 361
+          }
+        },
+        {
+          "text": ")Estates,Trusts,and Other Beneficial Interests",
+          "confidence": 0.9480440616607666,
+          "bbox": {
+            "x1": 229,
+            "y1": 392,
+            "x2": 700,
+            "y2": 416
+          }
+        },
+        {
+          "text": ")Claims and Litigation",
+          "confidence": 0.9337716698646545,
+          "bbox": {
+            "x1": 227,
+            "y1": 442,
+            "x2": 468,
+            "y2": 473
+          }
+        },
+        {
+          "text": "Personal and Family Maintenance",
+          "confidence": 0.9662399888038635,
+          "bbox": {
+            "x1": 227,
+            "y1": 500,
+            "x2": 584,
+            "y2": 524
+          }
+        },
+        {
+          "text": ") Benefits from Governmental Programs or Civil or Military Service",
+          "confidence": 0.9337857961654663,
+          "bbox": {
+            "x1": 229,
+            "y1": 555,
+            "x2": 904,
+            "y2": 579
+          }
+        },
+        {
+          "text": "Retirement Plans",
+          "confidence": 0.9727257490158081,
+          "bbox": {
+            "x1": 229,
+            "y1": 610,
+            "x2": 423,
+            "y2": 634
+          }
+        },
+        {
+          "text": ")Taxes",
+          "confidence": 0.8826833367347717,
+          "bbox": {
+            "x1": 228,
+            "y1": 658,
+            "x2": 318,
+            "y2": 693
+          }
+        },
+        {
+          "text": "All Preceding Subjects",
+          "confidence": 0.9536517858505249,
+          "bbox": {
+            "x1": 235,
+            "y1": 713,
+            "x2": 480,
+            "y2": 748
+          }
+        },
+        {
+          "text": "GRANT OF SPECIFIC AUTHORITY (OPTIONAL)",
+          "confidence": 0.9564706087112427,
+          "bbox": {
+            "x1": 362,
+            "y1": 784,
+            "x2": 915,
+            "y2": 810
+          }
+        },
+        {
+          "text": "My Agent MA Y NOT do any of the following specific acts for me UNLESS I have INITIALED",
+          "confidence": 0.9523046016693115,
+          "bbox": {
+            "x1": 161,
+            "y1": 834,
+            "x2": 1112,
+            "y2": 865
+          }
+        },
+        {
+          "text": "the specific authority listed below;",
+          "confidence": 0.938981294631958,
+          "bbox": {
+            "x1": 165,
+            "y1": 880,
+            "x2": 502,
+            "y2": 904
+          }
+        },
+        {
+          "text": "CAUTION: Granting any of the following will give your Agent the authority to take actions",
+          "confidence": 0.9550683498382568,
+          "bbox": {
+            "x1": 163,
+            "y1": 930,
+            "x2": 1114,
+            "y2": 961
+          }
+        },
+        {
+          "text": "that could significantly reduce your property or change how your property is distributed at",
+          "confidence": 0.9734649658203125,
+          "bbox": {
+            "x1": 161,
+            "y1": 973,
+            "x2": 1114,
+            "y2": 1004
+          }
+        },
+        {
+          "text": "your death. INITIAL ONLY the specific authority you WANT to give your Agent.)",
+          "confidence": 0.9527215361595154,
+          "bbox": {
+            "x1": 161,
+            "y1": 1016,
+            "x2": 1031,
+            "y2": 1047
+          }
+        },
+        {
+          "text": ".Make a gift, subject to thelimitations provided in G.S.32C-2-217",
+          "confidence": 0.9502641558647156,
+          "bbox": {
+            "x1": 203,
+            "y1": 1069,
+            "x2": 897,
+            "y2": 1100
+          }
+        },
+        {
+          "text": "Create or change rights of survivorship",
+          "confidence": 0.9718489050865173,
+          "bbox": {
+            "x1": 227,
+            "y1": 1127,
+            "x2": 634,
+            "y2": 1152
+          }
+        },
+        {
+          "text": "Create or change a beneficiary designation",
+          "confidence": 0.9601181745529175,
+          "bbox": {
+            "x1": 215,
+            "y1": 1181,
+            "x2": 669,
+            "y2": 1205
+          }
+        },
+        {
+          "text": ") Authorize another person to exercise the authority granted under this power of attorney.",
+          "confidence": 0.9660988450050354,
+          "bbox": {
+            "x1": 213,
+            "y1": 1232,
+            "x2": 1102,
+            "y2": 1265
+          }
+        },
+        {
+          "text": " Waive my right to be a beneficiary of a joint and survivor annuity, including a survivor",
+          "confidence": 0.9462372660636902,
+          "bbox": {
+            "x1": 203,
+            "y1": 1287,
+            "x2": 1112,
+            "y2": 1317
+          }
+        },
+        {
+          "text": "benefit under a retirement plan",
+          "confidence": 0.9703953862190247,
+          "bbox": {
+            "x1": 165,
+            "y1": 1327,
+            "x2": 468,
+            "y2": 1358
+          }
+        },
+        {
+          "text": ") Exercise fiduciary powers that I haye authority to delegate",
+          "confidence": 0.9360592365264893,
+          "bbox": {
+            "x1": 223,
+            "y1": 1382,
+            "x2": 823,
+            "y2": 1413
+          }
+        },
+        {
+          "text": " Disclaim or refuse an interest in property including a power of appointment",
+          "confidence": 0.950332522392273,
+          "bbox": {
+            "x1": 225,
+            "y1": 1435,
+            "x2": 994,
+            "y2": 1466
+          }
+        },
+        {
+          "text": "DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON",
+          "confidence": 0.9682130217552185,
+          "bbox": {
+            "x1": 177,
+            "y1": 1494,
+            "x2": 695,
+            "y2": 1516
+          }
+        },
+        {
+          "text": "4",
+          "confidence": 0.670199453830719,
+          "bbox": {
+            "x1": 1048,
+            "y1": 1494,
+            "x2": 1088,
+            "y2": 1519
+          }
+        },
+        {
+          "text": "RAMOSLAWPA.",
+          "confidence": 0.9412347674369812,
+          "bbox": {
+            "x1": 551,
+            "y1": 1526,
+            "x2": 712,
+            "y2": 1552
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 5,
+      "text": "BK019511PG00187 a9 Access the content of electronic communications EXERCISE OFSPECIFICAUTHORITY (OPTIONAL) UNLESS INITIALED,an Agent shall exercise any of the grants of specific authority initialed above in favor of the Agent or an individual to who is dependent upon the Agent,equally ADDITIONAL PROVISIONS AND EXCLUSIONS (OPTIONAL) You may give special instructions on the following lines: This power of attorney shall be effective oni my incapacity.as evidenced by a written statement of my attending physician and one other physician who has personally examined me.certifying that I am unable to manage property or business affairs EFFECTIVEDATE Thispower of attorney is effective upon incapacity as I have stated in the Additional Provisions and Exclusions. NOMINATION OF GUARDIAN (OPTIONAL) INITIALbelow ONLY if you WANT your acting Agent to be your Guardian. If it becomes necessary for a court to appoint a guardian of my estate or a general guardianI nominate my Agent acting under this power of attorney to be the guardian to serve without bond or other security. RELIANCE ONTHIS POWER OFATTORNEY Any person including my Agent, may rely upon the validity of this power of attorney or a copy of it unless that person knowsithas terminated or is invalid. DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON RAMOSLAW.PA",
+      "regions": [
+        {
+          "text": "BK019511PG00187",
+          "confidence": 0.9999043345451355,
+          "bbox": {
+            "x1": 19,
+            "y1": 7,
+            "x2": 230,
+            "y2": 31
+          }
+        },
+        {
+          "text": "a9",
+          "confidence": 0.5404391288757324,
+          "bbox": {
+            "x1": 73,
+            "y1": 172,
+            "x2": 83,
+            "y2": 187
+          }
+        },
+        {
+          "text": "Access the content of electronic communications",
+          "confidence": 0.9648188352584839,
+          "bbox": {
+            "x1": 249,
+            "y1": 174,
+            "x2": 735,
+            "y2": 199
+          }
+        },
+        {
+          "text": "EXERCISE OFSPECIFICAUTHORITY",
+          "confidence": 0.9768580198287964,
+          "bbox": {
+            "x1": 419,
+            "y1": 254,
+            "x2": 856,
+            "y2": 277
+          }
+        },
+        {
+          "text": "(OPTIONAL)",
+          "confidence": 0.9916931986808777,
+          "bbox": {
+            "x1": 561,
+            "y1": 278,
+            "x2": 716,
+            "y2": 311
+          }
+        },
+        {
+          "text": "UNLESS INITIALED,an Agent shall exercise any of the grants of specific authority",
+          "confidence": 0.935560405254364,
+          "bbox": {
+            "x1": 206,
+            "y1": 332,
+            "x2": 1109,
+            "y2": 363
+          }
+        },
+        {
+          "text": "initialed above in favor of the Agent or an individual to who is dependent upon the Agent,equally",
+          "confidence": 0.9475831985473633,
+          "bbox": {
+            "x1": 161,
+            "y1": 378,
+            "x2": 1109,
+            "y2": 402
+          }
+        },
+        {
+          "text": "ADDITIONAL PROVISIONS AND EXCLUSIONS",
+          "confidence": 0.964726448059082,
+          "bbox": {
+            "x1": 371,
+            "y1": 454,
+            "x2": 906,
+            "y2": 480
+          }
+        },
+        {
+          "text": "(OPTIONAL)",
+          "confidence": 0.9964281320571899,
+          "bbox": {
+            "x1": 563,
+            "y1": 483,
+            "x2": 715,
+            "y2": 512
+          }
+        },
+        {
+          "text": "You may give special instructions on the following lines:",
+          "confidence": 0.958767831325531,
+          "bbox": {
+            "x1": 163,
+            "y1": 533,
+            "x2": 724,
+            "y2": 564
+          }
+        },
+        {
+          "text": "This power of attorney shall be effective oni my incapacity.as evidenced by a written statement of",
+          "confidence": 0.9315847158432007,
+          "bbox": {
+            "x1": 166,
+            "y1": 591,
+            "x2": 1112,
+            "y2": 615
+          }
+        },
+        {
+          "text": "my attending physician and one other physician who has personally examined me.certifying that",
+          "confidence": 0.9521327614784241,
+          "bbox": {
+            "x1": 166,
+            "y1": 634,
+            "x2": 1110,
+            "y2": 658
+          }
+        },
+        {
+          "text": "I am unable to manage property or business affairs",
+          "confidence": 0.9564530253410339,
+          "bbox": {
+            "x1": 166,
+            "y1": 677,
+            "x2": 660,
+            "y2": 701
+          }
+        },
+        {
+          "text": "EFFECTIVEDATE",
+          "confidence": 0.991498589515686,
+          "bbox": {
+            "x1": 532,
+            "y1": 742,
+            "x2": 747,
+            "y2": 767
+          }
+        },
+        {
+          "text": "Thispower of attorney is effective upon incapacity as I have stated in the Additional Provisions",
+          "confidence": 0.9424216747283936,
+          "bbox": {
+            "x1": 168,
+            "y1": 796,
+            "x2": 1110,
+            "y2": 820
+          }
+        },
+        {
+          "text": "and Exclusions.",
+          "confidence": 0.9749599695205688,
+          "bbox": {
+            "x1": 163,
+            "y1": 833,
+            "x2": 321,
+            "y2": 863
+          }
+        },
+        {
+          "text": "NOMINATION OF GUARDIAN",
+          "confidence": 0.9495420455932617,
+          "bbox": {
+            "x1": 468,
+            "y1": 904,
+            "x2": 812,
+            "y2": 926
+          }
+        },
+        {
+          "text": "(OPTIONAL)",
+          "confidence": 0.9568142890930176,
+          "bbox": {
+            "x1": 565,
+            "y1": 930,
+            "x2": 715,
+            "y2": 959
+          }
+        },
+        {
+          "text": "INITIALbelow ONLY if you WANT your acting Agent to be your Guardian.",
+          "confidence": 0.9332242012023926,
+          "bbox": {
+            "x1": 168,
+            "y1": 985,
+            "x2": 972,
+            "y2": 1009
+          }
+        },
+        {
+          "text": "If it becomes necessary for a court to appoint a guardian of my estate or a general",
+          "confidence": 0.9412304759025574,
+          "bbox": {
+            "x1": 244,
+            "y1": 1035,
+            "x2": 1112,
+            "y2": 1066
+          }
+        },
+        {
+          "text": "guardianI nominate my Agent acting under this power of attorney to be the guardian to serve",
+          "confidence": 0.9517319202423096,
+          "bbox": {
+            "x1": 165,
+            "y1": 1078,
+            "x2": 1114,
+            "y2": 1109
+          }
+        },
+        {
+          "text": "without bond or other security.",
+          "confidence": 0.9417576789855957,
+          "bbox": {
+            "x1": 166,
+            "y1": 1124,
+            "x2": 468,
+            "y2": 1148
+          }
+        },
+        {
+          "text": "RELIANCE ONTHIS POWER OFATTORNEY",
+          "confidence": 0.9622665047645569,
+          "bbox": {
+            "x1": 383,
+            "y1": 1189,
+            "x2": 897,
+            "y2": 1213
+          }
+        },
+        {
+          "text": "Any person including my Agent, may rely upon the validity of this power of attorney or a copy",
+          "confidence": 0.9462877511978149,
+          "bbox": {
+            "x1": 166,
+            "y1": 1239,
+            "x2": 1112,
+            "y2": 1270
+          }
+        },
+        {
+          "text": "of it unless that person knowsithas terminated or is invalid.",
+          "confidence": 0.9461233615875244,
+          "bbox": {
+            "x1": 166,
+            "y1": 1284,
+            "x2": 752,
+            "y2": 1308
+          }
+        },
+        {
+          "text": "DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON",
+          "confidence": 0.9582644701004028,
+          "bbox": {
+            "x1": 178,
+            "y1": 1494,
+            "x2": 695,
+            "y2": 1516
+          }
+        },
+        {
+          "text": "RAMOSLAW.PA",
+          "confidence": 0.9253306984901428,
+          "bbox": {
+            "x1": 556,
+            "y1": 1530,
+            "x2": 710,
+            "y2": 1552
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
-# Base dependencies
-numpy==1.24.3
+# GPU OCR Server Requirements
+# This matches the dependencies installed in the Dockerfile
 
-# PaddlePaddle GPU for CUDA 12.x
-paddlepaddle-gpu==2.5.2.post120
+# PaddlePaddle GPU (installed separately - see instructions below)
+# paddlepaddle-gpu==2.6.1.post120
 
 # OCR and AI frameworks
 paddleocr==2.7.0.3
@@ -22,15 +22,26 @@ fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 pydantic==2.5.0
+python-magic==0.4.27
 
 # Monitoring and utilities
 nvidia-ml-py==12.535.133
-pycuda==2022.2.2
 diskcache==5.6.3
 redis==5.0.1
 python-dotenv==1.0.0
 loguru==0.7.2
 httpx==0.25.2
 
-# Note: Install paddlepaddle-gpu with:
-# pip install paddlepaddle-gpu==2.5.2.post120 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+# Testing (optional for development)
+aiohttp==3.9.1
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Installation Instructions:
+# 1. First install PaddlePaddle GPU:
+#    pip install paddlepaddle-gpu==2.6.1.post120 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+# 2. Then install other requirements:
+#    pip install -r requirements.txt
+
+# Note: This requires CUDA 12.0+ and cuDNN 8.9+
+# For TensorRT support, use the Docker image which includes TensorRT pre-installed

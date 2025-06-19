@@ -31,7 +31,7 @@ class OCRConfig:
     # Additional OCR settings
     use_angle_cls: bool = True
     lang: str = "en"
-    use_tensorrt: bool = True
+    use_tensorrt: bool = True  # Enable TensorRT for GPU acceleration
     use_space_char: bool = True
     paddle_det_model_dir: Optional[str] = None
     paddle_rec_model_dir: Optional[str] = None
@@ -46,6 +46,8 @@ class OCRConfig:
     pdf_max_pages: int = 200  # RTX 4090 optimized
     pdf_timeout: int = 300
     pdf_parallel_pages: int = 8
+    max_file_size_mb: int = 100  # Maximum file size in MB
+    max_pages: int = 200  # Maximum pages to process
     
     def __post_init__(self):
         if self.supported_image_formats is None:
@@ -128,6 +130,15 @@ class CacheConfig:
     redis_port: int = 6379
     redis_db: int = 0
     redis_password: Optional[str] = None
+    
+    # Multi-tier cache settings
+    memory_cache_size_mb: int = 512
+    disk_cache_size_gb: float = 10.0
+    disk_cache_path: str = "./cache"
+    
+    # AWS S3 cache settings
+    s3_cache_bucket: Optional[str] = None
+    s3_cache_region: Optional[str] = None
 
 
 class Config:
@@ -143,6 +154,7 @@ class Config:
         self.gpu = gpu or GPUConfig()
         self.cache = cache or CacheConfig()
         self.environment = environment or Environment.DEVELOPMENT
+        self.version = os.getenv("APP_VERSION", "1.0.0")
         
         # Set debug mode based on environment
         self.debug = self.environment == Environment.DEVELOPMENT
@@ -302,6 +314,11 @@ def load_config() -> Config:
         redis_port=int(os.getenv("REDIS_PORT", "6379")),
         redis_db=int(os.getenv("REDIS_DB", "0")),
         redis_password=os.getenv("REDIS_PASSWORD"),
+        memory_cache_size_mb=int(os.getenv("MEMORY_CACHE_SIZE_MB", "512")),
+        disk_cache_size_gb=float(os.getenv("DISK_CACHE_SIZE_GB", "10.0")),
+        disk_cache_path=os.getenv("DISK_CACHE_PATH", "./cache"),
+        s3_cache_bucket=os.getenv("S3_CACHE_BUCKET"),
+        s3_cache_region=os.getenv("S3_CACHE_REGION"),
     )
     
     # Create unified config

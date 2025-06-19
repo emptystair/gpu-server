@@ -1,0 +1,1020 @@
+{
+  "summary": {
+    "tensorrt_enabled": true,
+    "cache_bypass": true,
+    "total_documents": 96,
+    "successful": 96,
+    "failed": 0,
+    "cache_hits": 96,
+    "total_pages": 533,
+    "total_regions": 24425,
+    "total_size_mb": 37.98499584197998,
+    "average_confidence": 0.9739916601069581,
+    "total_time": 11.434380292892456,
+    "processing_time_sum": 1.6737844944000244,
+    "average_time_per_doc": 0.017435255150000255,
+    "docs_per_minute": 503.74395922272953,
+    "pages_per_minute": 2796.828440267863,
+    "mb_per_minute": 199.31991871351994
+  },
+  "page_groups": {
+    "5": [
+      0.006274223327636719,
+      0.026684999465942383,
+      0.016106367111206055,
+      0.01624155044555664,
+      0.023615360260009766,
+      0.005900382995605469,
+      0.020550012588500977
+    ],
+    "14": [
+      0.016231298446655273,
+      0.02104973793029785,
+      0.038286685943603516,
+      0.04567766189575195,
+      0.03719902038574219
+    ],
+    "1": [
+      0.016760587692260742,
+      0.012583494186401367,
+      0.004075288772583008,
+      0.004126071929931641,
+      0.003885507583618164,
+      0.0038957595825195312,
+      0.00462794303894043,
+      0.0040934085845947266,
+      0.008427143096923828,
+      0.00745844841003418,
+      0.010291337966918945,
+      0.010550737380981445,
+      0.014733314514160156,
+      0.015189170837402344,
+      0.012468576431274414,
+      0.010920524597167969,
+      0.011485815048217773,
+      0.015438079833984375,
+      0.015010356903076172,
+      0.012935876846313477,
+      0.019022464752197266,
+      0.012038230895996094,
+      0.015465497970581055,
+      0.01608419418334961,
+      0.015703201293945312
+    ],
+    "2": [
+      0.005410909652709961,
+      0.006993293762207031,
+      0.01546168327331543,
+      0.015665769577026367,
+      0.007340431213378906,
+      0.010832071304321289,
+      0.017256975173950195,
+      0.019644498825073242,
+      0.013416051864624023,
+      0.017061710357666016,
+      0.01152658462524414,
+      0.011583328247070312,
+      0.010925531387329102,
+      0.01731133460998535,
+      0.01141357421875,
+      0.011382579803466797,
+      0.010182857513427734,
+      0.01160883903503418,
+      0.01828312873840332,
+      0.016473770141601562
+    ],
+    "7": [
+      0.011985063552856445,
+      0.020486831665039062,
+      0.020043373107910156
+    ],
+    "11": [
+      0.03160834312438965,
+      0.02720952033996582,
+      0.03204607963562012,
+      0.04196333885192871,
+      0.019781827926635742,
+      0.03265571594238281,
+      0.037429094314575195
+    ],
+    "24": [
+      0.0426790714263916
+    ],
+    "3": [
+      0.017821788787841797,
+      0.005994319915771484,
+      0.013494729995727539,
+      0.0188751220703125,
+      0.011074066162109375,
+      0.011174678802490234
+    ],
+    "4": [
+      0.018938541412353516,
+      0.012325286865234375,
+      0.004527091979980469
+    ],
+    "6": [
+      0.022618532180786133,
+      0.02164435386657715,
+      0.010898351669311523,
+      0.01907515525817871,
+      0.012486934661865234,
+      0.024282217025756836,
+      0.01575946807861328
+    ],
+    "23": [
+      0.033300161361694336
+    ],
+    "8": [
+      0.015286922454833984,
+      0.02834606170654297,
+      0.015215396881103516
+    ],
+    "13": [
+      0.03096294403076172
+    ],
+    "18": [
+      0.034694671630859375,
+      0.031426191329956055
+    ],
+    "15": [
+      0.020324230194091797
+    ],
+    "9": [
+      0.027194499969482422,
+      0.011168479919433594
+    ],
+    "19": [
+      0.019881725311279297
+    ],
+    "21": [
+      0.03624105453491211
+    ]
+  },
+  "individual_results": [
+    {
+      "success": true,
+      "time": 0.006274223327636719,
+      "pages": 5,
+      "regions": 125,
+      "confidence": 0.9551909451947076,
+      "file_size": 709280,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.016231298446655273,
+      "pages": 14,
+      "regions": 635,
+      "confidence": 0.9685627657708427,
+      "file_size": 1027020,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.016760587692260742,
+      "pages": 1,
+      "regions": 44,
+      "confidence": 0.9697108363563364,
+      "file_size": 62266,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.012583494186401367,
+      "pages": 1,
+      "regions": 48,
+      "confidence": 0.9796938871343931,
+      "file_size": 70468,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.004075288772583008,
+      "pages": 1,
+      "regions": 44,
+      "confidence": 0.9757935675707731,
+      "file_size": 60590,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.004126071929931641,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.9777971908103588,
+      "file_size": 60299,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.003885507583618164,
+      "pages": 1,
+      "regions": 50,
+      "confidence": 0.9775772261619567,
+      "file_size": 71575,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.005410909652709961,
+      "pages": 2,
+      "regions": 124,
+      "confidence": 0.9852729472839954,
+      "file_size": 77110,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.0038957595825195312,
+      "pages": 1,
+      "regions": 40,
+      "confidence": 0.9716674908995628,
+      "file_size": 37131,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.00462794303894043,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.9774569702702899,
+      "file_size": 51034,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.0040934085845947266,
+      "pages": 1,
+      "regions": 73,
+      "confidence": 0.953793659602126,
+      "file_size": 44233,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.02104973793029785,
+      "pages": 14,
+      "regions": 830,
+      "confidence": 0.9742283854500506,
+      "file_size": 1358628,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.006993293762207031,
+      "pages": 2,
+      "regions": 79,
+      "confidence": 0.9745445351014619,
+      "file_size": 129388,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011985063552856445,
+      "pages": 7,
+      "regions": 332,
+      "confidence": 0.9770656791134849,
+      "file_size": 524472,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01546168327331543,
+      "pages": 2,
+      "regions": 55,
+      "confidence": 0.9687580235464417,
+      "file_size": 86004,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.03160834312438965,
+      "pages": 11,
+      "regions": 563,
+      "confidence": 0.9819407283864958,
+      "file_size": 967215,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.0426790714263916,
+      "pages": 24,
+      "regions": 1213,
+      "confidence": 0.9660194497517054,
+      "file_size": 1546024,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.020486831665039062,
+      "pages": 7,
+      "regions": 342,
+      "confidence": 0.9788575867502363,
+      "file_size": 424210,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.017821788787841797,
+      "pages": 3,
+      "regions": 82,
+      "confidence": 0.9741489533723949,
+      "file_size": 166683,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.005994319915771484,
+      "pages": 3,
+      "regions": 85,
+      "confidence": 0.9642386057506629,
+      "file_size": 151939,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015665769577026367,
+      "pages": 2,
+      "regions": 79,
+      "confidence": 0.9816039262348385,
+      "file_size": 94480,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.007340431213378906,
+      "pages": 2,
+      "regions": 82,
+      "confidence": 0.9797546090953277,
+      "file_size": 95893,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010832071304321289,
+      "pages": 2,
+      "regions": 74,
+      "confidence": 0.987313067371195,
+      "file_size": 93252,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.017256975173950195,
+      "pages": 2,
+      "regions": 79,
+      "confidence": 0.9811491142999993,
+      "file_size": 92516,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.019644498825073242,
+      "pages": 2,
+      "regions": 78,
+      "confidence": 0.9767873004019967,
+      "file_size": 83209,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.018938541412353516,
+      "pages": 4,
+      "regions": 113,
+      "confidence": 0.9763253055017937,
+      "file_size": 118903,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.008427143096923828,
+      "pages": 1,
+      "regions": 44,
+      "confidence": 0.9809249070557681,
+      "file_size": 41152,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.00745844841003418,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9740759992017979,
+      "file_size": 36801,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010291337966918945,
+      "pages": 1,
+      "regions": 42,
+      "confidence": 0.9655430898779914,
+      "file_size": 38165,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010550737380981445,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9742620849027867,
+      "file_size": 36909,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.014733314514160156,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9714390984395656,
+      "file_size": 37205,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015189170837402344,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9730893504328844,
+      "file_size": 36756,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.026684999465942383,
+      "pages": 5,
+      "regions": 123,
+      "confidence": 0.9577335321313732,
+      "file_size": 708647,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.022618532180786133,
+      "pages": 6,
+      "regions": 247,
+      "confidence": 0.9784444949736661,
+      "file_size": 342278,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.038286685943603516,
+      "pages": 14,
+      "regions": 843,
+      "confidence": 0.9726873067394514,
+      "file_size": 1203248,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.013416051864624023,
+      "pages": 2,
+      "regions": 56,
+      "confidence": 0.9812978702114228,
+      "file_size": 55964,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.017061710357666016,
+      "pages": 2,
+      "regions": 57,
+      "confidence": 0.9528769742358815,
+      "file_size": 64799,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.016106367111206055,
+      "pages": 5,
+      "regions": 168,
+      "confidence": 0.9687836425998606,
+      "file_size": 346512,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01624155044555664,
+      "pages": 5,
+      "regions": 169,
+      "confidence": 0.9619366393917959,
+      "file_size": 348935,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.023615360260009766,
+      "pages": 5,
+      "regions": 168,
+      "confidence": 0.9619153904615736,
+      "file_size": 348310,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.005900382995605469,
+      "pages": 5,
+      "regions": 148,
+      "confidence": 0.9543002054417803,
+      "file_size": 204393,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.02164435386657715,
+      "pages": 6,
+      "regions": 216,
+      "confidence": 0.9796062489325635,
+      "file_size": 307393,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.020043373107910156,
+      "pages": 7,
+      "regions": 446,
+      "confidence": 0.9831445324731519,
+      "file_size": 262025,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010898351669311523,
+      "pages": 6,
+      "regions": 148,
+      "confidence": 0.9590946425746593,
+      "file_size": 151309,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.033300161361694336,
+      "pages": 23,
+      "regions": 1175,
+      "confidence": 0.9743178040516076,
+      "file_size": 1524793,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01152658462524414,
+      "pages": 2,
+      "regions": 87,
+      "confidence": 0.9834966793908377,
+      "file_size": 97967,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01907515525817871,
+      "pages": 6,
+      "regions": 262,
+      "confidence": 0.9806708676049319,
+      "file_size": 392679,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.012486934661865234,
+      "pages": 6,
+      "regions": 190,
+      "confidence": 0.972594710291318,
+      "file_size": 210736,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.02720952033996582,
+      "pages": 11,
+      "regions": 468,
+      "confidence": 0.982642452678835,
+      "file_size": 749189,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.013494729995727539,
+      "pages": 3,
+      "regions": 151,
+      "confidence": 0.9568055419696458,
+      "file_size": 178291,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.03204607963562012,
+      "pages": 11,
+      "regions": 439,
+      "confidence": 0.9845541923053601,
+      "file_size": 765235,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015286922454833984,
+      "pages": 8,
+      "regions": 315,
+      "confidence": 0.9678042449280397,
+      "file_size": 361512,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.03096294403076172,
+      "pages": 13,
+      "regions": 570,
+      "confidence": 0.9745593721620049,
+      "file_size": 1021215,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011583328247070312,
+      "pages": 2,
+      "regions": 76,
+      "confidence": 0.92799786289785,
+      "file_size": 68530,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010925531387329102,
+      "pages": 2,
+      "regions": 66,
+      "confidence": 0.9705828536640514,
+      "file_size": 86782,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.04196333885192871,
+      "pages": 11,
+      "regions": 710,
+      "confidence": 0.9756575876735464,
+      "file_size": 1633596,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.019781827926635742,
+      "pages": 11,
+      "regions": 448,
+      "confidence": 0.9821981275864335,
+      "file_size": 725213,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.03265571594238281,
+      "pages": 11,
+      "regions": 449,
+      "confidence": 0.9844477785700623,
+      "file_size": 722848,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.012468576431274414,
+      "pages": 1,
+      "regions": 52,
+      "confidence": 0.984663636638568,
+      "file_size": 52285,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.020550012588500977,
+      "pages": 5,
+      "regions": 168,
+      "confidence": 0.969047265632667,
+      "file_size": 348064,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01731133460998535,
+      "pages": 2,
+      "regions": 66,
+      "confidence": 0.9705730360415247,
+      "file_size": 85933,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.034694671630859375,
+      "pages": 18,
+      "regions": 862,
+      "confidence": 0.98388666703596,
+      "file_size": 1460089,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.0188751220703125,
+      "pages": 3,
+      "regions": 195,
+      "confidence": 0.9799810841447908,
+      "file_size": 100207,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01141357421875,
+      "pages": 2,
+      "regions": 142,
+      "confidence": 0.9810593881296075,
+      "file_size": 73858,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.012325286865234375,
+      "pages": 4,
+      "regions": 108,
+      "confidence": 0.9818463991676177,
+      "file_size": 125484,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.020324230194091797,
+      "pages": 15,
+      "regions": 818,
+      "confidence": 0.985915906657293,
+      "file_size": 1429784,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.04567766189575195,
+      "pages": 14,
+      "regions": 750,
+      "confidence": 0.9708418790859585,
+      "file_size": 2117386,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011074066162109375,
+      "pages": 3,
+      "regions": 117,
+      "confidence": 0.9749824655725355,
+      "file_size": 123913,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.037429094314575195,
+      "pages": 11,
+      "regions": 721,
+      "confidence": 0.982755855558392,
+      "file_size": 2062689,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.027194499969482422,
+      "pages": 9,
+      "regions": 390,
+      "confidence": 0.9817357123526721,
+      "file_size": 645431,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010920524597167969,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.984284195789071,
+      "file_size": 42238,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.024282217025756836,
+      "pages": 6,
+      "regions": 275,
+      "confidence": 0.9586294378748578,
+      "file_size": 401851,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011382579803466797,
+      "pages": 2,
+      "regions": 56,
+      "confidence": 0.9497395711454006,
+      "file_size": 54591,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.031426191329956055,
+      "pages": 18,
+      "regions": 893,
+      "confidence": 0.9840518835596094,
+      "file_size": 1469003,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.010182857513427734,
+      "pages": 2,
+      "regions": 85,
+      "confidence": 0.9530976242678506,
+      "file_size": 120175,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.03719902038574219,
+      "pages": 14,
+      "regions": 814,
+      "confidence": 0.9816437253984588,
+      "file_size": 2111856,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011485815048217773,
+      "pages": 1,
+      "regions": 58,
+      "confidence": 0.9814886173297619,
+      "file_size": 80554,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.004527091979980469,
+      "pages": 4,
+      "regions": 127,
+      "confidence": 0.9788437327696445,
+      "file_size": 184241,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01160883903503418,
+      "pages": 2,
+      "regions": 55,
+      "confidence": 0.9849346099477825,
+      "file_size": 51882,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015438079833984375,
+      "pages": 1,
+      "regions": 50,
+      "confidence": 0.9872222423553467,
+      "file_size": 47518,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015010356903076172,
+      "pages": 1,
+      "regions": 38,
+      "confidence": 0.9890029163737046,
+      "file_size": 37021,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01828312873840332,
+      "pages": 2,
+      "regions": 138,
+      "confidence": 0.9726065439297944,
+      "file_size": 123400,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.019881725311279297,
+      "pages": 19,
+      "regions": 834,
+      "confidence": 0.9741062577756348,
+      "file_size": 1346827,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.012935876846313477,
+      "pages": 1,
+      "regions": 48,
+      "confidence": 0.9796915364762148,
+      "file_size": 73136,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.019022464752197266,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.9800220450689626,
+      "file_size": 40853,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.012038230895996094,
+      "pages": 1,
+      "regions": 42,
+      "confidence": 0.9711535133066631,
+      "file_size": 45772,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015465497970581055,
+      "pages": 1,
+      "regions": 48,
+      "confidence": 0.9576663201053938,
+      "file_size": 72440,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01608419418334961,
+      "pages": 1,
+      "regions": 50,
+      "confidence": 0.9779649162292481,
+      "file_size": 70323,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011174678802490234,
+      "pages": 3,
+      "regions": 108,
+      "confidence": 0.9707394512217258,
+      "file_size": 104704,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.02834606170654297,
+      "pages": 8,
+      "regions": 291,
+      "confidence": 0.9728631736732188,
+      "file_size": 482727,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.016473770141601562,
+      "pages": 2,
+      "regions": 76,
+      "confidence": 0.9802656918764114,
+      "file_size": 105916,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.011168479919433594,
+      "pages": 9,
+      "regions": 400,
+      "confidence": 0.9714031711354646,
+      "file_size": 508804,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015703201293945312,
+      "pages": 1,
+      "regions": 40,
+      "confidence": 0.9738948822021485,
+      "file_size": 41343,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.03624105453491211,
+      "pages": 21,
+      "regions": 1012,
+      "confidence": 0.9798878206601105,
+      "file_size": 1423020,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.015215396881103516,
+      "pages": 8,
+      "regions": 350,
+      "confidence": 0.9743498593034139,
+      "file_size": 503525,
+      "cache_hit": true
+    },
+    {
+      "success": true,
+      "time": 0.01575946807861328,
+      "pages": 6,
+      "regions": 262,
+      "confidence": 0.9816174914385697,
+      "file_size": 348103,
+      "cache_hit": true
+    }
+  ]
+}

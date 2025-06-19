@@ -49,7 +49,7 @@ class OCRRequest(BaseModel):
     strategy: ProcessingStrategy = ProcessingStrategy.BALANCED
     dpi: Optional[int] = Field(None, ge=72, le=600)
     confidence_threshold: Optional[float] = Field(None, ge=0.0, le=1.0)
-    output_format: str = Field("json", regex="^(json|text|xml)$")
+    output_format: str = Field("json", pattern="^(json|text|xml)$")
     
     @validator('dpi')
     def validate_dpi(cls, v):
@@ -208,7 +208,7 @@ class PageResponse(BaseModel):
 class OCRResponse(BaseModel):
     """Response schema for OCR results"""
     document_id: str
-    status: str = Field(..., regex="^(success|partial|failed)$")
+    status: str = Field(..., pattern="^(success|partial|failed)$")
     pages: List[PageResponse]
     total_pages: int
     processing_time_ms: float
@@ -271,14 +271,14 @@ class StatsResponse(BaseModel):
 
 class ServiceStatus(BaseModel):
     """Individual service status"""
-    status: str = Field(..., regex="^(up|down|degraded)$")
+    status: str = Field(..., pattern="^(up|down|degraded)$")
     message: Optional[str]
     last_check: datetime
 
 
 class HealthResponse(BaseModel):
     """Health check response"""
-    status: str = Field(..., regex="^(healthy|degraded|unhealthy)$")
+    status: str = Field(..., pattern="^(healthy|degraded|unhealthy)$")
     version: str
     services: Dict[str, ServiceStatus]
 
@@ -392,3 +392,46 @@ class TokenBucket:
         """Refill bucket based on time passed"""
         # Implementation would go here
         pass
+
+
+# Additional response schemas
+class ErrorResponse(BaseModel):
+    """Error response schema"""
+    error: str
+    message: str
+    details: Optional[Dict[str, Any]] = None
+    request_id: str
+    timestamp: datetime
+
+
+class HealthCheckResponse(BaseModel):
+    """Health check response"""
+    status: str
+    timestamp: datetime
+    version: Optional[str] = None
+    gpu_available: bool
+    gpu_info: Optional[Dict[str, Any]] = None
+    models_loaded: bool
+    cache_enabled: bool
+
+
+class ServiceStatus(BaseModel):
+    """Service status information"""
+    status: str = Field(..., pattern="^(up|down|degraded)$")
+    message: Optional[str] = None
+    last_check: datetime
+
+
+class HealthResponse(BaseModel):
+    """Health endpoint response"""
+    status: str = Field(..., pattern="^(healthy|degraded|unhealthy)$")
+    version: str
+    services: Dict[str, ServiceStatus]
+
+
+class ReadinessResponse(BaseModel):
+    """Readiness probe response"""
+    ready: bool
+    models_loaded: bool
+    gpu_available: bool
+    message: str

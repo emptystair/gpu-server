@@ -1,0 +1,8 @@
+TensorRT Performance Test - 2025-06-19 15:29:27.519895
+======================================================================
+Total documents: 96
+Successful: 96
+Total pages: 533
+Total time: 0.83s
+Docs/min: 6909.3
+Pages/min: 38361.3

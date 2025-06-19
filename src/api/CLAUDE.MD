@@ -219,41 +219,83 @@ GPU utilization metrics:
 }
 ```
 
-## Expected API Endpoints
+## Implemented API Endpoints
 
-Based on the schema definitions, the following endpoints should be implemented:
+The following endpoints have been implemented in `routes.py`:
 
 ### Core OCR Endpoints
-- `POST /api/v1/ocr/image` - Process uploaded image
+- `POST /api/v1/ocr/process` - Process a single document (image or PDF) with full options
+- `POST /api/v1/ocr/process-batch` - Batch process multiple documents
+- `POST /api/v1/ocr/image` - Process uploaded image (specialized endpoint)
 - `POST /api/v1/ocr/url` - Process image from URL
-- `POST /api/v1/ocr/pdf` - Process PDF file
-- `POST /api/v1/ocr/batch` - Batch process multiple images
+- `POST /api/v1/ocr/pdf` - Process PDF file with page range support
 
 ### Async Job Management
 - `POST /api/v1/jobs/submit` - Submit async OCR job
-- `GET /api/v1/jobs/{job_id}/status` - Check job status
-- `GET /api/v1/jobs/{job_id}/result` - Retrieve job results
+- `GET /api/v1/jobs/{job_id}/status` - Check job status with progress tracking
+- `GET /api/v1/jobs/{job_id}/result` - Retrieve job results (returns 202 if still processing)
 
 ### System Endpoints
-- `GET /api/v1/health` - Health check
-- `GET /api/v1/metrics/gpu` - GPU metrics
+- `GET /api/v1/health` - Health check with service status
+- `GET /api/v1/ready` - Readiness probe for Kubernetes
+- `GET /api/v1/gpu/status` - GPU status and utilization metrics
+- `GET /api/v1/stats` - Processing statistics and performance metrics
+- `GET /api/v1/metrics` - Prometheus-compatible metrics endpoint
 
-## Implementation Notes
+## Implementation Details
 
-1. All endpoints should validate requests using the Pydantic schemas
-2. File uploads should support multipart/form-data
-3. Implement proper error handling with ErrorResponse
-4. Use request_id for tracking and debugging
-5. Consider implementing rate limiting for batch endpoints
-6. GPU metrics should be collected in real-time
-7. Support both synchronous and asynchronous processing modes
+### Key Changes from Original Design
 
-## Middleware Requirements
+1. **OCRService Integration**:
+   - Modified `process_document()` to accept `ProcessingRequest` objects
+   - Returns `ProcessingResult` instead of raw OCR output
+   - Added lifecycle methods: `initialized`, `is_ready()`, `is_initializing()`, `shutdown()`
 
-- Request ID generation and tracking
-- Request/response logging
-- Performance monitoring
-- Error handling and formatting
-- CORS configuration for web clients
-- Authentication/authorization (if required)
-- Rate limiting for resource protection
+2. **GPU Monitoring**:
+   - Uses actual GPUMonitor methods: `get_gpu_utilization()`, `get_available_memory()`, `get_device_info()`
+   - No async methods in GPUMonitor - all synchronous calls
+   - Health checks verify GPU availability through `device_info.get("available")`
+
+3. **Schema Updates**:
+   - Changed Pydantic `regex` parameter to `pattern` (v2 compatibility)
+   - Added missing response schemas: `ErrorResponse`, `HealthCheckResponse`, `ServiceStatus`
+   - All schemas properly validate request/response data
+
+4. **Endpoint Specifics**:
+   - `/ocr/process` - General purpose endpoint for any document type
+   - `/ocr/image`, `/ocr/url`, `/ocr/pdf` - Specialized endpoints with specific validation
+   - Async jobs stored in memory (production should use Redis/database)
+   - All endpoints include proper error handling and cleanup
+
+## Middleware Stack (in order)
+
+1. **RequestIDMiddleware** - Generates unique request IDs
+2. **ErrorHandlingMiddleware** - Global exception handling
+3. **RequestLoggingMiddleware** - Structured JSON logging
+4. **MetricsMiddleware** - Collects performance metrics
+5. **RateLimitMiddleware** - Token bucket rate limiting (Redis-backed)
+6. **CORS** - Cross-origin resource sharing
+7. **GZipMiddleware** - Response compression
+
+## Usage Examples
+
+### Process an Image
+```bash
+curl -X POST http://localhost:8000/api/v1/ocr/image \
+  -F "file=@document.jpg" \
+  -F "language=en" \
+  -F "output_format=json"
+```
+
+### Submit Async Job
+```bash
+curl -X POST http://localhost:8000/api/v1/jobs/submit \
+  -F "file=@large_document.pdf" \
+  -F "language=en" \
+  -F "strategy=accuracy"
+```
+
+### Check GPU Status
+```bash
+curl http://localhost:8000/api/v1/gpu/status
+```

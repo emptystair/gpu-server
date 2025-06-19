@@ -1,0 +1,162 @@
+OCR Results for: DOCC111697069_019511-00182.pdf
+Processed: 2025-06-19 16:06:36.469862
+Total pages: 5
+Total regions: 125
+Average confidence: 95.52%
+======================================================================
+
+
+--- Page 1 ---
+Regions: 21
+
+BK019511PG00183
+NORTH CAROLINA
+STATUTORY FORM POWER OF ATTORNEY
+Prepared By and Return To:
+William D. Ramos, Esq.
+Ramos Law, P.A.
+300 S. Main Street, Suite 212, Holly Springs, North Carolina 27540-
+NOTICE
+THE POWERS GRANTED BY THIS DOCUMENT ARE BROAD AND SWEEPING.
+THEY ARE DEFINED IN CHAPTER 32C OF THE NORTH CAROLINA GENERAL
+STATUTES, WHICH EXPRESSLY PERMITS THE USE OF ANY OTHER OR DIFFERENT
+POEEEEEER PERREEP PER EE PEERREE POREREEE PR PNEEP PR PEEP
+  [Confidence: 51.93%]
+IMPORTANT INFORMATION
+This power of attorney authorizes another person (your agent) to make decisions
+concerning your property for you (the principal). Your agent will be able to make decisions and
+act with respect to your property (including your money) whether or not you are able to act for
+yourself. The meaning of authority over subjects listed on this form is explained in the North
+Carolina Uniform Power of Attorney Act..
+This power of attorney does not authorize the agent to make health care decisions for you
+DURABLE POWER OF ATTORNEY - TYLER AUSTIN CAHOON
+RAMOS LAW, P.A.
+
+
+--- Page 2 ---
+Regions: 20
+
+BK019511PG00184
+You should select someone you trust to serve as your agent. Unless you specify otherwise,
+generally the agent's authority will continue until you die or revoke the power of attorney or the
+agent resigns or is unable to act for you..
+Your agent is entitled to rcasonable compensation unless you state otherwise in the
+Additional Provisions and Exclusions.
+This form provides for designation of one agent, successor agent, and second successor.
+agent. If you wish to name more than one agent, successor agent, and second successor agent, you
+may name a co-agent, successor co-agent, or second successor co-agent in the Additional
+Provisions and Exclusions. Co-agents, successor co-agents, or second successor co-agents are not
+required to act together unless you include that requirement in the Additional Provisions and
+Exclusions.
+If your agent is unable or unwilling to act for you, your power of attorney will end unless.
+you have named a successor agent. You may also name a second successor agent.
+This power of attorney becomes effective immediately unless you state otherwise in the
+Additional Provisions and Exclusions.
+If you have questions about the power of attorney or the authority you are granting.
+to your agent, you should seek legal advice before signing this form.
+DURABLE POWER OF ATTORNEY-TYLER AUSTIN CAHOON
+RAMOSLAW, P.A.
+
+
+--- Page 3 ---
+Regions: 28
+
+BK019511PG00185
+DESIGNATION OFAGENT
+I, Tyler Austin Cahoonname the following person as my Agent
+Name of Agent Shelby Eloise Cahoon
+Agent's Address:171 Dunloe Loop,Raleigh,North Carolina 27603
+Agent's Telephone Number:(479)409.2024
+DESIGNATION OF SUCCESSOR AGENT(S)
+(OPTIONAL)
+If my Agent is unable or unwilling to act for me, I name as my successor Agent
+Name of Successor Agent: Ross Patrick Cahoon
+Successor Agent's Address:159th Avenue NEWoodinvilleWashington 98072
+Successor Agent's TelephoneNumber:(252)671-4861
+INITIAL below if you want to give an Agent the power to name a successor Agent
+give to my acting Agent the full power to appoint another to act as my Agent, and ful
+power to revoke such appointment if no Agent named by me above iswilling or able to act
+GRANTOF GENERALAUTHORITY
+I grant my Agent and any successor Agent general authority to act for me with respect to the
+following subjects as defined in the North Carolina Uniform Power of Attorney Act, Chapter 32C
+of the General Statutes
+INITIAL each subject you want to include in the Agent's general authority.If you wish to
+grant general authority over all of the subjects you may initial "All Preceding Subjects
+instead of initialing each subject.)
+Real Property
+Tangible Personal Property
+) Stocks and Bonds
+DURABLEPOWER OFATTORNEY-TYLERAUSTINCAHOON
++3
+  [Confidence: 51.24%]
+RAMOS LAWP.A
+
+
+--- Page 4 ---
+Regions: 29
+
+BK019511PG00186
+) Commodities and Options
+Banks and Other Financial Institutions
+Operation of Entity or Business
+)Insurance and Annuities
+)Estates,Trusts,and Other Beneficial Interests
+)Claims and Litigation
+Personal and Family Maintenance
+) Benefits from Governmental Programs or Civil or Military Service
+Retirement Plans
+)Taxes
+  [Confidence: 88.27%]
+All Preceding Subjects
+GRANT OF SPECIFIC AUTHORITY (OPTIONAL)
+My Agent MA Y NOT do any of the following specific acts for me UNLESS I have INITIALED
+the specific authority listed below;
+CAUTION: Granting any of the following will give your Agent the authority to take actions
+that could significantly reduce your property or change how your property is distributed at
+your death. INITIAL ONLY the specific authority you WANT to give your Agent.)
+.Make a gift, subject to thelimitations provided in G.S.32C-2-217
+Create or change rights of survivorship
+Create or change a beneficiary designation
+) Authorize another person to exercise the authority granted under this power of attorney.
+Waive my right to be a beneficiary of a joint and survivor annuity, including a survivor
+benefit under a retirement plan
+) Exercise fiduciary powers that I haye authority to delegate
+Disclaim or refuse an interest in property including a power of appointment
+DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON
+4
+  [Confidence: 67.02%]
+RAMOSLAWPA.
+
+
+--- Page 5 ---
+Regions: 27
+
+BK019511PG00187
+a9
+  [Confidence: 54.04%]
+Access the content of electronic communications
+EXERCISE OFSPECIFICAUTHORITY
+(OPTIONAL)
+UNLESS INITIALED,an Agent shall exercise any of the grants of specific authority
+initialed above in favor of the Agent or an individual to who is dependent upon the Agent,equally
+ADDITIONAL PROVISIONS AND EXCLUSIONS
+(OPTIONAL)
+You may give special instructions on the following lines:
+This power of attorney shall be effective oni my incapacity.as evidenced by a written statement of
+my attending physician and one other physician who has personally examined me.certifying that
+I am unable to manage property or business affairs
+EFFECTIVEDATE
+Thispower of attorney is effective upon incapacity as I have stated in the Additional Provisions
+and Exclusions.
+NOMINATION OF GUARDIAN
+(OPTIONAL)
+INITIALbelow ONLY if you WANT your acting Agent to be your Guardian.
+If it becomes necessary for a court to appoint a guardian of my estate or a general
+guardianI nominate my Agent acting under this power of attorney to be the guardian to serve
+without bond or other security.
+RELIANCE ONTHIS POWER OFATTORNEY
+Any person including my Agent, may rely upon the validity of this power of attorney or a copy
+of it unless that person knowsithas terminated or is invalid.
+DURABLEPOWER OFATTORNEY-TYLERAUSTIN CAHOON
+RAMOSLAW.PA
+

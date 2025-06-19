@@ -1,0 +1,58 @@
+# Testing Dependencies for GPU OCR Server
+
+# Core testing framework
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+pytest-timeout>=2.1.0
+pytest-mock>=3.11.0
+pytest-xdist>=3.3.0  # Parallel test execution
+
+# Test utilities
+faker>=19.0.0  # Generate test data
+factory-boy>=3.3.0  # Test fixtures
+hypothesis>=6.0.0  # Property-based testing
+
+# API testing
+httpx>=0.25.0
+requests-mock>=1.11.0
+aioresponses>=0.7.4  # Mock aiohttp requests
+
+# Performance testing
+pytest-benchmark>=4.0.0
+locust>=2.0.0  # Load testing
+memory-profiler>=0.61.0
+
+# Mocking and assertions
+responses>=0.23.0
+freezegun>=1.2.0  # Mock time
+testfixtures>=7.1.0
+
+# Code quality
+pylint>=2.17.0
+flake8>=6.1.0
+black>=23.10.0
+isort>=5.12.0
+mypy>=1.6.0
+
+# Coverage
+coverage[toml]>=7.3.0
+pytest-clarity>=1.0.0  # Better test output
+
+# Documentation testing
+pytest-doctestplus>=1.0.0
+
+# Security testing
+bandit>=1.7.0
+safety>=2.3.0
+
+# Test reporting
+pytest-html>=4.0.0
+pytest-json-report>=1.5.0
+allure-pytest>=2.13.0  # Allure test reports
+
+# Development tools
+ipdb>=0.13.0  # Debugging
+pytest-sugar>=0.9.0  # Better test output
+pytest-instafail>=0.5.0  # Show failures instantly
+pytest-env>=1.0.0  # Set env vars for tests

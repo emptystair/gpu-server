@@ -1,0 +1,2252 @@
+{
+  "request_id": "53e492b3-d228-4823-a218-a2b44df1580f",
+  "status": "completed",
+  "timestamp": "2025-06-19T20:00:32.943733",
+  "processing_time": 2684.99755859375,
+  "total_regions": 111,
+  "average_confidence": 0.969646142992734,
+  "language_detected": "en",
+  "cache_hit": true,
+  "regions": [
+    {
+      "text": "2025002517 B: 019888 P: 01266",
+      "confidence": 0.988818347454071,
+      "bbox": {
+        "x1": 691,
+        "y1": 58,
+        "x2": 1017,
+        "y2": 81
+      }
+    },
+    {
+      "text": "Page1 of 6",
+      "confidence": 0.8888407945632935,
+      "bbox": {
+        "x1": 691,
+        "y1": 95,
+        "x2": 797,
+        "y2": 112
+      }
+    },
+    {
+      "text": "OFFICIAL RECORDS OF WAKE COUNTY",
+      "confidence": 0.999041736125946,
+      "bbox": {
+        "x1": 689,
+        "y1": 112,
+        "x2": 1048,
+        "y2": 134
+      }
+    },
+    {
+      "text": "Tammy L. Brunner, Register of Deeds",
+      "confidence": 0.999805212020874,
+      "bbox": {
+        "x1": 688,
+        "y1": 136,
+        "x2": 1019,
+        "y2": 158
+      }
+    },
+    {
+      "text": "04/25/2025 10:11 AMFee: $26.00 Excise Tax: $0.00",
+      "confidence": 0.9789169430732727,
+      "bbox": {
+        "x1": 686,
+        "y1": 155,
+        "x2": 1145,
+        "y2": 177
+      }
+    },
+    {
+      "text": "Prepared by, and after recording, MAIL TO:",
+      "confidence": 0.9923678040504456,
+      "bbox": {
+        "x1": 177,
+        "y1": 473,
+        "x2": 523,
+        "y2": 495
+      }
+    },
+    {
+      "text": "Maynard Nexsen PC",
+      "confidence": 0.9981935024261475,
+      "bbox": {
+        "x1": 175,
+        "y1": 517,
+        "x2": 341,
+        "y2": 540
+      }
+    },
+    {
+      "text": "4141 Parklake Ave., Suite 200",
+      "confidence": 0.991380512714386,
+      "bbox": {
+        "x1": 175,
+        "y1": 540,
+        "x2": 417,
+        "y2": 562
+      }
+    },
+    {
+      "text": "Raleigh, NC 27613",
+      "confidence": 0.9604788422584534,
+      "bbox": {
+        "x1": 173,
+        "y1": 562,
+        "x2": 329,
+        "y2": 584
+      }
+    },
+    {
+      "text": "NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL",
+      "confidence": 0.952669620513916,
+      "bbox": {
+        "x1": 326,
+        "y1": 607,
+        "x2": 932,
+        "y2": 629
+      }
+    },
+    {
+      "text": "This NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL (this \"Notice') is executed",
+      "confidence": 0.9877017140388489,
+      "bbox": {
+        "x1": 244,
+        "y1": 655,
+        "x2": 1083,
+        "y2": 681
+      }
+    },
+    {
+      "text": "and recorded by BLANEY FARMS HOMEOWNERS ASSOCIATION, INC., a North Carolina",
+      "confidence": 0.9925867915153503,
+      "bbox": {
+        "x1": 175,
+        "y1": 682,
+        "x2": 1079,
+        "y2": 705
+      }
+    },
+    {
+      "text": "nonprofit corporation (\"HOA\"), on behalf of and as directed pursuant to the Consent Agreement attached.",
+      "confidence": 0.9827371835708618,
+      "bbox": {
+        "x1": 173,
+        "y1": 703,
+        "x2": 1081,
+        "y2": 731
+      }
+    },
+    {
+      "text": "hereto by NEDRA M. HOOD and RODERICK J. HOOD, each individual residents of Wake County,",
+      "confidence": 0.9916156530380249,
+      "bbox": {
+        "x1": 173,
+        "y1": 729,
+        "x2": 1081,
+        "y2": 755
+      }
+    },
+    {
+      "text": "North Carolina (collectively, \"Hood\").",
+      "confidence": 0.9775574207305908,
+      "bbox": {
+        "x1": 175,
+        "y1": 756,
+        "x2": 509,
+        "y2": 779
+      }
+    },
+    {
+      "text": "1.",
+      "confidence": 0.9967498779296875,
+      "bbox": {
+        "x1": 244,
+        "y1": 804,
+        "x2": 269,
+        "y2": 825
+      }
+    },
+    {
+      "text": "Hood and HOA have entered into an agreement (the \"Consent Agreement) whereby",
+      "confidence": 0.9870661497116089,
+      "bbox": {
+        "x1": 312,
+        "y1": 804,
+        "x2": 1081,
+        "y2": 827
+      }
+    },
+    {
+      "text": "Hood has consented to the HOA's removal of a failing Party Wall Fence (the \"Fence') located within HOA",
+      "confidence": 0.9702128171920776,
+      "bbox": {
+        "x1": 175,
+        "y1": 827,
+        "x2": 1081,
+        "y2": 853
+      }
+    },
+    {
+      "text": "Common Area in the rear of Hood's property located at 2220 Stillness Pond Lane, Apex, North Carolina",
+      "confidence": 0.9940550923347473,
+      "bbox": {
+        "x1": 173,
+        "y1": 851,
+        "x2": 1083,
+        "y2": 877
+      }
+    },
+    {
+      "text": "27539, and being more particularly described on Exhibit A attached hereto and incorporated herein by",
+      "confidence": 0.9985907077789307,
+      "bbox": {
+        "x1": 177,
+        "y1": 878,
+        "x2": 1081,
+        "y2": 901
+      }
+    },
+    {
+      "text": "reference (the \"Property'). A copy of the Consent Agreement is attached hereto as Exhibit B, which",
+      "confidence": 0.9877351522445679,
+      "bbox": {
+        "x1": 173,
+        "y1": 899,
+        "x2": 1083,
+        "y2": 926
+      }
+    },
+    {
+      "text": "together with its terms are incorporated herein by reference..",
+      "confidence": 0.983306884765625,
+      "bbox": {
+        "x1": 177,
+        "y1": 928,
+        "x2": 688,
+        "y2": 950
+      }
+    },
+    {
+      "text": "2.",
+      "confidence": 0.990271806716919,
+      "bbox": {
+        "x1": 246,
+        "y1": 976,
+        "x2": 263,
+        "y2": 995
+      }
+    },
+    {
+      "text": "Pursuant to the Consent Agreement, the HOA hereby executes and presents this Notice for",
+      "confidence": 0.9933925867080688,
+      "bbox": {
+        "x1": 310,
+        "y1": 973,
+        "x2": 1083,
+        "y2": 999
+      }
+    },
+    {
+      "text": "recording with the Wake County Registry to provide record notice of the Consent Agreement with respect",
+      "confidence": 0.984993577003479,
+      "bbox": {
+        "x1": 173,
+        "y1": 999,
+        "x2": 1083,
+        "y2": 1024
+      }
+    },
+    {
+      "text": "to the Property.",
+      "confidence": 0.9963244199752808,
+      "bbox": {
+        "x1": 173,
+        "y1": 1026,
+        "x2": 310,
+        "y2": 1048
+      }
+    },
+    {
+      "text": "3.",
+      "confidence": 0.9999486804008484,
+      "bbox": {
+        "x1": 243,
+        "y1": 1072,
+        "x2": 267,
+        "y2": 1097
+      }
+    },
+    {
+      "text": "Any settlement agent handling the sale of the Property by Hood are hereby instructed to",
+      "confidence": 0.9848607182502747,
+      "bbox": {
+        "x1": 312,
+        "y1": 1071,
+        "x2": 1081,
+        "y2": 1097
+      }
+    },
+    {
+      "text": "contact the individual below for additional information needed regarding the Consent Agreement, if any:",
+      "confidence": 0.9989047646522522,
+      "bbox": {
+        "x1": 175,
+        "y1": 1098,
+        "x2": 1069,
+        "y2": 1121
+      }
+    },
+    {
+      "text": "Maynard Nexsen PC",
+      "confidence": 0.9984026551246643,
+      "bbox": {
+        "x1": 452,
+        "y1": 1158,
+        "x2": 634,
+        "y2": 1181
+      }
+    },
+    {
+      "text": "Attn: Alex Serkes",
+      "confidence": 0.9716101288795471,
+      "bbox": {
+        "x1": 454,
+        "y1": 1184,
+        "x2": 615,
+        "y2": 1207
+      }
+    },
+    {
+      "text": "4141 Parklake Avenue, Suite 200",
+      "confidence": 0.9998505115509033,
+      "bbox": {
+        "x1": 454,
+        "y1": 1207,
+        "x2": 748,
+        "y2": 1231
+      }
+    },
+    {
+      "text": "Raleigh, NC 27612",
+      "confidence": 0.9903966188430786,
+      "bbox": {
+        "x1": 454,
+        "y1": 1232,
+        "x2": 622,
+        "y2": 1255
+      }
+    },
+    {
+      "text": "E-mail: aserkes@maynardnexsen.com",
+      "confidence": 0.9977367520332336,
+      "bbox": {
+        "x1": 452,
+        "y1": 1255,
+        "x2": 785,
+        "y2": 1282
+      }
+    },
+    {
+      "text": "[SIGNATURE PAGE FOLLOWS]",
+      "confidence": 0.9620275497436523,
+      "bbox": {
+        "x1": 471,
+        "y1": 1317,
+        "x2": 788,
+        "y2": 1339
+      }
+    },
+    {
+      "text": "Submitted electronically by \"Maynard Nexsen pc\".",
+      "confidence": 0.9788257479667664,
+      "bbox": {
+        "x1": 182,
+        "y1": 1511,
+        "x2": 676,
+        "y2": 1533
+      }
+    },
+    {
+      "text": "in compliance with North carolina statutes governing recordable documents",
+      "confidence": 0.9888473153114319,
+      "bbox": {
+        "x1": 180,
+        "y1": 1528,
+        "x2": 949,
+        "y2": 1550
+      }
+    },
+    {
+      "text": "2025002517 B: 019888 P: 01267",
+      "confidence": 0.9885093569755554,
+      "bbox": {
+        "x1": 641,
+        "y1": 41,
+        "x2": 1016,
+        "y2": 64
+      }
+    },
+    {
+      "text": "04/25/2025 10:11 AM Page 2 of 6",
+      "confidence": 0.9936715364456177,
+      "bbox": {
+        "x1": 638,
+        "y1": 71,
+        "x2": 980,
+        "y2": 94
+      }
+    },
+    {
+      "text": "SIGNATURE PAGE FOR NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL",
+      "confidence": 0.9681310653686523,
+      "bbox": {
+        "x1": 205,
+        "y1": 234,
+        "x2": 1056,
+        "y2": 257
+      }
+    },
+    {
+      "text": "IN WITNESS wHEREOF, HOA has executed and caused this Notice to be recorded on behalf",
+      "confidence": 0.9814292192459106,
+      "bbox": {
+        "x1": 246,
+        "y1": 306,
+        "x2": 1085,
+        "y2": 329
+      }
+    },
+    {
+      "text": "of and as directed by Hood pursuant to the Consent Agreement, effective as of the date of recording..",
+      "confidence": 0.9947052597999573,
+      "bbox": {
+        "x1": 177,
+        "y1": 333,
+        "x2": 1031,
+        "y2": 356
+      }
+    },
+    {
+      "text": "HOA:",
+      "confidence": 0.9990649819374084,
+      "bbox": {
+        "x1": 171,
+        "y1": 393,
+        "x2": 234,
+        "y2": 424
+      }
+    },
+    {
+      "text": "Blaney Farms Homeowners Association, Inc.",
+      "confidence": 0.9853248596191406,
+      "bbox": {
+        "x1": 174,
+        "y1": 437,
+        "x2": 585,
+        "y2": 468
+      }
+    },
+    {
+      "text": "a North Carolina nonprofit corporation.",
+      "confidence": 0.97463059425354,
+      "bbox": {
+        "x1": 172,
+        "y1": 462,
+        "x2": 513,
+        "y2": 489
+      }
+    },
+    {
+      "text": "By:",
+      "confidence": 0.9909438490867615,
+      "bbox": {
+        "x1": 177,
+        "y1": 538,
+        "x2": 214,
+        "y2": 558
+      }
+    },
+    {
+      "text": "(SEAL)",
+      "confidence": 0.9670684933662415,
+      "bbox": {
+        "x1": 502,
+        "y1": 537,
+        "x2": 578,
+        "y2": 561
+      }
+    },
+    {
+      "text": "Name: ScottJ. Brindi",
+      "confidence": 0.9669820070266724,
+      "bbox": {
+        "x1": 174,
+        "y1": 559,
+        "x2": 370,
+        "y2": 586
+      }
+    },
+    {
+      "text": "Title: Preside",
+      "confidence": 0.9552522301673889,
+      "bbox": {
+        "x1": 179,
+        "y1": 588,
+        "x2": 301,
+        "y2": 607
+      }
+    },
+    {
+      "text": "STATE OF NORTH CAROLINA",
+      "confidence": 0.9809158444404602,
+      "bbox": {
+        "x1": 176,
+        "y1": 708,
+        "x2": 487,
+        "y2": 731
+      }
+    },
+    {
+      "text": "COUNTY OF WAKE",
+      "confidence": 0.9979856610298157,
+      "bbox": {
+        "x1": 176,
+        "y1": 733,
+        "x2": 380,
+        "y2": 756
+      }
+    },
+    {
+      "text": "I, a Notary Public of the aforesaid State and County of",
+      "confidence": 0.9959510564804077,
+      "bbox": {
+        "x1": 176,
+        "y1": 806,
+        "x2": 670,
+        "y2": 829
+      }
+    },
+    {
+      "text": "Wake",
+      "confidence": 0.773964524269104,
+      "bbox": {
+        "x1": 657,
+        "y1": 800,
+        "x2": 752,
+        "y2": 831
+      }
+    },
+    {
+      "text": "certify that Scott J.",
+      "confidence": 0.9793486595153809,
+      "bbox": {
+        "x1": 909,
+        "y1": 806,
+        "x2": 1081,
+        "y2": 829
+      }
+    },
+    {
+      "text": "Brindisi, as the President of Blaney Farms Homeowners Association, Inc., appeared before me and being.",
+      "confidence": 0.9920539259910583,
+      "bbox": {
+        "x1": 174,
+        "y1": 827,
+        "x2": 1083,
+        "y2": 855
+      }
+    },
+    {
+      "text": "personally known to me (or proved to me on the basis of satisfactory evidence) to be the person whose",
+      "confidence": 0.9958288073539734,
+      "bbox": {
+        "x1": 176,
+        "y1": 855,
+        "x2": 1083,
+        "y2": 878
+      }
+    },
+    {
+      "text": "name is subscribed to the within instrument and acknowledged to me that he executed the same in his",
+      "confidence": 0.9594776034355164,
+      "bbox": {
+        "x1": 176,
+        "y1": 882,
+        "x2": 1078,
+        "y2": 900
+      }
+    },
+    {
+      "text": "authorized capacity, and that by his signature on the instrument the person, or entity upon behalf of which",
+      "confidence": 0.9923549294471741,
+      "bbox": {
+        "x1": 174,
+        "y1": 905,
+        "x2": 1083,
+        "y2": 928
+      }
+    },
+    {
+      "text": "the person acted, executed the instrument.",
+      "confidence": 0.9822840094566345,
+      "bbox": {
+        "x1": 172,
+        "y1": 926,
+        "x2": 534,
+        "y2": 953
+      }
+    },
+    {
+      "text": "WITNEsS my hand and official stamp or seal, this _ZZ^ day of _APn1L",
+      "confidence": 0.9448373913764954,
+      "bbox": {
+        "x1": 172,
+        "y1": 970,
+        "x2": 833,
+        "y2": 1002
+      }
+    },
+    {
+      "text": "2025.",
+      "confidence": 0.9999502301216125,
+      "bbox": {
+        "x1": 891,
+        "y1": 976,
+        "x2": 945,
+        "y2": 1001
+      }
+    },
+    {
+      "text": "NOTARY PUBLIC",
+      "confidence": 0.9238473176956177,
+      "bbox": {
+        "x1": 659,
+        "y1": 1073,
+        "x2": 835,
+        "y2": 1096
+      }
+    },
+    {
+      "text": "T/mofhy I. Monnis",
+      "confidence": 0.7384123802185059,
+      "bbox": {
+        "x1": 672,
+        "y1": 1139,
+        "x2": 1005,
+        "y2": 1163
+      }
+    },
+    {
+      "text": "(Type or Print Name of Notary Public)",
+      "confidence": 0.9976868629455566,
+      "bbox": {
+        "x1": 661,
+        "y1": 1174,
+        "x2": 994,
+        "y2": 1197
+      }
+    },
+    {
+      "text": "Y",
+      "confidence": 0.9248453378677368,
+      "bbox": {
+        "x1": 203,
+        "y1": 1256,
+        "x2": 221,
+        "y2": 1270
+      }
+    },
+    {
+      "text": "(NOTAR",
+      "confidence": 0.9803531169891357,
+      "bbox": {
+        "x1": 192,
+        "y1": 1271,
+        "x2": 301,
+        "y2": 1291
+      }
+    },
+    {
+      "text": "SEAL)",
+      "confidence": 0.9947929382324219,
+      "bbox": {
+        "x1": 306,
+        "y1": 1266,
+        "x2": 377,
+        "y2": 1295
+      }
+    },
+    {
+      "text": "R",
+      "confidence": 0.6570523977279663,
+      "bbox": {
+        "x1": 295,
+        "y1": 1287,
+        "x2": 313,
+        "y2": 1303
+      }
+    },
+    {
+      "text": "TAR",
+      "confidence": 0.9974775314331055,
+      "bbox": {
+        "x1": 206,
+        "y1": 1308,
+        "x2": 273,
+        "y2": 1336
+      }
+    },
+    {
+      "text": "COUN",
+      "confidence": 0.9963191747665405,
+      "bbox": {
+        "x1": 205,
+        "y1": 1440,
+        "x2": 257,
+        "y2": 1457
+      }
+    },
+    {
+      "text": "2",
+      "confidence": 0.9992318153381348,
+      "bbox": {
+        "x1": 621,
+        "y1": 1495,
+        "x2": 636,
+        "y2": 1516
+      }
+    },
+    {
+      "text": "124099338.1",
+      "confidence": 0.9998462796211243,
+      "bbox": {
+        "x1": 174,
+        "y1": 1535,
+        "x2": 259,
+        "y2": 1555
+      }
+    },
+    {
+      "text": "2025002517 B: 019888 P: 01270",
+      "confidence": 0.991911768913269,
+      "bbox": {
+        "x1": 641,
+        "y1": 41,
+        "x2": 1016,
+        "y2": 64
+      }
+    },
+    {
+      "text": "04/25/2025 10:11 AM Page 5 of 6",
+      "confidence": 0.9778486490249634,
+      "bbox": {
+        "x1": 638,
+        "y1": 71,
+        "x2": 980,
+        "y2": 94
+      }
+    },
+    {
+      "text": "Blaney Farms",
+      "confidence": 0.9996840953826904,
+      "bbox": {
+        "x1": 170,
+        "y1": 198,
+        "x2": 322,
+        "y2": 223
+      }
+    },
+    {
+      "text": "Homeowners Association, Inc.",
+      "confidence": 0.999707818031311,
+      "bbox": {
+        "x1": 168,
+        "y1": 228,
+        "x2": 500,
+        "y2": 257
+      }
+    },
+    {
+      "text": "Apex,NC 27502",
+      "confidence": 0.9287385940551758,
+      "bbox": {
+        "x1": 167,
+        "y1": 280,
+        "x2": 257,
+        "y2": 298
+      }
+    },
+    {
+      "text": "919362-1460",
+      "confidence": 0.9820629358291626,
+      "bbox": {
+        "x1": 166,
+        "y1": 302,
+        "x2": 254,
+        "y2": 326
+      }
+    },
+    {
+      "text": "FAX919362-1462",
+      "confidence": 0.9846083521842957,
+      "bbox": {
+        "x1": 295,
+        "y1": 308,
+        "x2": 411,
+        "y2": 326
+      }
+    },
+    {
+      "text": "18 MAr202s",
+      "confidence": 0.5975836515426636,
+      "bbox": {
+        "x1": 458,
+        "y1": 315,
+        "x2": 669,
+        "y2": 360
+      }
+    },
+    {
+      "text": "002",
+      "confidence": 0.5290817618370056,
+      "bbox": {
+        "x1": 670,
+        "y1": 340,
+        "x2": 706,
+        "y2": 354
+      }
+    },
+    {
+      "text": "220 Stillness Pond Ln",
+      "confidence": 0.9267544746398926,
+      "bbox": {
+        "x1": 168,
+        "y1": 411,
+        "x2": 390,
+        "y2": 441
+      }
+    },
+    {
+      "text": "Apex, NC 27539",
+      "confidence": 0.9938406944274902,
+      "bbox": {
+        "x1": 165,
+        "y1": 435,
+        "x2": 308,
+        "y2": 462
+      }
+    },
+    {
+      "text": "Dear",
+      "confidence": 0.9998059272766113,
+      "bbox": {
+        "x1": 165,
+        "y1": 554,
+        "x2": 210,
+        "y2": 576
+      }
+    },
+    {
+      "text": "As previously discussed in meetings and correspondence held and delivered by the Blaney Farms",
+      "confidence": 0.9937277436256409,
+      "bbox": {
+        "x1": 223,
+        "y1": 622,
+        "x2": 1007,
+        "y2": 652
+      }
+    },
+    {
+      "text": "Homeowners Association, Inc. (the \"Association\"), the Association intends to remove the failing Fence",
+      "confidence": 0.9817216992378235,
+      "bbox": {
+        "x1": 163,
+        "y1": 646,
+        "x2": 1009,
+        "y2": 677
+      }
+    },
+    {
+      "text": "located in the rear of your Lot along Ten-Ten Road. The portion of your Lot that the Fence is located in",
+      "confidence": 0.989145040512085,
+      "bbox": {
+        "x1": 163,
+        "y1": 669,
+        "x2": 1009,
+        "y2": 700
+      }
+    },
+    {
+      "text": "constitutes Common Area maintained by the Association pursuant to the Association's governing",
+      "confidence": 0.9815287590026855,
+      "bbox": {
+        "x1": 163,
+        "y1": 692,
+        "x2": 1007,
+        "y2": 726
+      }
+    },
+    {
+      "text": "documents (collectively, the \"Governing Documents'). The Association intends to install buffer trees.",
+      "confidence": 0.9777148962020874,
+      "bbox": {
+        "x1": 161,
+        "y1": 715,
+        "x2": 1007,
+        "y2": 747
+      }
+    },
+    {
+      "text": "and other vegetation in front of the prior location of the Fence (the \"Landscaping Buffer') in order to.",
+      "confidence": 0.9821762442588806,
+      "bbox": {
+        "x1": 161,
+        "y1": 738,
+        "x2": 1007,
+        "y2": 770
+      }
+    },
+    {
+      "text": "give that location a more aesthetically pleasing look, while also providing sight and sound buffers from",
+      "confidence": 0.9973109364509583,
+      "bbox": {
+        "x1": 161,
+        "y1": 763,
+        "x2": 1007,
+        "y2": 793
+      }
+    },
+    {
+      "text": "the highly traveled Ten-Ten Toad.",
+      "confidence": 0.9884424209594727,
+      "bbox": {
+        "x1": 159,
+        "y1": 788,
+        "x2": 435,
+        "y2": 811
+      }
+    },
+    {
+      "text": "Pursuant to the Governing Documents, the Fence is a \"Party Wall' that requires your consent to",
+      "confidence": 0.9844481348991394,
+      "bbox": {
+        "x1": 221,
+        "y1": 853,
+        "x2": 1005,
+        "y2": 884
+      }
+    },
+    {
+      "text": "permanently remove the Party Wall from your Lot. By signing the following page, you hereby give your.",
+      "confidence": 0.9878849983215332,
+      "bbox": {
+        "x1": 161,
+        "y1": 878,
+        "x2": 1007,
+        "y2": 912
+      }
+    },
+    {
+      "text": "consent to the Association's removal of the Fence to be replaced with the new Landscaping Buffer as",
+      "confidence": 0.9923884868621826,
+      "bbox": {
+        "x1": 161,
+        "y1": 903,
+        "x2": 1007,
+        "y2": 933
+      }
+    },
+    {
+      "text": "discussed above. Please note, however, that while the Association intends to install the Landscaping",
+      "confidence": 0.9916667938232422,
+      "bbox": {
+        "x1": 159,
+        "y1": 922,
+        "x2": 1007,
+        "y2": 962
+      }
+    },
+    {
+      "text": "Buffer as discussed above, completion of the Landscaping Buffer will not be on a certain timeline.",
+      "confidence": 0.9875632524490356,
+      "bbox": {
+        "x1": 158,
+        "y1": 949,
+        "x2": 953,
+        "y2": 979
+      }
+    },
+    {
+      "text": "If you choose not to sign this letter giving your consent to permanently remove the Fence from",
+      "confidence": 0.9953193664550781,
+      "bbox": {
+        "x1": 217,
+        "y1": 1016,
+        "x2": 1003,
+        "y2": 1048
+      }
+    },
+    {
+      "text": "your Lot and replace the area with the new Landscaping Buffer discussed above, please be advised that,.",
+      "confidence": 0.9792714715003967,
+      "bbox": {
+        "x1": 157,
+        "y1": 1043,
+        "x2": 1003,
+        "y2": 1073
+      }
+    },
+    {
+      "text": "in order to provide for the Fence's future maintenance, the Association may elect to impose on your Lot",
+      "confidence": 0.9939217567443848,
+      "bbox": {
+        "x1": 157,
+        "y1": 1066,
+        "x2": 1003,
+        "y2": 1096
+      }
+    },
+    {
+      "text": "\"neighborhood assessments\" in accordance with the Governing Documents that are specific to your Lot",
+      "confidence": 0.9866316318511963,
+      "bbox": {
+        "x1": 157,
+        "y1": 1089,
+        "x2": 1003,
+        "y2": 1119
+      }
+    },
+    {
+      "text": "and in addition to the annual assessments you are otherwise obligated to pay to the Association.",
+      "confidence": 0.9941412806510925,
+      "bbox": {
+        "x1": 157,
+        "y1": 1112,
+        "x2": 929,
+        "y2": 1142
+      }
+    },
+    {
+      "text": "Finally, by signing the following page evidencing your consent to the removal of the Fence from",
+      "confidence": 0.983206570148468,
+      "bbox": {
+        "x1": 215,
+        "y1": 1178,
+        "x2": 1003,
+        "y2": 1215
+      }
+    },
+    {
+      "text": "your Lot, you hereby authorize the Association to record one or more documents in the Wake County",
+      "confidence": 0.9893434643745422,
+      "bbox": {
+        "x1": 157,
+        "y1": 1206,
+        "x2": 1002,
+        "y2": 1236
+      }
+    },
+    {
+      "text": "Registry evidencing your consent.",
+      "confidence": 0.9995733499526978,
+      "bbox": {
+        "x1": 156,
+        "y1": 1229,
+        "x2": 435,
+        "y2": 1252
+      }
+    },
+    {
+      "text": "Prior to signing this Letter, please do not hesitate to reach out to the Association with any",
+      "confidence": 0.9944826364517212,
+      "bbox": {
+        "x1": 214,
+        "y1": 1286,
+        "x2": 1002,
+        "y2": 1318
+      }
+    },
+    {
+      "text": "questions you may have with respect to this Letter.",
+      "confidence": 0.9925454258918762,
+      "bbox": {
+        "x1": 158,
+        "y1": 1314,
+        "x2": 570,
+        "y2": 1337
+      }
+    },
+    {
+      "text": "Sincerely,",
+      "confidence": 0.9995125532150269,
+      "bbox": {
+        "x1": 512,
+        "y1": 1377,
+        "x2": 600,
+        "y2": 1406
+      }
+    },
+    {
+      "text": "Blaney Farms Homeowners Association, Inc.",
+      "confidence": 0.9995696544647217,
+      "bbox": {
+        "x1": 514,
+        "y1": 1519,
+        "x2": 884,
+        "y2": 1546
+      }
+    },
+    {
+      "text": "AWe, the undersigned homeowners, hereby consent to the Association's removal of the Fence",
+      "confidence": 0.9982408881187439,
+      "bbox": {
+        "x1": 203,
+        "y1": 1537,
+        "x2": 976,
+        "y2": 1574
+      }
+    },
+    {
+      "text": "from Lot 7 and the replacement of the Fence with the Landscaping Buffer discussed in this Letter.",
+      "confidence": 0.981946587562561,
+      "bbox": {
+        "x1": 152,
+        "y1": 1564,
+        "x2": 994,
+        "y2": 1596
+      }
+    }
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "2025002517 B: 019888 P: 01266 Page1 of 6 OFFICIAL RECORDS OF WAKE COUNTY Tammy L. Brunner, Register of Deeds 04/25/2025 10:11 AMFee: $26.00 Excise Tax: $0.00 Prepared by, and after recording, MAIL TO: Maynard Nexsen PC 4141 Parklake Ave., Suite 200 Raleigh, NC 27613 NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL This NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL (this \"Notice') is executed and recorded by BLANEY FARMS HOMEOWNERS ASSOCIATION, INC., a North Carolina nonprofit corporation (\"HOA\"), on behalf of and as directed pursuant to the Consent Agreement attached. hereto by NEDRA M. HOOD and RODERICK J. HOOD, each individual residents of Wake County, North Carolina (collectively, \"Hood\"). 1. Hood and HOA have entered into an agreement (the \"Consent Agreement) whereby Hood has consented to the HOA's removal of a failing Party Wall Fence (the \"Fence') located within HOA Common Area in the rear of Hood's property located at 2220 Stillness Pond Lane, Apex, North Carolina 27539, and being more particularly described on Exhibit A attached hereto and incorporated herein by reference (the \"Property'). A copy of the Consent Agreement is attached hereto as Exhibit B, which together with its terms are incorporated herein by reference.. 2. Pursuant to the Consent Agreement, the HOA hereby executes and presents this Notice for recording with the Wake County Registry to provide record notice of the Consent Agreement with respect to the Property. 3. Any settlement agent handling the sale of the Property by Hood are hereby instructed to contact the individual below for additional information needed regarding the Consent Agreement, if any: Maynard Nexsen PC Attn: Alex Serkes 4141 Parklake Avenue, Suite 200 Raleigh, NC 27612 E-mail: aserkes@maynardnexsen.com [SIGNATURE PAGE FOLLOWS] Submitted electronically by \"Maynard Nexsen pc\". in compliance with North carolina statutes governing recordable documents",
+      "regions": [
+        {
+          "text": "2025002517 B: 019888 P: 01266",
+          "confidence": 0.988818347454071,
+          "bbox": {
+            "x1": 691,
+            "y1": 58,
+            "x2": 1017,
+            "y2": 81
+          }
+        },
+        {
+          "text": "Page1 of 6",
+          "confidence": 0.8888407945632935,
+          "bbox": {
+            "x1": 691,
+            "y1": 95,
+            "x2": 797,
+            "y2": 112
+          }
+        },
+        {
+          "text": "OFFICIAL RECORDS OF WAKE COUNTY",
+          "confidence": 0.999041736125946,
+          "bbox": {
+            "x1": 689,
+            "y1": 112,
+            "x2": 1048,
+            "y2": 134
+          }
+        },
+        {
+          "text": "Tammy L. Brunner, Register of Deeds",
+          "confidence": 0.999805212020874,
+          "bbox": {
+            "x1": 688,
+            "y1": 136,
+            "x2": 1019,
+            "y2": 158
+          }
+        },
+        {
+          "text": "04/25/2025 10:11 AMFee: $26.00 Excise Tax: $0.00",
+          "confidence": 0.9789169430732727,
+          "bbox": {
+            "x1": 686,
+            "y1": 155,
+            "x2": 1145,
+            "y2": 177
+          }
+        },
+        {
+          "text": "Prepared by, and after recording, MAIL TO:",
+          "confidence": 0.9923678040504456,
+          "bbox": {
+            "x1": 177,
+            "y1": 473,
+            "x2": 523,
+            "y2": 495
+          }
+        },
+        {
+          "text": "Maynard Nexsen PC",
+          "confidence": 0.9981935024261475,
+          "bbox": {
+            "x1": 175,
+            "y1": 517,
+            "x2": 341,
+            "y2": 540
+          }
+        },
+        {
+          "text": "4141 Parklake Ave., Suite 200",
+          "confidence": 0.991380512714386,
+          "bbox": {
+            "x1": 175,
+            "y1": 540,
+            "x2": 417,
+            "y2": 562
+          }
+        },
+        {
+          "text": "Raleigh, NC 27613",
+          "confidence": 0.9604788422584534,
+          "bbox": {
+            "x1": 173,
+            "y1": 562,
+            "x2": 329,
+            "y2": 584
+          }
+        },
+        {
+          "text": "NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL",
+          "confidence": 0.952669620513916,
+          "bbox": {
+            "x1": 326,
+            "y1": 607,
+            "x2": 932,
+            "y2": 629
+          }
+        },
+        {
+          "text": "This NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL (this \"Notice') is executed",
+          "confidence": 0.9877017140388489,
+          "bbox": {
+            "x1": 244,
+            "y1": 655,
+            "x2": 1083,
+            "y2": 681
+          }
+        },
+        {
+          "text": "and recorded by BLANEY FARMS HOMEOWNERS ASSOCIATION, INC., a North Carolina",
+          "confidence": 0.9925867915153503,
+          "bbox": {
+            "x1": 175,
+            "y1": 682,
+            "x2": 1079,
+            "y2": 705
+          }
+        },
+        {
+          "text": "nonprofit corporation (\"HOA\"), on behalf of and as directed pursuant to the Consent Agreement attached.",
+          "confidence": 0.9827371835708618,
+          "bbox": {
+            "x1": 173,
+            "y1": 703,
+            "x2": 1081,
+            "y2": 731
+          }
+        },
+        {
+          "text": "hereto by NEDRA M. HOOD and RODERICK J. HOOD, each individual residents of Wake County,",
+          "confidence": 0.9916156530380249,
+          "bbox": {
+            "x1": 173,
+            "y1": 729,
+            "x2": 1081,
+            "y2": 755
+          }
+        },
+        {
+          "text": "North Carolina (collectively, \"Hood\").",
+          "confidence": 0.9775574207305908,
+          "bbox": {
+            "x1": 175,
+            "y1": 756,
+            "x2": 509,
+            "y2": 779
+          }
+        },
+        {
+          "text": "1.",
+          "confidence": 0.9967498779296875,
+          "bbox": {
+            "x1": 244,
+            "y1": 804,
+            "x2": 269,
+            "y2": 825
+          }
+        },
+        {
+          "text": "Hood and HOA have entered into an agreement (the \"Consent Agreement) whereby",
+          "confidence": 0.9870661497116089,
+          "bbox": {
+            "x1": 312,
+            "y1": 804,
+            "x2": 1081,
+            "y2": 827
+          }
+        },
+        {
+          "text": "Hood has consented to the HOA's removal of a failing Party Wall Fence (the \"Fence') located within HOA",
+          "confidence": 0.9702128171920776,
+          "bbox": {
+            "x1": 175,
+            "y1": 827,
+            "x2": 1081,
+            "y2": 853
+          }
+        },
+        {
+          "text": "Common Area in the rear of Hood's property located at 2220 Stillness Pond Lane, Apex, North Carolina",
+          "confidence": 0.9940550923347473,
+          "bbox": {
+            "x1": 173,
+            "y1": 851,
+            "x2": 1083,
+            "y2": 877
+          }
+        },
+        {
+          "text": "27539, and being more particularly described on Exhibit A attached hereto and incorporated herein by",
+          "confidence": 0.9985907077789307,
+          "bbox": {
+            "x1": 177,
+            "y1": 878,
+            "x2": 1081,
+            "y2": 901
+          }
+        },
+        {
+          "text": "reference (the \"Property'). A copy of the Consent Agreement is attached hereto as Exhibit B, which",
+          "confidence": 0.9877351522445679,
+          "bbox": {
+            "x1": 173,
+            "y1": 899,
+            "x2": 1083,
+            "y2": 926
+          }
+        },
+        {
+          "text": "together with its terms are incorporated herein by reference..",
+          "confidence": 0.983306884765625,
+          "bbox": {
+            "x1": 177,
+            "y1": 928,
+            "x2": 688,
+            "y2": 950
+          }
+        },
+        {
+          "text": "2.",
+          "confidence": 0.990271806716919,
+          "bbox": {
+            "x1": 246,
+            "y1": 976,
+            "x2": 263,
+            "y2": 995
+          }
+        },
+        {
+          "text": "Pursuant to the Consent Agreement, the HOA hereby executes and presents this Notice for",
+          "confidence": 0.9933925867080688,
+          "bbox": {
+            "x1": 310,
+            "y1": 973,
+            "x2": 1083,
+            "y2": 999
+          }
+        },
+        {
+          "text": "recording with the Wake County Registry to provide record notice of the Consent Agreement with respect",
+          "confidence": 0.984993577003479,
+          "bbox": {
+            "x1": 173,
+            "y1": 999,
+            "x2": 1083,
+            "y2": 1024
+          }
+        },
+        {
+          "text": "to the Property.",
+          "confidence": 0.9963244199752808,
+          "bbox": {
+            "x1": 173,
+            "y1": 1026,
+            "x2": 310,
+            "y2": 1048
+          }
+        },
+        {
+          "text": "3.",
+          "confidence": 0.9999486804008484,
+          "bbox": {
+            "x1": 243,
+            "y1": 1072,
+            "x2": 267,
+            "y2": 1097
+          }
+        },
+        {
+          "text": "Any settlement agent handling the sale of the Property by Hood are hereby instructed to",
+          "confidence": 0.9848607182502747,
+          "bbox": {
+            "x1": 312,
+            "y1": 1071,
+            "x2": 1081,
+            "y2": 1097
+          }
+        },
+        {
+          "text": "contact the individual below for additional information needed regarding the Consent Agreement, if any:",
+          "confidence": 0.9989047646522522,
+          "bbox": {
+            "x1": 175,
+            "y1": 1098,
+            "x2": 1069,
+            "y2": 1121
+          }
+        },
+        {
+          "text": "Maynard Nexsen PC",
+          "confidence": 0.9984026551246643,
+          "bbox": {
+            "x1": 452,
+            "y1": 1158,
+            "x2": 634,
+            "y2": 1181
+          }
+        },
+        {
+          "text": "Attn: Alex Serkes",
+          "confidence": 0.9716101288795471,
+          "bbox": {
+            "x1": 454,
+            "y1": 1184,
+            "x2": 615,
+            "y2": 1207
+          }
+        },
+        {
+          "text": "4141 Parklake Avenue, Suite 200",
+          "confidence": 0.9998505115509033,
+          "bbox": {
+            "x1": 454,
+            "y1": 1207,
+            "x2": 748,
+            "y2": 1231
+          }
+        },
+        {
+          "text": "Raleigh, NC 27612",
+          "confidence": 0.9903966188430786,
+          "bbox": {
+            "x1": 454,
+            "y1": 1232,
+            "x2": 622,
+            "y2": 1255
+          }
+        },
+        {
+          "text": "E-mail: aserkes@maynardnexsen.com",
+          "confidence": 0.9977367520332336,
+          "bbox": {
+            "x1": 452,
+            "y1": 1255,
+            "x2": 785,
+            "y2": 1282
+          }
+        },
+        {
+          "text": "[SIGNATURE PAGE FOLLOWS]",
+          "confidence": 0.9620275497436523,
+          "bbox": {
+            "x1": 471,
+            "y1": 1317,
+            "x2": 788,
+            "y2": 1339
+          }
+        },
+        {
+          "text": "Submitted electronically by \"Maynard Nexsen pc\".",
+          "confidence": 0.9788257479667664,
+          "bbox": {
+            "x1": 182,
+            "y1": 1511,
+            "x2": 676,
+            "y2": 1533
+          }
+        },
+        {
+          "text": "in compliance with North carolina statutes governing recordable documents",
+          "confidence": 0.9888473153114319,
+          "bbox": {
+            "x1": 180,
+            "y1": 1528,
+            "x2": 949,
+            "y2": 1550
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "text": "2025002517 B: 019888 P: 01267 04/25/2025 10:11 AM Page 2 of 6 SIGNATURE PAGE FOR NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL IN WITNESS wHEREOF, HOA has executed and caused this Notice to be recorded on behalf of and as directed by Hood pursuant to the Consent Agreement, effective as of the date of recording.. HOA: Blaney Farms Homeowners Association, Inc. a North Carolina nonprofit corporation. By: (SEAL) Name: ScottJ. Brindi Title: Preside STATE OF NORTH CAROLINA COUNTY OF WAKE I, a Notary Public of the aforesaid State and County of Wake certify that Scott J. Brindisi, as the President of Blaney Farms Homeowners Association, Inc., appeared before me and being. personally known to me (or proved to me on the basis of satisfactory evidence) to be the person whose name is subscribed to the within instrument and acknowledged to me that he executed the same in his authorized capacity, and that by his signature on the instrument the person, or entity upon behalf of which the person acted, executed the instrument. WITNEsS my hand and official stamp or seal, this _ZZ^ day of _APn1L 2025. NOTARY PUBLIC T/mofhy I. Monnis (Type or Print Name of Notary Public) Y (NOTAR SEAL) R TAR COUN 2 124099338.1",
+      "regions": [
+        {
+          "text": "2025002517 B: 019888 P: 01267",
+          "confidence": 0.9885093569755554,
+          "bbox": {
+            "x1": 641,
+            "y1": 41,
+            "x2": 1016,
+            "y2": 64
+          }
+        },
+        {
+          "text": "04/25/2025 10:11 AM Page 2 of 6",
+          "confidence": 0.9936715364456177,
+          "bbox": {
+            "x1": 638,
+            "y1": 71,
+            "x2": 980,
+            "y2": 94
+          }
+        },
+        {
+          "text": "SIGNATURE PAGE FOR NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL",
+          "confidence": 0.9681310653686523,
+          "bbox": {
+            "x1": 205,
+            "y1": 234,
+            "x2": 1056,
+            "y2": 257
+          }
+        },
+        {
+          "text": "IN WITNESS wHEREOF, HOA has executed and caused this Notice to be recorded on behalf",
+          "confidence": 0.9814292192459106,
+          "bbox": {
+            "x1": 246,
+            "y1": 306,
+            "x2": 1085,
+            "y2": 329
+          }
+        },
+        {
+          "text": "of and as directed by Hood pursuant to the Consent Agreement, effective as of the date of recording..",
+          "confidence": 0.9947052597999573,
+          "bbox": {
+            "x1": 177,
+            "y1": 333,
+            "x2": 1031,
+            "y2": 356
+          }
+        },
+        {
+          "text": "HOA:",
+          "confidence": 0.9990649819374084,
+          "bbox": {
+            "x1": 171,
+            "y1": 393,
+            "x2": 234,
+            "y2": 424
+          }
+        },
+        {
+          "text": "Blaney Farms Homeowners Association, Inc.",
+          "confidence": 0.9853248596191406,
+          "bbox": {
+            "x1": 174,
+            "y1": 437,
+            "x2": 585,
+            "y2": 468
+          }
+        },
+        {
+          "text": "a North Carolina nonprofit corporation.",
+          "confidence": 0.97463059425354,
+          "bbox": {
+            "x1": 172,
+            "y1": 462,
+            "x2": 513,
+            "y2": 489
+          }
+        },
+        {
+          "text": "By:",
+          "confidence": 0.9909438490867615,
+          "bbox": {
+            "x1": 177,
+            "y1": 538,
+            "x2": 214,
+            "y2": 558
+          }
+        },
+        {
+          "text": "(SEAL)",
+          "confidence": 0.9670684933662415,
+          "bbox": {
+            "x1": 502,
+            "y1": 537,
+            "x2": 578,
+            "y2": 561
+          }
+        },
+        {
+          "text": "Name: ScottJ. Brindi",
+          "confidence": 0.9669820070266724,
+          "bbox": {
+            "x1": 174,
+            "y1": 559,
+            "x2": 370,
+            "y2": 586
+          }
+        },
+        {
+          "text": "Title: Preside",
+          "confidence": 0.9552522301673889,
+          "bbox": {
+            "x1": 179,
+            "y1": 588,
+            "x2": 301,
+            "y2": 607
+          }
+        },
+        {
+          "text": "STATE OF NORTH CAROLINA",
+          "confidence": 0.9809158444404602,
+          "bbox": {
+            "x1": 176,
+            "y1": 708,
+            "x2": 487,
+            "y2": 731
+          }
+        },
+        {
+          "text": "COUNTY OF WAKE",
+          "confidence": 0.9979856610298157,
+          "bbox": {
+            "x1": 176,
+            "y1": 733,
+            "x2": 380,
+            "y2": 756
+          }
+        },
+        {
+          "text": "I, a Notary Public of the aforesaid State and County of",
+          "confidence": 0.9959510564804077,
+          "bbox": {
+            "x1": 176,
+            "y1": 806,
+            "x2": 670,
+            "y2": 829
+          }
+        },
+        {
+          "text": "Wake",
+          "confidence": 0.773964524269104,
+          "bbox": {
+            "x1": 657,
+            "y1": 800,
+            "x2": 752,
+            "y2": 831
+          }
+        },
+        {
+          "text": "certify that Scott J.",
+          "confidence": 0.9793486595153809,
+          "bbox": {
+            "x1": 909,
+            "y1": 806,
+            "x2": 1081,
+            "y2": 829
+          }
+        },
+        {
+          "text": "Brindisi, as the President of Blaney Farms Homeowners Association, Inc., appeared before me and being.",
+          "confidence": 0.9920539259910583,
+          "bbox": {
+            "x1": 174,
+            "y1": 827,
+            "x2": 1083,
+            "y2": 855
+          }
+        },
+        {
+          "text": "personally known to me (or proved to me on the basis of satisfactory evidence) to be the person whose",
+          "confidence": 0.9958288073539734,
+          "bbox": {
+            "x1": 176,
+            "y1": 855,
+            "x2": 1083,
+            "y2": 878
+          }
+        },
+        {
+          "text": "name is subscribed to the within instrument and acknowledged to me that he executed the same in his",
+          "confidence": 0.9594776034355164,
+          "bbox": {
+            "x1": 176,
+            "y1": 882,
+            "x2": 1078,
+            "y2": 900
+          }
+        },
+        {
+          "text": "authorized capacity, and that by his signature on the instrument the person, or entity upon behalf of which",
+          "confidence": 0.9923549294471741,
+          "bbox": {
+            "x1": 174,
+            "y1": 905,
+            "x2": 1083,
+            "y2": 928
+          }
+        },
+        {
+          "text": "the person acted, executed the instrument.",
+          "confidence": 0.9822840094566345,
+          "bbox": {
+            "x1": 172,
+            "y1": 926,
+            "x2": 534,
+            "y2": 953
+          }
+        },
+        {
+          "text": "WITNEsS my hand and official stamp or seal, this _ZZ^ day of _APn1L",
+          "confidence": 0.9448373913764954,
+          "bbox": {
+            "x1": 172,
+            "y1": 970,
+            "x2": 833,
+            "y2": 1002
+          }
+        },
+        {
+          "text": "2025.",
+          "confidence": 0.9999502301216125,
+          "bbox": {
+            "x1": 891,
+            "y1": 976,
+            "x2": 945,
+            "y2": 1001
+          }
+        },
+        {
+          "text": "NOTARY PUBLIC",
+          "confidence": 0.9238473176956177,
+          "bbox": {
+            "x1": 659,
+            "y1": 1073,
+            "x2": 835,
+            "y2": 1096
+          }
+        },
+        {
+          "text": "T/mofhy I. Monnis",
+          "confidence": 0.7384123802185059,
+          "bbox": {
+            "x1": 672,
+            "y1": 1139,
+            "x2": 1005,
+            "y2": 1163
+          }
+        },
+        {
+          "text": "(Type or Print Name of Notary Public)",
+          "confidence": 0.9976868629455566,
+          "bbox": {
+            "x1": 661,
+            "y1": 1174,
+            "x2": 994,
+            "y2": 1197
+          }
+        },
+        {
+          "text": "Y",
+          "confidence": 0.9248453378677368,
+          "bbox": {
+            "x1": 203,
+            "y1": 1256,
+            "x2": 221,
+            "y2": 1270
+          }
+        },
+        {
+          "text": "(NOTAR",
+          "confidence": 0.9803531169891357,
+          "bbox": {
+            "x1": 192,
+            "y1": 1271,
+            "x2": 301,
+            "y2": 1291
+          }
+        },
+        {
+          "text": "SEAL)",
+          "confidence": 0.9947929382324219,
+          "bbox": {
+            "x1": 306,
+            "y1": 1266,
+            "x2": 377,
+            "y2": 1295
+          }
+        },
+        {
+          "text": "R",
+          "confidence": 0.6570523977279663,
+          "bbox": {
+            "x1": 295,
+            "y1": 1287,
+            "x2": 313,
+            "y2": 1303
+          }
+        },
+        {
+          "text": "TAR",
+          "confidence": 0.9974775314331055,
+          "bbox": {
+            "x1": 206,
+            "y1": 1308,
+            "x2": 273,
+            "y2": 1336
+          }
+        },
+        {
+          "text": "COUN",
+          "confidence": 0.9963191747665405,
+          "bbox": {
+            "x1": 205,
+            "y1": 1440,
+            "x2": 257,
+            "y2": 1457
+          }
+        },
+        {
+          "text": "2",
+          "confidence": 0.9992318153381348,
+          "bbox": {
+            "x1": 621,
+            "y1": 1495,
+            "x2": 636,
+            "y2": 1516
+          }
+        },
+        {
+          "text": "124099338.1",
+          "confidence": 0.9998462796211243,
+          "bbox": {
+            "x1": 174,
+            "y1": 1535,
+            "x2": 259,
+            "y2": 1555
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "text": "2025002517 B: 019888 P: 01270 04/25/2025 10:11 AM Page 5 of 6 Blaney Farms Homeowners Association, Inc. Apex,NC 27502 919362-1460 FAX919362-1462 18 MAr202s 002 220 Stillness Pond Ln Apex, NC 27539 Dear As previously discussed in meetings and correspondence held and delivered by the Blaney Farms Homeowners Association, Inc. (the \"Association\"), the Association intends to remove the failing Fence located in the rear of your Lot along Ten-Ten Road. The portion of your Lot that the Fence is located in constitutes Common Area maintained by the Association pursuant to the Association's governing documents (collectively, the \"Governing Documents'). The Association intends to install buffer trees. and other vegetation in front of the prior location of the Fence (the \"Landscaping Buffer') in order to. give that location a more aesthetically pleasing look, while also providing sight and sound buffers from the highly traveled Ten-Ten Toad. Pursuant to the Governing Documents, the Fence is a \"Party Wall' that requires your consent to permanently remove the Party Wall from your Lot. By signing the following page, you hereby give your. consent to the Association's removal of the Fence to be replaced with the new Landscaping Buffer as discussed above. Please note, however, that while the Association intends to install the Landscaping Buffer as discussed above, completion of the Landscaping Buffer will not be on a certain timeline. If you choose not to sign this letter giving your consent to permanently remove the Fence from your Lot and replace the area with the new Landscaping Buffer discussed above, please be advised that,. in order to provide for the Fence's future maintenance, the Association may elect to impose on your Lot \"neighborhood assessments\" in accordance with the Governing Documents that are specific to your Lot and in addition to the annual assessments you are otherwise obligated to pay to the Association. Finally, by signing the following page evidencing your consent to the removal of the Fence from your Lot, you hereby authorize the Association to record one or more documents in the Wake County Registry evidencing your consent. Prior to signing this Letter, please do not hesitate to reach out to the Association with any questions you may have with respect to this Letter. Sincerely, Blaney Farms Homeowners Association, Inc. AWe, the undersigned homeowners, hereby consent to the Association's removal of the Fence from Lot 7 and the replacement of the Fence with the Landscaping Buffer discussed in this Letter.",
+      "regions": [
+        {
+          "text": "2025002517 B: 019888 P: 01270",
+          "confidence": 0.991911768913269,
+          "bbox": {
+            "x1": 641,
+            "y1": 41,
+            "x2": 1016,
+            "y2": 64
+          }
+        },
+        {
+          "text": "04/25/2025 10:11 AM Page 5 of 6",
+          "confidence": 0.9778486490249634,
+          "bbox": {
+            "x1": 638,
+            "y1": 71,
+            "x2": 980,
+            "y2": 94
+          }
+        },
+        {
+          "text": "Blaney Farms",
+          "confidence": 0.9996840953826904,
+          "bbox": {
+            "x1": 170,
+            "y1": 198,
+            "x2": 322,
+            "y2": 223
+          }
+        },
+        {
+          "text": "Homeowners Association, Inc.",
+          "confidence": 0.999707818031311,
+          "bbox": {
+            "x1": 168,
+            "y1": 228,
+            "x2": 500,
+            "y2": 257
+          }
+        },
+        {
+          "text": "Apex,NC 27502",
+          "confidence": 0.9287385940551758,
+          "bbox": {
+            "x1": 167,
+            "y1": 280,
+            "x2": 257,
+            "y2": 298
+          }
+        },
+        {
+          "text": "919362-1460",
+          "confidence": 0.9820629358291626,
+          "bbox": {
+            "x1": 166,
+            "y1": 302,
+            "x2": 254,
+            "y2": 326
+          }
+        },
+        {
+          "text": "FAX919362-1462",
+          "confidence": 0.9846083521842957,
+          "bbox": {
+            "x1": 295,
+            "y1": 308,
+            "x2": 411,
+            "y2": 326
+          }
+        },
+        {
+          "text": "18 MAr202s",
+          "confidence": 0.5975836515426636,
+          "bbox": {
+            "x1": 458,
+            "y1": 315,
+            "x2": 669,
+            "y2": 360
+          }
+        },
+        {
+          "text": "002",
+          "confidence": 0.5290817618370056,
+          "bbox": {
+            "x1": 670,
+            "y1": 340,
+            "x2": 706,
+            "y2": 354
+          }
+        },
+        {
+          "text": "220 Stillness Pond Ln",
+          "confidence": 0.9267544746398926,
+          "bbox": {
+            "x1": 168,
+            "y1": 411,
+            "x2": 390,
+            "y2": 441
+          }
+        },
+        {
+          "text": "Apex, NC 27539",
+          "confidence": 0.9938406944274902,
+          "bbox": {
+            "x1": 165,
+            "y1": 435,
+            "x2": 308,
+            "y2": 462
+          }
+        },
+        {
+          "text": "Dear",
+          "confidence": 0.9998059272766113,
+          "bbox": {
+            "x1": 165,
+            "y1": 554,
+            "x2": 210,
+            "y2": 576
+          }
+        },
+        {
+          "text": "As previously discussed in meetings and correspondence held and delivered by the Blaney Farms",
+          "confidence": 0.9937277436256409,
+          "bbox": {
+            "x1": 223,
+            "y1": 622,
+            "x2": 1007,
+            "y2": 652
+          }
+        },
+        {
+          "text": "Homeowners Association, Inc. (the \"Association\"), the Association intends to remove the failing Fence",
+          "confidence": 0.9817216992378235,
+          "bbox": {
+            "x1": 163,
+            "y1": 646,
+            "x2": 1009,
+            "y2": 677
+          }
+        },
+        {
+          "text": "located in the rear of your Lot along Ten-Ten Road. The portion of your Lot that the Fence is located in",
+          "confidence": 0.989145040512085,
+          "bbox": {
+            "x1": 163,
+            "y1": 669,
+            "x2": 1009,
+            "y2": 700
+          }
+        },
+        {
+          "text": "constitutes Common Area maintained by the Association pursuant to the Association's governing",
+          "confidence": 0.9815287590026855,
+          "bbox": {
+            "x1": 163,
+            "y1": 692,
+            "x2": 1007,
+            "y2": 726
+          }
+        },
+        {
+          "text": "documents (collectively, the \"Governing Documents'). The Association intends to install buffer trees.",
+          "confidence": 0.9777148962020874,
+          "bbox": {
+            "x1": 161,
+            "y1": 715,
+            "x2": 1007,
+            "y2": 747
+          }
+        },
+        {
+          "text": "and other vegetation in front of the prior location of the Fence (the \"Landscaping Buffer') in order to.",
+          "confidence": 0.9821762442588806,
+          "bbox": {
+            "x1": 161,
+            "y1": 738,
+            "x2": 1007,
+            "y2": 770
+          }
+        },
+        {
+          "text": "give that location a more aesthetically pleasing look, while also providing sight and sound buffers from",
+          "confidence": 0.9973109364509583,
+          "bbox": {
+            "x1": 161,
+            "y1": 763,
+            "x2": 1007,
+            "y2": 793
+          }
+        },
+        {
+          "text": "the highly traveled Ten-Ten Toad.",
+          "confidence": 0.9884424209594727,
+          "bbox": {
+            "x1": 159,
+            "y1": 788,
+            "x2": 435,
+            "y2": 811
+          }
+        },
+        {
+          "text": "Pursuant to the Governing Documents, the Fence is a \"Party Wall' that requires your consent to",
+          "confidence": 0.9844481348991394,
+          "bbox": {
+            "x1": 221,
+            "y1": 853,
+            "x2": 1005,
+            "y2": 884
+          }
+        },
+        {
+          "text": "permanently remove the Party Wall from your Lot. By signing the following page, you hereby give your.",
+          "confidence": 0.9878849983215332,
+          "bbox": {
+            "x1": 161,
+            "y1": 878,
+            "x2": 1007,
+            "y2": 912
+          }
+        },
+        {
+          "text": "consent to the Association's removal of the Fence to be replaced with the new Landscaping Buffer as",
+          "confidence": 0.9923884868621826,
+          "bbox": {
+            "x1": 161,
+            "y1": 903,
+            "x2": 1007,
+            "y2": 933
+          }
+        },
+        {
+          "text": "discussed above. Please note, however, that while the Association intends to install the Landscaping",
+          "confidence": 0.9916667938232422,
+          "bbox": {
+            "x1": 159,
+            "y1": 922,
+            "x2": 1007,
+            "y2": 962
+          }
+        },
+        {
+          "text": "Buffer as discussed above, completion of the Landscaping Buffer will not be on a certain timeline.",
+          "confidence": 0.9875632524490356,
+          "bbox": {
+            "x1": 158,
+            "y1": 949,
+            "x2": 953,
+            "y2": 979
+          }
+        },
+        {
+          "text": "If you choose not to sign this letter giving your consent to permanently remove the Fence from",
+          "confidence": 0.9953193664550781,
+          "bbox": {
+            "x1": 217,
+            "y1": 1016,
+            "x2": 1003,
+            "y2": 1048
+          }
+        },
+        {
+          "text": "your Lot and replace the area with the new Landscaping Buffer discussed above, please be advised that,.",
+          "confidence": 0.9792714715003967,
+          "bbox": {
+            "x1": 157,
+            "y1": 1043,
+            "x2": 1003,
+            "y2": 1073
+          }
+        },
+        {
+          "text": "in order to provide for the Fence's future maintenance, the Association may elect to impose on your Lot",
+          "confidence": 0.9939217567443848,
+          "bbox": {
+            "x1": 157,
+            "y1": 1066,
+            "x2": 1003,
+            "y2": 1096
+          }
+        },
+        {
+          "text": "\"neighborhood assessments\" in accordance with the Governing Documents that are specific to your Lot",
+          "confidence": 0.9866316318511963,
+          "bbox": {
+            "x1": 157,
+            "y1": 1089,
+            "x2": 1003,
+            "y2": 1119
+          }
+        },
+        {
+          "text": "and in addition to the annual assessments you are otherwise obligated to pay to the Association.",
+          "confidence": 0.9941412806510925,
+          "bbox": {
+            "x1": 157,
+            "y1": 1112,
+            "x2": 929,
+            "y2": 1142
+          }
+        },
+        {
+          "text": "Finally, by signing the following page evidencing your consent to the removal of the Fence from",
+          "confidence": 0.983206570148468,
+          "bbox": {
+            "x1": 215,
+            "y1": 1178,
+            "x2": 1003,
+            "y2": 1215
+          }
+        },
+        {
+          "text": "your Lot, you hereby authorize the Association to record one or more documents in the Wake County",
+          "confidence": 0.9893434643745422,
+          "bbox": {
+            "x1": 157,
+            "y1": 1206,
+            "x2": 1002,
+            "y2": 1236
+          }
+        },
+        {
+          "text": "Registry evidencing your consent.",
+          "confidence": 0.9995733499526978,
+          "bbox": {
+            "x1": 156,
+            "y1": 1229,
+            "x2": 435,
+            "y2": 1252
+          }
+        },
+        {
+          "text": "Prior to signing this Letter, please do not hesitate to reach out to the Association with any",
+          "confidence": 0.9944826364517212,
+          "bbox": {
+            "x1": 214,
+            "y1": 1286,
+            "x2": 1002,
+            "y2": 1318
+          }
+        },
+        {
+          "text": "questions you may have with respect to this Letter.",
+          "confidence": 0.9925454258918762,
+          "bbox": {
+            "x1": 158,
+            "y1": 1314,
+            "x2": 570,
+            "y2": 1337
+          }
+        },
+        {
+          "text": "Sincerely,",
+          "confidence": 0.9995125532150269,
+          "bbox": {
+            "x1": 512,
+            "y1": 1377,
+            "x2": 600,
+            "y2": 1406
+          }
+        },
+        {
+          "text": "Blaney Farms Homeowners Association, Inc.",
+          "confidence": 0.9995696544647217,
+          "bbox": {
+            "x1": 514,
+            "y1": 1519,
+            "x2": 884,
+            "y2": 1546
+          }
+        },
+        {
+          "text": "AWe, the undersigned homeowners, hereby consent to the Association's removal of the Fence",
+          "confidence": 0.9982408881187439,
+          "bbox": {
+            "x1": 203,
+            "y1": 1537,
+            "x2": 976,
+            "y2": 1574
+          }
+        },
+        {
+          "text": "from Lot 7 and the replacement of the Fence with the Landscaping Buffer discussed in this Letter.",
+          "confidence": 0.981946587562561,
+          "bbox": {
+            "x1": 152,
+            "y1": 1564,
+            "x2": 994,
+            "y2": 1596
+          }
+        }
+      ]
+    }
+  ]
+}

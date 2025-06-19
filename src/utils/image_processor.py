@@ -85,6 +85,11 @@ class ImageProcessor:
             }
         }
     
+    def bytes_to_image(self, image_bytes: bytes) -> np.ndarray:
+        """Convert image bytes to numpy array for OCR processing"""
+        image = self._load_image(image_bytes)
+        return np.array(image)
+    
     def prepare_image(
         self,
         image_bytes: bytes,

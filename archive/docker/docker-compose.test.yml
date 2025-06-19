@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # Main OCR server for API testing
+  ocr-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gpu-ocr-server:test
+    container_name: ocr-server-test
+    ports:
+      - "8000:8000"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - DEFAULT_DPI=150
+      - MAX_BATCH_SIZE=50
+      - TENSORRT_PRECISION=FP16
+      - GPU_MEMORY_BUFFER_MB=500
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./cache:/app/cache
+      - ./logs:/app/logs
+      - ./tests/testpdfs:/app/tests/testpdfs:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Test runner container
+  test-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gpu-ocr-server:test
+    container_name: ocr-test-runner
+    depends_on:
+      ocr-server:
+        condition: service_healthy
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - SERVER_URL=http://ocr-server:8000
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./test-results:/app/test-results
+      - ./tests/testpdfs:/app/tests/testpdfs:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ["echo", "Test runner ready. Use docker-compose run test-runner <command>"]
+
+  # Direct OCR test container (no server needed)
+  direct-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gpu-ocr-server:test
+    container_name: ocr-direct-test
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./test-results:/app/test-results
+      - ./tests/testpdfs:/app/tests/testpdfs:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ["python", "tests/test_pdf_comprehensive.py"]

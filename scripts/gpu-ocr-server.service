@@ -1,0 +1,54 @@
+[Unit]
+Description=GPU OCR Server - High-performance OCR service with GPU acceleration
+Documentation=https://github.com/your-org/gpu-ocr-server
+After=network.target
+Wants=redis.service
+
+[Service]
+Type=exec
+User=ocr-service
+Group=ocr-service
+WorkingDirectory=/opt/gpu-ocr-server
+
+# Environment
+Environment="ENVIRONMENT=production"
+Environment="CUDA_DEVICE_ORDER=PCI_BUS_ID"
+Environment="CUDA_VISIBLE_DEVICES=0"
+Environment="PYTHONPATH=/opt/gpu-ocr-server"
+
+# Python virtual environment (adjust path as needed)
+Environment="PATH=/opt/gpu-ocr-server/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Startup
+ExecStartPre=/opt/gpu-ocr-server/venv/bin/python scripts/run_production.py --check-only
+ExecStart=/opt/gpu-ocr-server/venv/bin/python scripts/run_production.py
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+
+# Process management
+Restart=always
+RestartSec=10
+RestartPreventExitStatus=0
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/gpu-ocr-server/logs /opt/gpu-ocr-server/cache /opt/gpu-ocr-server/uploads /opt/gpu-ocr-server/temp
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# Timeouts
+TimeoutStartSec=300
+TimeoutStopSec=30
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=gpu-ocr-server
+
+[Install]
+WantedBy=multi-user.target

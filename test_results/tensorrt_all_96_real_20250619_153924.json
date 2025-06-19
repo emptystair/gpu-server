@@ -1,0 +1,955 @@
+{
+  "summary": {
+    "total_documents": 96,
+    "successful": 96,
+    "total_pages": 533,
+    "total_regions": 24425,
+    "total_size_mb": 37.98499584197998,
+    "average_confidence": 0.9739916601069581,
+    "total_time": 39.238587856292725,
+    "avg_time_per_doc": 0.01933002968629201,
+    "docs_per_minute": 146.79427356293772,
+    "pages_per_minute": 815.0140396775604,
+    "fast_outliers": 48
+  },
+  "page_groups": {
+    "5": {
+      "count": 7,
+      "avg_time": 0.010978051594325475
+    },
+    "14": {
+      "count": 5,
+      "avg_time": 0.02599172592163086
+    },
+    "1": {
+      "count": 25,
+      "avg_time": 0.008335275650024414
+    },
+    "2": {
+      "count": 20,
+      "avg_time": 0.008335494995117187
+    },
+    "7": {
+      "count": 3,
+      "avg_time": 0.012718915939331055
+    },
+    "11": {
+      "count": 7,
+      "avg_time": 0.019538947514125278
+    },
+    "24": {
+      "count": 1,
+      "avg_time": 0.032335758209228516
+    },
+    "3": {
+      "count": 6,
+      "avg_time": 0.005130449930826823
+    },
+    "4": {
+      "count": 3,
+      "avg_time": 0.008319934209187826
+    },
+    "6": {
+      "count": 7,
+      "avg_time": 0.010141611099243164
+    },
+    "23": {
+      "count": 1,
+      "avg_time": 0.02487945556640625
+    },
+    "8": {
+      "count": 3,
+      "avg_time": 0.011554320653279623
+    },
+    "13": {
+      "count": 1,
+      "avg_time": 0.014066219329833984
+    },
+    "18": {
+      "count": 2,
+      "avg_time": 0.030463337898254395
+    },
+    "15": {
+      "count": 1,
+      "avg_time": 0.04033327102661133
+    },
+    "9": {
+      "count": 2,
+      "avg_time": 0.02137458324432373
+    },
+    "19": {
+      "count": 1,
+      "avg_time": 0.025694608688354492
+    },
+    "21": {
+      "count": 1,
+      "avg_time": 0.02486276626586914
+    }
+  },
+  "results": [
+    {
+      "file": "DOCC111697069_019511-00182.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 125,
+      "confidence": 0.9551909451947076,
+      "time": 0.007122993469238281,
+      "size_kb": 692.65625
+    },
+    {
+      "file": "DOCC111697085_019511-00279.pdf",
+      "success": true,
+      "pages": 14,
+      "regions": 635,
+      "confidence": 0.9685627657708427,
+      "time": 0.01584315299987793,
+      "size_kb": 1002.94921875
+    },
+    {
+      "file": "DOCC111697087_019511-00294.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 44,
+      "confidence": 0.9697108363563364,
+      "time": 0.0031900405883789062,
+      "size_kb": 60.806640625
+    },
+    {
+      "file": "DOCC111697089_019511-00296.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 48,
+      "confidence": 0.9796938871343931,
+      "time": 0.0029518604278564453,
+      "size_kb": 68.81640625
+    },
+    {
+      "file": "DOCC111697101_019511-00316.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 44,
+      "confidence": 0.9757935675707731,
+      "time": 0.0029044151306152344,
+      "size_kb": 59.169921875
+    },
+    {
+      "file": "DOCC111697102_019511-00317.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.9777971908103588,
+      "time": 0.015549898147583008,
+      "size_kb": 58.8857421875
+    },
+    {
+      "file": "DOCC111697104_019511-00319.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 50,
+      "confidence": 0.9775772261619567,
+      "time": 0.007932186126708984,
+      "size_kb": 69.8974609375
+    },
+    {
+      "file": "DOCC111697106_019511-00322.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 124,
+      "confidence": 0.9852729472839954,
+      "time": 0.006247520446777344,
+      "size_kb": 75.302734375
+    },
+    {
+      "file": "DOCC111697111_019511-00329.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 40,
+      "confidence": 0.9716674908995628,
+      "time": 0.005949974060058594,
+      "size_kb": 36.2607421875
+    },
+    {
+      "file": "DOCC111697114_019511-00332.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.9774569702702899,
+      "time": 0.004012584686279297,
+      "size_kb": 49.837890625
+    },
+    {
+      "file": "DOCC111697120_019511-00353.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 73,
+      "confidence": 0.953793659602126,
+      "time": 0.011936664581298828,
+      "size_kb": 43.1962890625
+    },
+    {
+      "file": "DOCC111697124_019511-00359.pdf",
+      "success": true,
+      "pages": 14,
+      "regions": 830,
+      "confidence": 0.9742283854500506,
+      "time": 0.034998178482055664,
+      "size_kb": 1326.78515625
+    },
+    {
+      "file": "DOCC111697131_019511-00386.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 79,
+      "confidence": 0.9745445351014619,
+      "time": 0.0037724971771240234,
+      "size_kb": 126.35546875
+    },
+    {
+      "file": "DOCC111697133_019511-00404.pdf",
+      "success": true,
+      "pages": 7,
+      "regions": 332,
+      "confidence": 0.9770656791134849,
+      "time": 0.008753776550292969,
+      "size_kb": 512.1796875
+    },
+    {
+      "file": "DOCC111697136_019511-00418.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 55,
+      "confidence": 0.9687580235464417,
+      "time": 0.0031042098999023438,
+      "size_kb": 83.98828125
+    },
+    {
+      "file": "DOCC111697139_019511-00434.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 563,
+      "confidence": 0.9819407283864958,
+      "time": 0.02407550811767578,
+      "size_kb": 944.5458984375
+    },
+    {
+      "file": "DOCC111697142_019511-00460.pdf",
+      "success": true,
+      "pages": 24,
+      "regions": 1213,
+      "confidence": 0.9660194497517054,
+      "time": 0.032335758209228516,
+      "size_kb": 1509.7890625
+    },
+    {
+      "file": "DOCC111697149_019511-00420.pdf",
+      "success": true,
+      "pages": 7,
+      "regions": 342,
+      "confidence": 0.9788575867502363,
+      "time": 0.008162498474121094,
+      "size_kb": 414.267578125
+    },
+    {
+      "file": "DOCC111697154_019511-00578.pdf",
+      "success": true,
+      "pages": 3,
+      "regions": 82,
+      "confidence": 0.9741489533723949,
+      "time": 0.004182100296020508,
+      "size_kb": 162.7763671875
+    },
+    {
+      "file": "DOCC111697156_019511-00587.pdf",
+      "success": true,
+      "pages": 3,
+      "regions": 85,
+      "confidence": 0.9642386057506629,
+      "time": 0.005683183670043945,
+      "size_kb": 148.3779296875
+    },
+    {
+      "file": "DOCC111697159_019511-00566.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 79,
+      "confidence": 0.9816039262348385,
+      "time": 0.009464740753173828,
+      "size_kb": 92.265625
+    },
+    {
+      "file": "DOCC111697160_019511-00568.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 82,
+      "confidence": 0.9797546090953277,
+      "time": 0.012504339218139648,
+      "size_kb": 93.6455078125
+    },
+    {
+      "file": "DOCC111697162_019511-00572.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 74,
+      "confidence": 0.987313067371195,
+      "time": 0.005747318267822266,
+      "size_kb": 91.06640625
+    },
+    {
+      "file": "DOCC111697163_019511-00574.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 79,
+      "confidence": 0.9811491142999993,
+      "time": 0.006662607192993164,
+      "size_kb": 90.34765625
+    },
+    {
+      "file": "DOCC111697172_019511-00547.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 78,
+      "confidence": 0.9767873004019967,
+      "time": 0.007803678512573242,
+      "size_kb": 81.2587890625
+    },
+    {
+      "file": "DOCC111697178_019511-00590.pdf",
+      "success": true,
+      "pages": 4,
+      "regions": 113,
+      "confidence": 0.9763253055017937,
+      "time": 0.017594099044799805,
+      "size_kb": 116.1162109375
+    },
+    {
+      "file": "DOCC111697189_019511-00653.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 44,
+      "confidence": 0.9809249070557681,
+      "time": 0.011783599853515625,
+      "size_kb": 40.1875
+    },
+    {
+      "file": "DOCC111697202_019511-00715.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9740759992017979,
+      "time": 0.009226083755493164,
+      "size_kb": 35.9384765625
+    },
+    {
+      "file": "DOCC111697203_019511-00716.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 42,
+      "confidence": 0.9655430898779914,
+      "time": 0.016445636749267578,
+      "size_kb": 37.2705078125
+    },
+    {
+      "file": "DOCC111697204_019511-00717.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9742620849027867,
+      "time": 0.012734174728393555,
+      "size_kb": 36.0439453125
+    },
+    {
+      "file": "DOCC111697205_019511-00718.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9714390984395656,
+      "time": 0.014393329620361328,
+      "size_kb": 36.3330078125
+    },
+    {
+      "file": "DOCC111697208_019511-00721.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 41,
+      "confidence": 0.9730893504328844,
+      "time": 0.011212825775146484,
+      "size_kb": 35.89453125
+    },
+    {
+      "file": "DOCC111697213_019511-00726.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 123,
+      "confidence": 0.9577335321313732,
+      "time": 0.014356851577758789,
+      "size_kb": 692.0380859375
+    },
+    {
+      "file": "DOCC111697216_019511-00753.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 247,
+      "confidence": 0.9784444949736661,
+      "time": 0.007005453109741211,
+      "size_kb": 334.255859375
+    },
+    {
+      "file": "DOCC111697219_019511-00782.pdf",
+      "success": true,
+      "pages": 14,
+      "regions": 843,
+      "confidence": 0.9726873067394514,
+      "time": 0.018726587295532227,
+      "size_kb": 1175.046875
+    },
+    {
+      "file": "DOCC111697225_019511-00801.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 56,
+      "confidence": 0.9812978702114228,
+      "time": 0.0162961483001709,
+      "size_kb": 54.65234375
+    },
+    {
+      "file": "DOCC111697227_019511-00832.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 57,
+      "confidence": 0.9528769742358815,
+      "time": 0.007597208023071289,
+      "size_kb": 63.2802734375
+    },
+    {
+      "file": "DOCC111697229_019511-00845.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 168,
+      "confidence": 0.9687836425998606,
+      "time": 0.00666356086730957,
+      "size_kb": 338.390625
+    },
+    {
+      "file": "DOCC111697232_019511-00859.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 169,
+      "confidence": 0.9619366393917959,
+      "time": 0.009218931198120117,
+      "size_kb": 340.7568359375
+    },
+    {
+      "file": "DOCC111697233_019511-00865.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 168,
+      "confidence": 0.9619153904615736,
+      "time": 0.016476869583129883,
+      "size_kb": 340.146484375
+    },
+    {
+      "file": "DOCC111697244_019511-00913.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 148,
+      "confidence": 0.9543002054417803,
+      "time": 0.01824212074279785,
+      "size_kb": 199.6025390625
+    },
+    {
+      "file": "DOCC111697245_019511-00919.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 216,
+      "confidence": 0.9796062489325635,
+      "time": 0.01797938346862793,
+      "size_kb": 300.1884765625
+    },
+    {
+      "file": "DOCC111697246_019511-00925.pdf",
+      "success": true,
+      "pages": 7,
+      "regions": 446,
+      "confidence": 0.9831445324731519,
+      "time": 0.0212404727935791,
+      "size_kb": 255.8837890625
+    },
+    {
+      "file": "DOCC111697247_019511-00932.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 148,
+      "confidence": 0.9590946425746593,
+      "time": 0.00422358512878418,
+      "size_kb": 147.7626953125
+    },
+    {
+      "file": "DOCC111697253_019511-00962.pdf",
+      "success": true,
+      "pages": 23,
+      "regions": 1175,
+      "confidence": 0.9743178040516076,
+      "time": 0.02487945556640625,
+      "size_kb": 1489.0556640625
+    },
+    {
+      "file": "DOCC111697260_019511-01017.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 87,
+      "confidence": 0.9834966793908377,
+      "time": 0.017523765563964844,
+      "size_kb": 95.6708984375
+    },
+    {
+      "file": "DOCC111697277_019511-01093.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 262,
+      "confidence": 0.9806708676049319,
+      "time": 0.014660835266113281,
+      "size_kb": 383.4755859375
+    },
+    {
+      "file": "DOCC111697279_019511-01120.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 190,
+      "confidence": 0.972594710291318,
+      "time": 0.004570722579956055,
+      "size_kb": 205.796875
+    },
+    {
+      "file": "DOCC111697288_019511-01257.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 468,
+      "confidence": 0.982642452678835,
+      "time": 0.01098322868347168,
+      "size_kb": 731.6298828125
+    },
+    {
+      "file": "DOCC111697292_019511-01311.pdf",
+      "success": true,
+      "pages": 3,
+      "regions": 151,
+      "confidence": 0.9568055419696458,
+      "time": 0.004024505615234375,
+      "size_kb": 174.1123046875
+    },
+    {
+      "file": "DOCC111697294_019511-01325.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 439,
+      "confidence": 0.9845541923053601,
+      "time": 0.03284192085266113,
+      "size_kb": 747.2998046875
+    },
+    {
+      "file": "DOCC111697308_019511-01446.pdf",
+      "success": true,
+      "pages": 8,
+      "regions": 315,
+      "confidence": 0.9678042449280397,
+      "time": 0.011393547058105469,
+      "size_kb": 353.0390625
+    },
+    {
+      "file": "DOCC111697309_019511-01454.pdf",
+      "success": true,
+      "pages": 13,
+      "regions": 570,
+      "confidence": 0.9745593721620049,
+      "time": 0.014066219329833984,
+      "size_kb": 997.2802734375
+    },
+    {
+      "file": "DOCC111697310_019511-01468.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 76,
+      "confidence": 0.92799786289785,
+      "time": 0.005217790603637695,
+      "size_kb": 66.923828125
+    },
+    {
+      "file": "DOCC111697315_019511-01520.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 66,
+      "confidence": 0.9705828536640514,
+      "time": 0.00299835205078125,
+      "size_kb": 84.748046875
+    },
+    {
+      "file": "DOCC111697319_019511-01546.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 710,
+      "confidence": 0.9756575876735464,
+      "time": 0.022761821746826172,
+      "size_kb": 1595.30859375
+    },
+    {
+      "file": "DOCC111697322_019511-01587.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 448,
+      "confidence": 0.9821981275864335,
+      "time": 0.011349916458129883,
+      "size_kb": 708.2158203125
+    },
+    {
+      "file": "DOCC111697335_019511-01645.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 449,
+      "confidence": 0.9844477785700623,
+      "time": 0.011853933334350586,
+      "size_kb": 705.90625
+    },
+    {
+      "file": "DOCC111697338_019511-01659.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 52,
+      "confidence": 0.984663636638568,
+      "time": 0.0028803348541259766,
+      "size_kb": 51.0595703125
+    },
+    {
+      "file": "DOCC111697347_019511-01698.pdf",
+      "success": true,
+      "pages": 5,
+      "regions": 168,
+      "confidence": 0.969047265632667,
+      "time": 0.004765033721923828,
+      "size_kb": 339.90625
+    },
+    {
+      "file": "DOCC111697350_019511-01720.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 66,
+      "confidence": 0.9705730360415247,
+      "time": 0.017838001251220703,
+      "size_kb": 83.9189453125
+    },
+    {
+      "file": "DOCC111697356_019511-01733.pdf",
+      "success": true,
+      "pages": 18,
+      "regions": 862,
+      "confidence": 0.98388666703596,
+      "time": 0.03910470008850098,
+      "size_kb": 1425.8681640625
+    },
+    {
+      "file": "DOCC111697362_019511-01815.pdf",
+      "success": true,
+      "pages": 3,
+      "regions": 195,
+      "confidence": 0.9799810841447908,
+      "time": 0.00399327278137207,
+      "size_kb": 97.8583984375
+    },
+    {
+      "file": "DOCC111697363_019511-01820.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 142,
+      "confidence": 0.9810593881296075,
+      "time": 0.0033867359161376953,
+      "size_kb": 72.126953125
+    },
+    {
+      "file": "DOCC111697371_019511-01418.pdf",
+      "success": true,
+      "pages": 4,
+      "regions": 108,
+      "confidence": 0.9818463991676177,
+      "time": 0.003335714340209961,
+      "size_kb": 122.54296875
+    },
+    {
+      "file": "DOCC111697387_019511-01936.pdf",
+      "success": true,
+      "pages": 15,
+      "regions": 818,
+      "confidence": 0.985915906657293,
+      "time": 0.04033327102661133,
+      "size_kb": 1396.2734375
+    },
+    {
+      "file": "DOCC111697390_019511-01958.pdf",
+      "success": true,
+      "pages": 14,
+      "regions": 750,
+      "confidence": 0.9708418790859585,
+      "time": 0.022748947143554688,
+      "size_kb": 2067.759765625
+    },
+    {
+      "file": "DOCC111697399_019511-01886.pdf",
+      "success": true,
+      "pages": 3,
+      "regions": 117,
+      "confidence": 0.9749824655725355,
+      "time": 0.004178762435913086,
+      "size_kb": 121.0087890625
+    },
+    {
+      "file": "DOCC111697405_019511-01998.pdf",
+      "success": true,
+      "pages": 11,
+      "regions": 721,
+      "confidence": 0.982755855558392,
+      "time": 0.02290630340576172,
+      "size_kb": 2014.3447265625
+    },
+    {
+      "file": "DOCC111697406_019511-02011.pdf",
+      "success": true,
+      "pages": 9,
+      "regions": 390,
+      "confidence": 0.9817357123526721,
+      "time": 0.010142803192138672,
+      "size_kb": 630.3037109375
+    },
+    {
+      "file": "DOCC111697414_019511-02053.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.984284195789071,
+      "time": 0.003677845001220703,
+      "size_kb": 41.248046875
+    },
+    {
+      "file": "DOCC111697416_019511-02060.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 275,
+      "confidence": 0.9586294378748578,
+      "time": 0.0074880123138427734,
+      "size_kb": 392.4326171875
+    },
+    {
+      "file": "DOCC111697418_019511-02066.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 56,
+      "confidence": 0.9497395711454006,
+      "time": 0.0030913352966308594,
+      "size_kb": 53.3115234375
+    },
+    {
+      "file": "DOCC111697420_019511-02070.pdf",
+      "success": true,
+      "pages": 18,
+      "regions": 893,
+      "confidence": 0.9840518835596094,
+      "time": 0.021821975708007812,
+      "size_kb": 1434.5732421875
+    },
+    {
+      "file": "DOCC111697422_019511-02092.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 85,
+      "confidence": 0.9530976242678506,
+      "time": 0.004030466079711914,
+      "size_kb": 117.3583984375
+    },
+    {
+      "file": "DOCC111697423_019511-02095.pdf",
+      "success": true,
+      "pages": 14,
+      "regions": 814,
+      "confidence": 0.9816437253984588,
+      "time": 0.03764176368713379,
+      "size_kb": 2062.359375
+    },
+    {
+      "file": "DOCC111697427_019511-02115.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 58,
+      "confidence": 0.9814886173297619,
+      "time": 0.003612995147705078,
+      "size_kb": 78.666015625
+    },
+    {
+      "file": "DOCC111697429_019511-02130.pdf",
+      "success": true,
+      "pages": 4,
+      "regions": 127,
+      "confidence": 0.9788437327696445,
+      "time": 0.004029989242553711,
+      "size_kb": 179.9228515625
+    },
+    {
+      "file": "DOCC111697444_019511-02134.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 55,
+      "confidence": 0.9849346099477825,
+      "time": 0.002880573272705078,
+      "size_kb": 50.666015625
+    },
+    {
+      "file": "DOCC111697445_019511-02178.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 50,
+      "confidence": 0.9872222423553467,
+      "time": 0.002693653106689453,
+      "size_kb": 46.404296875
+    },
+    {
+      "file": "DOCC111697453_019511-02186.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 38,
+      "confidence": 0.9890029163737046,
+      "time": 0.015689849853515625,
+      "size_kb": 36.1533203125
+    },
+    {
+      "file": "DOCC111697456_019511-02216.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 138,
+      "confidence": 0.9726065439297944,
+      "time": 0.013551473617553711,
+      "size_kb": 120.5078125
+    },
+    {
+      "file": "DOCC111697457_019511-02218.pdf",
+      "success": true,
+      "pages": 19,
+      "regions": 834,
+      "confidence": 0.9741062577756348,
+      "time": 0.025694608688354492,
+      "size_kb": 1315.2607421875
+    },
+    {
+      "file": "DOCC111697459_019511-02243.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 48,
+      "confidence": 0.9796915364762148,
+      "time": 0.0034024715423583984,
+      "size_kb": 71.421875
+    },
+    {
+      "file": "DOCC111697460_019511-02244.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 43,
+      "confidence": 0.9800220450689626,
+      "time": 0.0029222965240478516,
+      "size_kb": 39.8955078125
+    },
+    {
+      "file": "DOCC111697465_019511-02268.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 42,
+      "confidence": 0.9711535133066631,
+      "time": 0.01776409149169922,
+      "size_kb": 44.69921875
+    },
+    {
+      "file": "DOCC111697466_019511-02269.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 48,
+      "confidence": 0.9576663201053938,
+      "time": 0.011758089065551758,
+      "size_kb": 70.7421875
+    },
+    {
+      "file": "DOCC111697475_019511-02297.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 50,
+      "confidence": 0.9779649162292481,
+      "time": 0.006055116653442383,
+      "size_kb": 68.6748046875
+    },
+    {
+      "file": "DOCC111697476_019511-02298.pdf",
+      "success": true,
+      "pages": 3,
+      "regions": 108,
+      "confidence": 0.9707394512217258,
+      "time": 0.008720874786376953,
+      "size_kb": 102.25
+    },
+    {
+      "file": "DOCC111697482_019511-02338.pdf",
+      "success": true,
+      "pages": 8,
+      "regions": 291,
+      "confidence": 0.9728631736732188,
+      "time": 0.014281749725341797,
+      "size_kb": 471.4130859375
+    },
+    {
+      "file": "DOCC111697484_019511-02355.pdf",
+      "success": true,
+      "pages": 2,
+      "regions": 76,
+      "confidence": 0.9802656918764114,
+      "time": 0.016991138458251953,
+      "size_kb": 103.43359375
+    },
+    {
+      "file": "DOCC111697485_019511-02357.pdf",
+      "success": true,
+      "pages": 9,
+      "regions": 400,
+      "confidence": 0.9714031711354646,
+      "time": 0.03260636329650879,
+      "size_kb": 496.87890625
+    },
+    {
+      "file": "DOCC111697486_019511-02366.pdf",
+      "success": true,
+      "pages": 1,
+      "regions": 40,
+      "confidence": 0.9738948822021485,
+      "time": 0.007701873779296875,
+      "size_kb": 40.3740234375
+    },
+    {
+      "file": "DOCC111697488_019511-02375.pdf",
+      "success": true,
+      "pages": 21,
+      "regions": 1012,
+      "confidence": 0.9798878206601105,
+      "time": 0.02486276626586914,
+      "size_kb": 1389.66796875
+    },
+    {
+      "file": "DOCC111697489_019511-02396.pdf",
+      "success": true,
+      "pages": 8,
+      "regions": 350,
+      "confidence": 0.9743498593034139,
+      "time": 0.008987665176391602,
+      "size_kb": 491.7236328125
+    },
+    {
+      "file": "DOCC111697494_019511-02432.pdf",
+      "success": true,
+      "pages": 6,
+      "regions": 262,
+      "confidence": 0.9816174914385697,
+      "time": 0.015063285827636719,
+      "size_kb": 339.9443359375
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+OCR Results for: DOC717S208.pdf
+Processed: 2025-06-19 16:06:36.482239
+Total pages: 3
+Total regions: 111
+Average confidence: 96.96%
+======================================================================
+
+
+--- Page 1 ---
+Regions: 37
+
+2025002517 B: 019888 P: 01266
+Page1 of 6
+  [Confidence: 88.88%]
+OFFICIAL RECORDS OF WAKE COUNTY
+Tammy L. Brunner, Register of Deeds
+04/25/2025 10:11 AMFee: $26.00 Excise Tax: $0.00
+Prepared by, and after recording, MAIL TO:
+Maynard Nexsen PC
+4141 Parklake Ave., Suite 200
+Raleigh, NC 27613
+NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL
+This NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL (this "Notice') is executed
+and recorded by BLANEY FARMS HOMEOWNERS ASSOCIATION, INC., a North Carolina
+nonprofit corporation ("HOA"), on behalf of and as directed pursuant to the Consent Agreement attached.
+hereto by NEDRA M. HOOD and RODERICK J. HOOD, each individual residents of Wake County,
+North Carolina (collectively, "Hood").
+1.
+Hood and HOA have entered into an agreement (the "Consent Agreement) whereby
+Hood has consented to the HOA's removal of a failing Party Wall Fence (the "Fence') located within HOA
+Common Area in the rear of Hood's property located at 2220 Stillness Pond Lane, Apex, North Carolina
+27539, and being more particularly described on Exhibit A attached hereto and incorporated herein by
+reference (the "Property'). A copy of the Consent Agreement is attached hereto as Exhibit B, which
+together with its terms are incorporated herein by reference..
+2.
+Pursuant to the Consent Agreement, the HOA hereby executes and presents this Notice for
+recording with the Wake County Registry to provide record notice of the Consent Agreement with respect
+to the Property.
+3.
+Any settlement agent handling the sale of the Property by Hood are hereby instructed to
+contact the individual below for additional information needed regarding the Consent Agreement, if any:
+Maynard Nexsen PC
+Attn: Alex Serkes
+4141 Parklake Avenue, Suite 200
+Raleigh, NC 27612
+E-mail: aserkes@maynardnexsen.com
+[SIGNATURE PAGE FOLLOWS]
+Submitted electronically by "Maynard Nexsen pc".
+in compliance with North carolina statutes governing recordable documents
+
+
+--- Page 2 ---
+Regions: 35
+
+2025002517 B: 019888 P: 01267
+04/25/2025 10:11 AM Page 2 of 6
+SIGNATURE PAGE FOR NOTICE OF CONSENT TO PARTY WALL FENCE REMOVAL
+IN WITNESS wHEREOF, HOA has executed and caused this Notice to be recorded on behalf
+of and as directed by Hood pursuant to the Consent Agreement, effective as of the date of recording..
+HOA:
+Blaney Farms Homeowners Association, Inc.
+a North Carolina nonprofit corporation.
+By:
+(SEAL)
+Name: ScottJ. Brindi
+Title: Preside
+STATE OF NORTH CAROLINA
+COUNTY OF WAKE
+I, a Notary Public of the aforesaid State and County of
+Wake
+  [Confidence: 77.40%]
+certify that Scott J.
+Brindisi, as the President of Blaney Farms Homeowners Association, Inc., appeared before me and being.
+personally known to me (or proved to me on the basis of satisfactory evidence) to be the person whose
+name is subscribed to the within instrument and acknowledged to me that he executed the same in his
+authorized capacity, and that by his signature on the instrument the person, or entity upon behalf of which
+the person acted, executed the instrument.
+WITNEsS my hand and official stamp or seal, this _ZZ^ day of _APn1L
+2025.
+NOTARY PUBLIC
+T/mofhy I. Monnis
+  [Confidence: 73.84%]
+(Type or Print Name of Notary Public)
+Y
+(NOTAR
+SEAL)
+R
+  [Confidence: 65.71%]
+TAR
+COUN
+2
+124099338.1
+
+
+--- Page 3 ---
+Regions: 39
+
+2025002517 B: 019888 P: 01270
+04/25/2025 10:11 AM Page 5 of 6
+Blaney Farms
+Homeowners Association, Inc.
+Apex,NC 27502
+919362-1460
+FAX919362-1462
+18 MAr202s
+  [Confidence: 59.76%]
+002
+  [Confidence: 52.91%]
+220 Stillness Pond Ln
+Apex, NC 27539
+Dear
+As previously discussed in meetings and correspondence held and delivered by the Blaney Farms
+Homeowners Association, Inc. (the "Association"), the Association intends to remove the failing Fence
+located in the rear of your Lot along Ten-Ten Road. The portion of your Lot that the Fence is located in
+constitutes Common Area maintained by the Association pursuant to the Association's governing
+documents (collectively, the "Governing Documents'). The Association intends to install buffer trees.
+and other vegetation in front of the prior location of the Fence (the "Landscaping Buffer') in order to.
+give that location a more aesthetically pleasing look, while also providing sight and sound buffers from
+the highly traveled Ten-Ten Toad.
+Pursuant to the Governing Documents, the Fence is a "Party Wall' that requires your consent to
+permanently remove the Party Wall from your Lot. By signing the following page, you hereby give your.
+consent to the Association's removal of the Fence to be replaced with the new Landscaping Buffer as
+discussed above. Please note, however, that while the Association intends to install the Landscaping
+Buffer as discussed above, completion of the Landscaping Buffer will not be on a certain timeline.
+If you choose not to sign this letter giving your consent to permanently remove the Fence from
+your Lot and replace the area with the new Landscaping Buffer discussed above, please be advised that,.
+in order to provide for the Fence's future maintenance, the Association may elect to impose on your Lot
+"neighborhood assessments" in accordance with the Governing Documents that are specific to your Lot
+and in addition to the annual assessments you are otherwise obligated to pay to the Association.
+Finally, by signing the following page evidencing your consent to the removal of the Fence from
+your Lot, you hereby authorize the Association to record one or more documents in the Wake County
+Registry evidencing your consent.
+Prior to signing this Letter, please do not hesitate to reach out to the Association with any
+questions you may have with respect to this Letter.
+Sincerely,
+Blaney Farms Homeowners Association, Inc.
+AWe, the undersigned homeowners, hereby consent to the Association's removal of the Fence
+from Lot 7 and the replacement of the Fence with the Landscaping Buffer discussed in this Letter.
+

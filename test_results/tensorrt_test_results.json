@@ -1,0 +1,12 @@
+{
+  "tensorrt_enabled": true,
+  "total_documents": 10,
+  "successful": 10,
+  "failed": 0,
+  "total_pages": 28,
+  "total_regions": 1196,
+  "total_time": 18.41418480873108,
+  "avg_time_per_doc": 1.8410307168960571,
+  "docs_per_minute": 32.583576532560386,
+  "pages_per_minute": 91.23401429116909
+}

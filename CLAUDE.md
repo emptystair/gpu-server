@@ -29,12 +29,45 @@ src/
 
 ## Development Commands
 
-Since the project is in initial setup phase, specific commands are not yet defined. When implementing:
+### Setup
+```bash
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate  # Windows
 
-1. **Dependencies**: Use `requirements.txt` for Python package management
-2. **Running the server**: Likely `python src/main.py` or through Docker
-3. **Testing**: Test files are in `tests/` directory, framework TBD
-4. **Docker**: Use `docker-compose up` once docker-compose.yml is configured
+# Install dependencies
+pip install -r requirements.txt
+pip install -r requirements-api.txt
+pip install -r requirements-test.txt
+```
+
+### Running the Server
+```bash
+# Development mode
+python src/main.py
+
+# Production mode with uvicorn
+uvicorn src.main:app --host 0.0.0.0 --port 8000
+
+# Docker (when configured)
+docker-compose up
+```
+
+### Testing
+```bash
+# Run all tests
+python tests/run_tests.py
+
+# Run specific test categories
+python tests/run_tests.py unit
+python tests/run_tests.py integration
+python tests/run_tests.py --no-cov  # Without coverage
+
+# Run specific test file
+pytest tests/test_api_routes.py -v
+```
 
 ## Key Implementation Areas
 
@@ -49,9 +82,31 @@ Since the project is in initial setup phase, specific commands are not yet defin
 
 ## Current Status
 
-The project structure has been created with the following components implemented:
-- **API Schemas** (`src/api/schemas.py`): Complete Pydantic models for all request/response types
-- All other implementation files are ready for development following the established modular architecture.
+The project has been significantly developed with the following components implemented:
+
+### Completed Components:
+- **API Layer** (`src/api/`): 
+  - All 13 REST endpoints implemented in `routes.py`
+  - Complete middleware stack (logging, rate limiting, metrics, error handling)
+  - Pydantic v2 schemas with proper validation
+- **OCR Service** (`src/ocr_service.py`): 
+  - Accepts `ProcessingRequest` objects for clean API
+  - Returns `ProcessingResult` with structured data
+  - Includes initialization, readiness checks, and shutdown methods
+- **GPU Monitoring** (`src/gpu_monitor.py`): 
+  - Real-time GPU metrics (memory, utilization, temperature)
+  - Synchronous API for performance metrics
+- **Models** (`src/models/`):
+  - PaddleOCR wrapper with `is_ready()` method
+  - TensorRT optimization placeholder
+  - Result formatting utilities
+
+### Implementation Highlights:
+- Fixed circular import issues between modules
+- Updated to Pydantic v2 (pattern instead of regex)
+- Proper error handling and resource cleanup
+- Async job processing with in-memory storage (upgrade to Redis for production)
+- Comprehensive health and readiness checks
 
 ## API Features
 

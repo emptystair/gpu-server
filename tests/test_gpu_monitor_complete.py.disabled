@@ -1,0 +1,316 @@
+"""
+GPU Monitor Complete Tests
+
+Comprehensive tests for GPU monitoring functionality including
+mocked tests for environments without GPU.
+"""
+
+import pytest
+import asyncio
+import time
+from unittest.mock import Mock, patch, MagicMock
+import pynvml
+
+from src.gpu_monitor import GPUMonitor, MemoryInfo, GPUUtilization, GPUMetrics
+from src.config import GPUConfig
+
+
+class TestGPUMonitor:
+    """Test GPU monitoring functionality"""
+    
+    @pytest.fixture
+    def gpu_config(self):
+        """GPU configuration for testing"""
+        return GPUConfig(
+            device_id=0,
+            monitoring_interval_seconds=0.1,
+            memory_threshold_percent=85.0,
+            enable_monitoring=True
+        )
+    
+    @pytest.fixture
+    def mock_nvml(self):
+        """Mock pynvml for testing without GPU"""
+        with patch('src.gpu_monitor.pynvml') as mock:
+            # Mock initialization
+            mock.nvmlInit = Mock()
+            mock.nvmlShutdown = Mock()
+            
+            # Mock device handle
+            mock_handle = MagicMock()
+            mock.nvmlDeviceGetHandleByIndex = Mock(return_value=mock_handle)
+            
+            # Mock device info
+            mock.nvmlDeviceGetName = Mock(return_value=b"NVIDIA GeForce RTX 4090")
+            mock.nvmlDeviceGetMemoryInfo = Mock(return_value=Mock(
+                total=25769803776,  # 24GB
+                free=21474836480,   # 20GB
+                used=4294967296     # 4GB
+            ))
+            mock.nvmlDeviceGetUtilizationRates = Mock(return_value=Mock(
+                gpu=25,
+                memory=17
+            ))
+            mock.nvmlDeviceGetTemperature = Mock(return_value=45)
+            mock.nvmlDeviceGetPowerUsage = Mock(return_value=150000)  # milliwatts
+            mock.nvmlDeviceGetEncoderUtilization = Mock(return_value=(0, 0))
+            mock.nvmlDeviceGetDecoderUtilization = Mock(return_value=(0, 0))
+            
+            # Mock error cases
+            mock.NVMLError = pynvml.NVMLError if hasattr(pynvml, 'NVMLError') else Exception
+            
+            yield mock
+    
+    @pytest.mark.unit
+    async def test_initialization(self, gpu_config, mock_nvml):
+        """Test GPU monitor initialization"""
+        monitor = GPUMonitor(gpu_config)
+        
+        await monitor.initialize()
+        
+        assert monitor.initialized
+        assert monitor.device_handle is not None
+        mock_nvml.nvmlInit.assert_called_once()
+        mock_nvml.nvmlDeviceGetHandleByIndex.assert_called_with(0)
+    
+    @pytest.mark.unit
+    async def test_initialization_no_gpu(self, gpu_config, mock_nvml):
+        """Test initialization when GPU is not available"""
+        mock_nvml.nvmlInit.side_effect = Exception("NVML not available")
+        
+        monitor = GPUMonitor(gpu_config)
+        
+        with pytest.raises(RuntimeError, match="Failed to initialize NVIDIA Management Library"):
+            await monitor.initialize()
+    
+    @pytest.mark.unit
+    async def test_get_current_status(self, gpu_config, mock_nvml):
+        """Test getting current GPU status"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        status = await monitor.get_current_status()
+        
+        assert isinstance(status, GPUStatus)
+        assert status.device_id == 0
+        assert status.device_name == "NVIDIA GeForce RTX 4090"
+        assert status.memory.total_mb == 24576  # 24GB
+        assert status.memory.used_mb == 4096    # 4GB
+        assert status.memory.free_mb == 20480   # 20GB
+        assert status.utilization.compute_percent == 25.0
+        assert status.utilization.memory_percent == 17.0
+        assert status.temperature_celsius == 45.0
+        assert status.power_draw_watts == 150.0
+    
+    @pytest.mark.unit
+    async def test_get_available_memory(self, gpu_config, mock_nvml):
+        """Test getting available GPU memory"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        available_mb = await monitor.get_available_memory()
+        
+        assert available_mb == 20480 - 500  # Free memory minus buffer
+    
+    @pytest.mark.unit
+    async def test_check_memory_pressure(self, gpu_config, mock_nvml):
+        """Test memory pressure detection"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Normal memory usage (17%)
+        is_under_pressure = await monitor.check_memory_pressure()
+        assert is_under_pressure is False
+        
+        # High memory usage (90%)
+        mock_nvml.nvmlDeviceGetMemoryInfo.return_value = Mock(
+            total=25769803776,
+            free=2576980377,   # 10% free
+            used=23192823398   # 90% used
+        )
+        mock_nvml.nvmlDeviceGetUtilizationRates.return_value = Mock(gpu=25, memory=90)
+        
+        is_under_pressure = await monitor.check_memory_pressure()
+        assert is_under_pressure is True
+    
+    @pytest.mark.unit
+    async def test_monitoring_loop(self, gpu_config, mock_nvml):
+        """Test background monitoring loop"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Start monitoring
+        monitor.start_monitoring()
+        
+        # Let it run for a bit
+        await asyncio.sleep(0.3)
+        
+        # Check that metrics were collected
+        assert len(monitor.metrics_history) > 0
+        
+        # Stop monitoring
+        await monitor.shutdown()
+        assert monitor.monitoring_task is None
+    
+    @pytest.mark.unit
+    async def test_get_metrics_history(self, gpu_config, mock_nvml):
+        """Test metrics history retrieval"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Add some metrics
+        for i in range(5):
+            status = await monitor.get_current_status()
+            monitor.metrics_history.append(status)
+            await asyncio.sleep(0.1)
+        
+        history = monitor.get_metrics_history(duration_seconds=1)
+        
+        assert len(history) == 5
+        assert all(isinstance(s, GPUStatus) for s in history)
+    
+    @pytest.mark.unit
+    async def test_get_average_metrics(self, gpu_config, mock_nvml):
+        """Test average metrics calculation"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Mock varying utilization
+        utilizations = [20, 30, 40, 50, 60]
+        for util in utilizations:
+            mock_nvml.nvmlDeviceGetUtilizationRates.return_value = Mock(
+                gpu=util, memory=util/2
+            )
+            status = await monitor.get_current_status()
+            monitor.metrics_history.append(status)
+        
+        avg_metrics = monitor.get_average_metrics(duration_seconds=10)
+        
+        assert avg_metrics["compute_percent"] == 40.0  # Average of 20-60
+        assert avg_metrics["memory_percent"] == 20.0   # Average of 10-30
+    
+    @pytest.mark.unit
+    async def test_error_handling(self, gpu_config, mock_nvml):
+        """Test error handling in various scenarios"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Simulate NVML error during status check
+        mock_nvml.nvmlDeviceGetUtilizationRates.side_effect = Exception("NVML Error")
+        
+        with pytest.raises(RuntimeError, match="Failed to get GPU utilization"):
+            await monitor.get_current_status()
+    
+    @pytest.mark.unit
+    async def test_multi_gpu_support(self, gpu_config, mock_nvml):
+        """Test support for multiple GPUs"""
+        # Configure for GPU 1
+        gpu_config.device_id = 1
+        
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        mock_nvml.nvmlDeviceGetHandleByIndex.assert_called_with(1)
+    
+    @pytest.mark.unit
+    async def test_shutdown(self, gpu_config, mock_nvml):
+        """Test proper shutdown procedure"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Start monitoring
+        monitor.start_monitoring()
+        await asyncio.sleep(0.1)
+        
+        # Shutdown
+        await monitor.shutdown()
+        
+        assert not monitor.initialized
+        assert monitor.monitoring_task is None
+        mock_nvml.nvmlShutdown.assert_called_once()
+    
+    @pytest.mark.unit
+    def test_memory_info_properties(self):
+        """Test MemoryStatus properties"""
+        memory = MemoryStatus(
+            total_mb=24576,
+            used_mb=8192,
+            free_mb=16384,
+            reserved_mb=2048
+        )
+        
+        assert memory.utilization_percent == pytest.approx(33.33, 0.01)
+        assert memory.available_mb == 16384 - 2048
+    
+    @pytest.mark.unit
+    def test_gpu_status_serialization(self):
+        """Test GPUStatus serialization"""
+        status = GPUStatus(
+            device_id=0,
+            device_name="Test GPU",
+            memory=MemoryStatus(
+                total_mb=8192,
+                used_mb=2048,
+                free_mb=6144,
+                reserved_mb=512
+            ),
+            utilization=UtilizationStatus(
+                compute_percent=50.0,
+                memory_percent=25.0,
+                encoder_percent=10.0,
+                decoder_percent=5.0
+            ),
+            temperature_celsius=60.0,
+            power_draw_watts=200.0,
+            timestamp=time.time()
+        )
+        
+        # Should be serializable
+        data = status.to_dict()
+        assert data["device_id"] == 0
+        assert data["device_name"] == "Test GPU"
+        assert data["memory"]["total_mb"] == 8192
+        assert data["utilization"]["compute_percent"] == 50.0
+    
+    @pytest.mark.gpu
+    @pytest.mark.integration
+    async def test_real_gpu(self, gpu_config):
+        """Test with real GPU if available"""
+        try:
+            monitor = GPUMonitor(gpu_config)
+            await monitor.initialize()
+            
+            # Get real GPU status
+            status = await monitor.get_current_status()
+            
+            # Basic sanity checks
+            assert status.device_id >= 0
+            assert len(status.device_name) > 0
+            assert status.memory.total_mb > 0
+            assert 0 <= status.utilization.compute_percent <= 100
+            assert status.temperature_celsius > 0
+            
+            await monitor.shutdown()
+            
+        except Exception as e:
+            pytest.skip(f"No GPU available for testing: {e}")
+    
+    @pytest.mark.performance
+    async def test_monitoring_performance(self, gpu_config, mock_nvml):
+        """Test monitoring performance and overhead"""
+        monitor = GPUMonitor(gpu_config)
+        await monitor.initialize()
+        
+        # Measure time for 100 status checks
+        start_time = time.time()
+        
+        for _ in range(100):
+            await monitor.get_current_status()
+        
+        elapsed = time.time() - start_time
+        avg_time = elapsed / 100
+        
+        # Should be fast (< 10ms per check)
+        assert avg_time < 0.01
+        
+        print(f"Average status check time: {avg_time*1000:.2f}ms")

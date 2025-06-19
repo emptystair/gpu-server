@@ -1,0 +1,400 @@
+"""
+API Routes Tests
+
+Tests for all API endpoints including file upload, processing, and monitoring.
+"""
+
+import pytest
+import asyncio
+import io
+import json
+from pathlib import Path
+from unittest.mock import Mock, patch, AsyncMock
+from fastapi.testclient import TestClient
+from fastapi import UploadFile
+
+from src.main import create_app
+from src.api.schemas import ProcessingStrategy, OCRLanguage, OutputFormat, ProcessingStatus
+
+
+class TestAPIRoutes:
+    """Test API route functionality"""
+    
+    @pytest.fixture
+    def client(self, test_config, mock_gpu_monitor, mock_cache_manager):
+        """Create test client with mocked dependencies"""
+        app = create_app()
+        
+        # Mock dependencies
+        with patch('src.api.routes.ocr_service', Mock()):
+            with patch('src.api.routes.gpu_monitor', mock_gpu_monitor):
+                with patch('src.api.routes.cache_manager', mock_cache_manager):
+                    # Set initialized state
+                    with patch('src.api.routes.state.startup_complete', True):
+                        yield TestClient(app)
+    
+    @pytest.mark.unit
+    def test_root_endpoint(self, client):
+        """Test root endpoint"""
+        response = client.get("/")
+        assert response.status_code == 200
+        data = response.json()
+        assert data["service"] == "GPU OCR Server"
+        assert "version" in data
+        assert data["status"] == "operational"
+    
+    @pytest.mark.unit
+    def test_health_endpoint(self, client):
+        """Test health check endpoint"""
+        response = client.get("/api/v1/health")
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] in ["healthy", "degraded", "unhealthy"]
+        assert "services" in data
+        assert "version" in data
+    
+    @pytest.mark.unit
+    def test_ready_endpoint(self, client):
+        """Test readiness endpoint"""
+        response = client.get("/api/v1/ready")
+        assert response.status_code == 200
+        data = response.json()
+        assert isinstance(data["ready"], bool)
+        assert "models_loaded" in data
+        assert "gpu_available" in data
+        assert "message" in data
+    
+    @pytest.mark.unit
+    def test_gpu_status_endpoint(self, client):
+        """Test GPU status endpoint"""
+        response = client.get("/api/v1/gpu/status")
+        assert response.status_code == 200
+        data = response.json()
+        assert "device_id" in data
+        assert "device_name" in data
+        assert "memory" in data
+        assert "utilization" in data
+        assert data["memory"]["total_mb"] > 0
+    
+    @pytest.mark.unit
+    def test_stats_endpoint(self, client):
+        """Test statistics endpoint"""
+        response = client.get("/api/v1/stats")
+        assert response.status_code == 200
+        data = response.json()
+        assert "uptime_seconds" in data
+        assert "total_requests" in data
+        assert "total_documents" in data
+        assert "average_pages_per_second" in data
+    
+    @pytest.mark.unit
+    def test_process_single_image(self, client, test_image):
+        """Test single image processing"""
+        # Create mock file
+        files = {"file": ("test.png", test_image, "image/png")}
+        data = {
+            "strategy": ProcessingStrategy.BALANCED.value,
+            "language": OCRLanguage.ENGLISH.value,
+            "output_format": OutputFormat.JSON.value
+        }
+        
+        # Mock OCR service
+        mock_result = Mock()
+        mock_result.pages = [Mock(
+            page_number=1,
+            text="Test text",
+            words=[],
+            confidence=0.95
+        )]
+        mock_result.average_confidence = 0.95
+        
+        with patch('src.api.routes.ocr_service') as mock_svc:
+            mock_svc.process_document = AsyncMock(return_value=mock_result)
+            
+            response = client.post(
+                "/api/v1/ocr/process",
+                files=files,
+                data=data
+            )
+        
+        assert response.status_code == 200
+        result = response.json()
+        assert result["status"] == ProcessingStatus.COMPLETED.value
+        assert "request_id" in result
+        assert "processing_time" in result
+        assert result["average_confidence"] == 0.95
+    
+    @pytest.mark.unit
+    def test_process_invalid_file_type(self, client):
+        """Test processing with invalid file type"""
+        # Create text file
+        files = {"file": ("test.txt", b"Not an image", "text/plain")}
+        data = {"strategy": ProcessingStrategy.BALANCED.value}
+        
+        response = client.post(
+            "/api/v1/ocr/process",
+            files=files,
+            data=data
+        )
+        
+        assert response.status_code == 400
+        result = response.json()
+        assert "error" in result
+        assert "Invalid file type" in result["message"]
+    
+    @pytest.mark.unit
+    def test_process_oversized_file(self, client):
+        """Test processing with oversized file"""
+        # Create large fake file
+        large_content = b"x" * (101 * 1024 * 1024)  # 101MB
+        files = {"file": ("large.jpg", large_content, "image/jpeg")}
+        data = {"strategy": ProcessingStrategy.BALANCED.value}
+        
+        response = client.post(
+            "/api/v1/ocr/process",
+            files=files,
+            data=data
+        )
+        
+        assert response.status_code == 413
+        result = response.json()
+        assert "error" in result
+        assert "File size exceeds" in result["message"]
+    
+    @pytest.mark.unit
+    def test_process_batch(self, client, test_image):
+        """Test batch processing"""
+        # Create multiple files
+        files = [
+            ("files", ("test1.png", test_image, "image/png")),
+            ("files", ("test2.png", test_image, "image/png")),
+            ("files", ("test3.png", test_image, "image/png"))
+        ]
+        data = {
+            "strategy": ProcessingStrategy.SPEED.value,
+            "parallel_processing": "true"
+        }
+        
+        # Mock OCR service
+        mock_result = Mock()
+        mock_result.pages = [Mock(text="Test", confidence=0.9)]
+        mock_result.average_confidence = 0.9
+        mock_result.processing_time_ms = 100
+        
+        with patch('src.api.routes.ocr_service') as mock_svc:
+            mock_svc.process_document = AsyncMock(return_value=mock_result)
+            
+            response = client.post(
+                "/api/v1/ocr/process-batch",
+                files=files,
+                data=data
+            )
+        
+        assert response.status_code == 200
+        result = response.json()
+        assert result["status"] == ProcessingStatus.COMPLETED.value
+        assert result["total_images"] == 3
+        assert result["successful"] == 3
+        assert result["failed"] == 0
+        assert len(result["results"]) == 3
+    
+    @pytest.mark.unit
+    def test_batch_size_limit(self, client, test_image):
+        """Test batch size limit enforcement"""
+        # Create 101 files (exceeds limit)
+        files = [
+            ("files", (f"test{i}.png", test_image, "image/png"))
+            for i in range(101)
+        ]
+        
+        response = client.post(
+            "/api/v1/ocr/process-batch",
+            files=files,
+            data={"strategy": ProcessingStrategy.BALANCED.value}
+        )
+        
+        assert response.status_code == 400
+        result = response.json()
+        assert "Batch size cannot exceed" in result["detail"]
+    
+    @pytest.mark.unit
+    def test_output_formats(self, client, test_image):
+        """Test different output formats"""
+        formats = [
+            OutputFormat.JSON,
+            OutputFormat.TEXT,
+            OutputFormat.MARKDOWN,
+            OutputFormat.HTML
+        ]
+        
+        # Mock OCR result
+        mock_result = Mock()
+        mock_result.pages = [
+            Mock(
+                page_number=1,
+                text="Page 1 text",
+                words=[Mock(text="Page", confidence=0.9, bbox=(0, 0, 10, 10))],
+                confidence=0.95
+            ),
+            Mock(
+                page_number=2,
+                text="Page 2 text",
+                words=[],
+                confidence=0.90
+            )
+        ]
+        mock_result.average_confidence = 0.925
+        
+        for output_format in formats:
+            files = {"file": ("test.png", test_image, "image/png")}
+            data = {
+                "output_format": output_format.value,
+                "strategy": ProcessingStrategy.BALANCED.value
+            }
+            
+            with patch('src.api.routes.ocr_service') as mock_svc:
+                mock_svc.process_document = AsyncMock(return_value=mock_result)
+                
+                response = client.post(
+                    "/api/v1/ocr/process",
+                    files=files,
+                    data=data
+                )
+            
+            assert response.status_code == 200
+            result = response.json()
+            
+            if output_format == OutputFormat.JSON:
+                assert "regions" in result
+                assert "pages" in result
+            elif output_format == OutputFormat.TEXT:
+                assert "text" in result
+                assert "Page 1 text" in result["text"]
+                assert "Page 2 text" in result["text"]
+            elif output_format == OutputFormat.MARKDOWN:
+                assert "text" in result
+                assert "## Page 1" in result["text"]
+                assert "## Page 2" in result["text"]
+            elif output_format == OutputFormat.HTML:
+                assert "text" in result
+                assert '<div class="page"' in result["text"]
+    
+    @pytest.mark.unit
+    def test_caching_behavior(self, client, test_image, mock_cache_manager):
+        """Test caching functionality"""
+        files = {"file": ("test.png", test_image, "image/png")}
+        data = {"strategy": ProcessingStrategy.BALANCED.value}
+        
+        # First request - cache miss
+        mock_cache_manager.get.return_value = None
+        
+        with patch('src.api.routes.ocr_service') as mock_svc:
+            mock_result = Mock()
+            mock_result.pages = [Mock(text="Test", words=[], confidence=0.9)]
+            mock_result.average_confidence = 0.9
+            mock_svc.process_document = AsyncMock(return_value=mock_result)
+            
+            response1 = client.post(
+                "/api/v1/ocr/process",
+                files=files,
+                data=data
+            )
+        
+        assert response1.status_code == 200
+        result1 = response1.json()
+        assert result1["cache_hit"] is False
+        
+        # Verify cache was set
+        assert mock_cache_manager.set.called
+        
+        # Second request - cache hit
+        mock_cache_manager.get.return_value = {
+            "status": "completed",
+            "text": "Cached result",
+            "cache_hit": True
+        }
+        
+        response2 = client.post(
+            "/api/v1/ocr/process",
+            files=files,
+            data=data
+        )
+        
+        assert response2.status_code == 200
+        result2 = response2.json()
+        assert result2["cache_hit"] is True
+    
+    @pytest.mark.unit
+    def test_error_handling(self, client, test_image):
+        """Test error handling in processing"""
+        files = {"file": ("test.png", test_image, "image/png")}
+        data = {"strategy": ProcessingStrategy.BALANCED.value}
+        
+        # Mock service error
+        with patch('src.api.routes.ocr_service') as mock_svc:
+            mock_svc.process_document = AsyncMock(
+                side_effect=Exception("Processing failed")
+            )
+            
+            response = client.post(
+                "/api/v1/ocr/process",
+                files=files,
+                data=data
+            )
+        
+        assert response.status_code == 500
+        result = response.json()
+        assert "error" in result
+        assert "request_id" in result
+        assert "Document processing failed" in result["message"]
+    
+    @pytest.mark.unit
+    def test_metrics_endpoint(self, client):
+        """Test Prometheus metrics endpoint"""
+        response = client.get("/api/v1/metrics")
+        assert response.status_code == 200
+        content = response.text
+        
+        # Check for expected metrics
+        assert "ocr_requests_total" in content
+        assert "ocr_documents_total" in content
+        assert "ocr_pages_total" in content
+        assert "ocr_processing_time_ms" in content
+    
+    @pytest.mark.integration
+    async def test_concurrent_requests(self, client, test_image):
+        """Test handling of concurrent requests"""
+        # Simulate multiple concurrent requests
+        async def make_request():
+            files = {"file": ("test.png", test_image, "image/png")}
+            data = {"strategy": ProcessingStrategy.SPEED.value}
+            
+            loop = asyncio.get_event_loop()
+            response = await loop.run_in_executor(
+                None,
+                lambda: client.post(
+                    "/api/v1/ocr/process",
+                    files=files,
+                    data=data
+                )
+            )
+            return response
+        
+        # Make 5 concurrent requests
+        with patch('src.api.routes.ocr_service') as mock_svc:
+            mock_result = Mock()
+            mock_result.pages = [Mock(text="Test", words=[], confidence=0.9)]
+            mock_result.average_confidence = 0.9
+            mock_svc.process_document = AsyncMock(return_value=mock_result)
+            
+            responses = await asyncio.gather(*[
+                make_request() for _ in range(5)
+            ])
+        
+        # All should succeed
+        for response in responses:
+            assert response.status_code == 200
+            
+        # Check that each has unique request ID
+        request_ids = [r.json()["request_id"] for r in responses]
+        assert len(set(request_ids)) == 5  # All unique
