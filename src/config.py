@@ -126,7 +126,7 @@ class CacheConfig:
     cache_max_size: int = 5000
     
     # Redis settings
-    redis_host: str = "localhost"
+    redis_host: str = os.getenv("REDIS_HOST", "redis")
     redis_port: int = 6379
     redis_db: int = 0
     redis_password: Optional[str] = None

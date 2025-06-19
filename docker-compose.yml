@@ -46,6 +46,7 @@ services:
       - GPU_MEMORY_BUFFER_MB=500
       - PYTHONUNBUFFERED=1
       - LOG_LEVEL=INFO
+      - REDIS_HOST=redis
       # TensorRT settings
       - USE_TENSORRT=true
       - FLAGS_use_tensorrt=1
