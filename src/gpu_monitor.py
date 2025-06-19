@@ -9,8 +9,15 @@ try:
     import pynvml
     PYNVML_AVAILABLE = True
 except ImportError:
-    PYNVML_AVAILABLE = False
-    logging.warning("pynvml not available. GPU monitoring will be disabled.")
+    try:
+        # nvidia-ml-py installs as pynvml
+        import nvidia_ml_py as pynvml
+        PYNVML_AVAILABLE = True
+    except ImportError:
+        PYNVML_AVAILABLE = False
+        pynvml = None
+        logging.warning("pynvml not available. GPU monitoring will be disabled.")
+
 
 from src.config import GPUConfig, load_config
 
@@ -45,14 +52,22 @@ class GPUMetrics:
     cuda_version: str
 
 
+@dataclass
+class GPUStatus:
+    """GPU status for async compatibility"""
+    available: bool
+    device_name: str
+    memory: MemoryInfo
+    utilization: GPUUtilization
+    temperature: float
+    error: Optional[str] = None
+
+
 class GPUMonitor:
     """Monitor GPU resources using nvidia-ml-py"""
     
     def __init__(self, device_id: int = 0):
-        """Purpose: Initialize GPU monitoring with nvidia-ml-py
-        Dependencies: nvidia-ml-py (pynvml)
-        Priority: MONITORING
-        """
+        """Initialize GPU monitoring with nvidia-ml-py"""
         self.device_id = device_id
         self.device_handle = None
         self.monitoring_thread = None
@@ -72,47 +87,81 @@ class GPUMonitor:
         
         # Initialize logging
         self.logger = logging.getLogger(__name__)
-        
-        # Try to initialize NVML
+    
+    async def initialize(self):
+        """Async initialization for compatibility with main.py"""
         self._initialize_nvml()
+        if self.gpu_config.enable_monitoring and self.gpu_available:
+            self.start_monitoring()
     
     def _initialize_nvml(self):
         """Initialize NVIDIA Management Library"""
-        if not PYNVML_AVAILABLE:
-            self.logger.warning("pynvml not available. GPU monitoring disabled.")
-            return
+        self.logger.debug(f"Initializing NVML. PYNVML_AVAILABLE={PYNVML_AVAILABLE}")
+        
+        # Try pynvml first
+        if PYNVML_AVAILABLE:
+            try:
+                pynvml.nvmlInit()
+                self.device_handle = pynvml.nvmlDeviceGetHandleByIndex(self.device_id)
+                self.gpu_available = True
+                self.is_initialized = True
+                self._nvml_module = pynvml
+                
+                # Log GPU information
+                device_name = pynvml.nvmlDeviceGetName(self.device_handle)
+                if isinstance(device_name, bytes):
+                    device_name = device_name.decode('utf-8')
+                driver_version = pynvml.nvmlSystemGetDriverVersion()
+                if isinstance(driver_version, bytes):
+                    driver_version = driver_version.decode('utf-8')
+                self.logger.info(f"GPU monitoring initialized for device {self.device_id}: {device_name}")
+                self.logger.info(f"NVIDIA Driver Version: {driver_version}")
+                return
+            except Exception as e:
+                self.logger.error(f"pynvml initialization failed: {e}", exc_info=True)
+        else:
+            self.logger.error(f"PYNVML_AVAILABLE is False. Module import failed.")
+        
+        self.logger.error("No NVML library available. GPU monitoring disabled.")
+        self.gpu_available = False
+    
+    async def get_current_status(self) -> GPUStatus:
+        """Get current GPU status (async for compatibility)"""
+        if not self.gpu_available:
+            return GPUStatus(
+                available=False,
+                device_name="No GPU",
+                memory=MemoryInfo(0, 0, 0, 0.0),
+                utilization=GPUUtilization(0.0, 0.0, 0.0, 0.0),
+                temperature=0.0,
+                error="GPU not available"
+            )
         
         try:
-            pynvml.nvmlInit()
-            self.device_handle = pynvml.nvmlDeviceGetHandleByIndex(self.device_id)
-            self.gpu_available = True
-            self.is_initialized = True
+            memory_info = self.get_available_memory()
+            utilization = self.get_gpu_utilization()
+            device_info = self.get_device_info()
             
-            # Log GPU information
-            device_name = pynvml.nvmlDeviceGetName(self.device_handle)
-            if isinstance(device_name, bytes):
-                device_name = device_name.decode('utf-8')
-            driver_version = pynvml.nvmlSystemGetDriverVersion()
-            if isinstance(driver_version, bytes):
-                driver_version = driver_version.decode('utf-8')
-            self.logger.info(f"GPU monitoring initialized for device {self.device_id}: {device_name}")
-            self.logger.info(f"NVIDIA Driver Version: {driver_version}")
-            
-        except pynvml.NVMLError as e:
-            self.logger.error(f"Failed to initialize NVML: {e}")
-            self.gpu_available = False
+            return GPUStatus(
+                available=True,
+                device_name=device_info.get("name", "Unknown GPU"),
+                memory=memory_info,
+                utilization=utilization,
+                temperature=utilization.temperature_celsius
+            )
         except Exception as e:
-            self.logger.error(f"Unexpected error initializing GPU monitoring: {e}")
-            self.gpu_available = False
+            self.logger.error(f"Error getting GPU status: {e}")
+            return GPUStatus(
+                available=False,
+                device_name="Error",
+                memory=MemoryInfo(0, 0, 0, 0.0),
+                utilization=GPUUtilization(0.0, 0.0, 0.0, 0.0),
+                temperature=0.0,
+                error=str(e)
+            )
     
     def start_monitoring(self):
-        """Purpose: Start background GPU monitoring thread
-        Calls:
-            - pynvml.nvmlInit()
-            - _monitoring_loop() in thread
-        Called by: main.startup_event
-        Priority: MONITORING
-        """
+        """Start background GPU monitoring thread"""
         if not self.gpu_available:
             self.logger.warning("GPU not available. Monitoring not started.")
             return
@@ -134,12 +183,7 @@ class GPUMonitor:
         self.logger.info("GPU monitoring thread started.")
     
     def stop_monitoring(self):
-        """Purpose: Stop monitoring thread and cleanup
-        Calls:
-            - pynvml.nvmlShutdown()
-        Called by: main.shutdown_event
-        Priority: MONITORING
-        """
+        """Stop monitoring thread and cleanup"""
         # Signal thread to stop
         self.stop_event.set()
         
@@ -150,23 +194,21 @@ class GPUMonitor:
                 self.logger.warning("Monitoring thread did not stop gracefully.")
         
         # Shutdown NVML
-        if self.is_initialized and PYNVML_AVAILABLE:
+        if self.is_initialized and hasattr(self, '_nvml_module'):
             try:
-                pynvml.nvmlShutdown()
+                self._nvml_module.nvmlShutdown()
                 self.is_initialized = False
                 self.logger.info("NVML shutdown complete.")
-            except pynvml.NVMLError as e:
+            except Exception as e:
                 self.logger.error(f"Error shutting down NVML: {e}")
     
+    async def shutdown(self):
+        """Async shutdown for compatibility"""
+        self.stop_monitoring()
+    
     def get_available_memory(self) -> MemoryInfo:
-        """Purpose: Get current GPU memory availability
-        Calls:
-            - pynvml.nvmlDeviceGetMemoryInfo()
-        Called by: ocr_service._determine_batch_size()
-        Priority: OPTIMIZATION
-        """
-        if not self.gpu_available:
-            # Return mock data if GPU not available
+        """Get current GPU memory availability"""
+        if not self.gpu_available or not hasattr(self, '_nvml_module'):
             return MemoryInfo(
                 total_mb=0,
                 used_mb=0,
@@ -175,7 +217,7 @@ class GPUMonitor:
             )
         
         try:
-            mem_info = pynvml.nvmlDeviceGetMemoryInfo(self.device_handle)
+            mem_info = self._nvml_module.nvmlDeviceGetMemoryInfo(self.device_handle)
             total_mb = mem_info.total // (1024 * 1024)
             used_mb = mem_info.used // (1024 * 1024)
             free_mb = mem_info.free // (1024 * 1024)
@@ -187,7 +229,7 @@ class GPUMonitor:
                 free_mb=free_mb,
                 utilization_percent=utilization_percent
             )
-        except pynvml.NVMLError as e:
+        except Exception as e:
             self.logger.error(f"Error getting memory info: {e}")
             return MemoryInfo(
                 total_mb=0,
@@ -197,14 +239,8 @@ class GPUMonitor:
             )
     
     def get_gpu_utilization(self) -> GPUUtilization:
-        """Purpose: Get current GPU compute utilization
-        Calls:
-            - pynvml.nvmlDeviceGetUtilizationRates()
-        Called by: api.routes.gpu_status_endpoint
-        Priority: MONITORING
-        """
-        if not self.gpu_available:
-            # Return mock data if GPU not available
+        """Get current GPU compute utilization"""
+        if not self.gpu_available or not hasattr(self, '_nvml_module'):
             return GPUUtilization(
                 compute_percent=0.0,
                 memory_percent=0.0,
@@ -214,15 +250,15 @@ class GPUMonitor:
         
         try:
             # Get utilization rates
-            util_rates = pynvml.nvmlDeviceGetUtilizationRates(self.device_handle)
+            util_rates = self._nvml_module.nvmlDeviceGetUtilizationRates(self.device_handle)
             
             # Get temperature
             temperature = self.get_temperature()
             
             # Get power draw
             try:
-                power_draw = pynvml.nvmlDeviceGetPowerUsage(self.device_handle) / 1000.0  # Convert to watts
-            except pynvml.NVMLError:
+                power_draw = self._nvml_module.nvmlDeviceGetPowerUsage(self.device_handle) / 1000.0
+            except:
                 power_draw = 0.0
             
             return GPUUtilization(
@@ -231,7 +267,7 @@ class GPUMonitor:
                 temperature_celsius=temperature,
                 power_draw_watts=power_draw
             )
-        except pynvml.NVMLError as e:
+        except Exception as e:
             self.logger.error(f"Error getting GPU utilization: {e}")
             return GPUUtilization(
                 compute_percent=0.0,
@@ -241,43 +277,25 @@ class GPUMonitor:
             )
     
     def check_memory_pressure(self) -> bool:
-        """Purpose: Check if GPU memory is under pressure
-        Calls:
-            - get_available_memory()
-        Called by: ocr_service._process_batches()
-        Priority: OPTIMIZATION
-        """
+        """Check if GPU memory is under pressure"""
         memory_info = self.get_available_memory()
-        
-        # Check if memory utilization exceeds threshold
         return memory_info.utilization_percent > self.gpu_config.memory_threshold_percent
     
     def get_temperature(self) -> float:
-        """Purpose: Get GPU temperature for thermal monitoring
-        Calls:
-            - pynvml.nvmlDeviceGetTemperature()
-        Called by: api.routes.gpu_status_endpoint
-        Priority: MONITORING
-        """
-        if not self.gpu_available:
+        """Get GPU temperature for thermal monitoring"""
+        if not self.gpu_available or not hasattr(self, '_nvml_module'):
             return 0.0
         
         try:
             # NVML_TEMPERATURE_GPU = 0
-            temperature = pynvml.nvmlDeviceGetTemperature(self.device_handle, 0)
+            temperature = self._nvml_module.nvmlDeviceGetTemperature(self.device_handle, 0)
             return float(temperature)
-        except pynvml.NVMLError as e:
+        except Exception as e:
             self.logger.error(f"Error getting temperature: {e}")
             return 0.0
     
     def _monitoring_loop(self):
-        """Purpose: Background thread for continuous monitoring
-        Calls:
-            - All get_* methods periodically
-            - _update_metrics()
-        Called by: start_monitoring() in thread
-        Priority: MONITORING
-        """
+        """Background thread for continuous monitoring"""
         self.logger.info(f"GPU monitoring loop started with interval: {self.gpu_config.monitoring_interval_seconds}s")
         
         while not self.stop_event.is_set():
@@ -291,16 +309,16 @@ class GPUMonitor:
                 driver_version = "Unknown"
                 cuda_version = "Unknown"
                 
-                if self.gpu_available:
+                if self.gpu_available and hasattr(self, '_nvml_module'):
                     try:
-                        device_name = pynvml.nvmlDeviceGetName(self.device_handle)
+                        device_name = self._nvml_module.nvmlDeviceGetName(self.device_handle)
                         if isinstance(device_name, bytes):
                             device_name = device_name.decode('utf-8')
-                        driver_version = pynvml.nvmlSystemGetDriverVersion()
+                        driver_version = self._nvml_module.nvmlSystemGetDriverVersion()
                         if isinstance(driver_version, bytes):
                             driver_version = driver_version.decode('utf-8')
-                        cuda_version = str(pynvml.nvmlDeviceGetCudaComputeCapability(self.device_handle))
-                    except pynvml.NVMLError:
+                        cuda_version = str(self._nvml_module.nvmlDeviceGetCudaComputeCapability(self.device_handle))
+                    except:
                         pass
                 
                 # Create metrics object
@@ -333,11 +351,7 @@ class GPUMonitor:
         self.logger.info("GPU monitoring loop stopped.")
     
     def _update_metrics(self, metrics: GPUMetrics):
-        """Purpose: Update internal metrics storage
-        Calls: None (updates internal state)
-        Called by: _monitoring_loop()
-        Priority: MONITORING
-        """
+        """Update internal metrics storage"""
         with self.metrics_lock:
             self.latest_metrics = metrics
             
@@ -372,11 +386,17 @@ class GPUMonitor:
                 "error": "GPU not available or drivers not installed"
             }
         
+        if not hasattr(self, '_nvml_module'):
+            return {
+                "available": False,
+                "error": "NVML not initialized"
+            }
+        
         try:
-            device_name = pynvml.nvmlDeviceGetName(self.device_handle)
+            device_name = self._nvml_module.nvmlDeviceGetName(self.device_handle)
             if isinstance(device_name, bytes):
                 device_name = device_name.decode('utf-8')
-            driver_version = pynvml.nvmlSystemGetDriverVersion()
+            driver_version = self._nvml_module.nvmlSystemGetDriverVersion()
             if isinstance(driver_version, bytes):
                 driver_version = driver_version.decode('utf-8')
             
@@ -385,10 +405,10 @@ class GPUMonitor:
                 "device_id": self.device_id,
                 "name": device_name,
                 "driver_version": driver_version,
-                "cuda_compute_capability": pynvml.nvmlDeviceGetCudaComputeCapability(self.device_handle),
-                "total_memory_mb": pynvml.nvmlDeviceGetMemoryInfo(self.device_handle).total // (1024 * 1024)
+                "cuda_compute_capability": self._nvml_module.nvmlDeviceGetCudaComputeCapability(self.device_handle),
+                "total_memory_mb": self._nvml_module.nvmlDeviceGetMemoryInfo(self.device_handle).total // (1024 * 1024)
             }
-        except pynvml.NVMLError as e:
+        except Exception as e:
             return {
                 "available": False,
                 "error": f"Error getting device info: {str(e)}"
@@ -397,38 +417,43 @@ class GPUMonitor:
 
 # Example usage and testing
 if __name__ == "__main__":
+    import asyncio
+    
     # Set up logging
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
     
-    # Create monitor
-    monitor = GPUMonitor(device_id=0)
+    async def test_gpu_monitor():
+        # Create monitor
+        monitor = GPUMonitor(device_id=0)
+        
+        # Initialize
+        await monitor.initialize()
+        
+        # Get status
+        status = await monitor.get_current_status()
+        print(f"GPU Status: {status}")
+        
+        if monitor.is_gpu_available():
+            print("GPU is available!")
+            print(f"Device info: {monitor.get_device_info()}")
+            
+            # Get current metrics
+            print(f"Memory info: {monitor.get_available_memory()}")
+            print(f"GPU utilization: {monitor.get_gpu_utilization()}")
+            print(f"Temperature: {monitor.get_temperature()}°C")
+            print(f"Memory pressure: {monitor.check_memory_pressure()}")
+            
+            # Wait a bit
+            await asyncio.sleep(3)
+            
+            # Shutdown
+            await monitor.shutdown()
+            print("Monitor shutdown complete.")
+        else:
+            print("GPU is not available.")
     
-    # Check if GPU is available
-    if monitor.is_gpu_available():
-        print("GPU is available!")
-        print(f"Device info: {monitor.get_device_info()}")
-        
-        # Get current metrics
-        print(f"Memory info: {monitor.get_available_memory()}")
-        print(f"GPU utilization: {monitor.get_gpu_utilization()}")
-        print(f"Temperature: {monitor.get_temperature()}°C")
-        print(f"Memory pressure: {monitor.check_memory_pressure()}")
-        
-        # Test monitoring thread
-        monitor.start_monitoring()
-        print("Monitoring started. Waiting 5 seconds...")
-        time.sleep(5)
-        
-        # Get latest metrics
-        latest = monitor.get_latest_metrics()
-        if latest:
-            print(f"Latest metrics timestamp: {latest.timestamp}")
-        
-        # Stop monitoring
-        monitor.stop_monitoring()
-        print("Monitoring stopped.")
-    else:
-        print("GPU is not available.")
+    # Run test
+    asyncio.run(test_gpu_monitor())
