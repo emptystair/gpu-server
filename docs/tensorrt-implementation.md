@@ -54,9 +54,16 @@ docker logs gpu-ocr-server | grep -i tensorrt
 ```
 
 ### 3. Test Performance
-Run the performance comparison:
+Run the performance tests:
 ```bash
-python test_tensorrt_performance.py
+# Basic TensorRT test
+python tests/performance_tests/test_tensorrt_performance.py
+
+# Real document test
+python tests/performance_tests/test_real_tensorrt.py
+
+# Full batch test (96 PDFs)
+python tests/performance_tests/test_tensorrt_final.py
 ```
 
 ## Configuration Options

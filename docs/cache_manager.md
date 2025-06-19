@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Cache Manager provides a multi-tier caching system designed to work in both local GPU server environments with Celery workers and distributed AWS Batch processing. It implements a three-tier cache hierarchy: Memory → Redis → S3/Disk.
+The Cache Manager provides a multi-tier caching system designed to work in both local GPU server environments and distributed processing. It implements a three-tier cache hierarchy: Memory → Redis → S3/Disk. The implementation is located in `src/utils/cache_manager.py` with tests in `tests/test_cache_manager.py`.
 
 ## Architecture
 
@@ -330,3 +330,19 @@ save 900 1  # Persistence
 - Use STANDARD_IA for cost savings
 - Enable S3 Transfer Acceleration for large files
 - Consider S3 lifecycle policies for old cache entries
+
+## Integration with TensorRT
+
+The cache manager also caches TensorRT optimized engines:
+- Engine cache path: `/app/model_cache/tensorrt/`
+- Cache keys include model version and precision
+- Engines are GPU-specific (RTX 4090)
+- First optimization takes ~2-3 minutes, subsequent runs use cache
+
+## Docker Environment
+
+When running in the Docker container:
+- Redis is configured via `REDIS_URL` or individual host/port settings
+- Disk cache is mounted at `/app/cache`
+- Model cache at `/app/model_cache`
+- All cache directories are created during container build
