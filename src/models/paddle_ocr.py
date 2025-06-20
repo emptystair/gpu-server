@@ -10,6 +10,7 @@ import logging
 import time
 from typing import List, Tuple, Optional, Dict, Any
 from dataclasses import dataclass
+from pathlib import Path
 import numpy as np
 import cv2
 
@@ -144,6 +145,8 @@ class PaddleOCRWrapper:
                 'precision': self.config.tensorrt_precision.lower(),
                 'max_batch_size': self.config.max_batch_size,
                 'min_subgraph_size': 10,
+                'tensorrt_workspace_size': 1 << 30,  # 1GB workspace
+                'tensorrt_use_static_engine': True,  # Use static engines for caching
                 'use_space_char': self.config.use_space_char,
                 'drop_score': 0.5,
                 'det_db_thresh': 0.3,  # Optimized for accuracy
@@ -172,8 +175,20 @@ class PaddleOCRWrapper:
             # Initialize PaddleOCR
             logger.info(f"Initializing PaddleOCR with TensorRT: {use_tensorrt}")
             logger.info("Starting PaddleOCR initialization...")
+            
+            # Check if engine cache directory exists
+            engine_cache_dir = "/root/.paddleocr/tensorrt_engines"
+            if os.path.exists(engine_cache_dir):
+                engine_files = list(Path(engine_cache_dir).glob("*.engine"))
+                if engine_files:
+                    logger.info(f"Found {len(engine_files)} cached TensorRT engines")
+                else:
+                    logger.info("TensorRT engine cache directory exists but is empty")
+            
+            init_start_time = time.time()
             self.ocr = PaddleOCR(**ocr_config)
-            logger.info("PaddleOCR initialization completed")
+            init_time = time.time() - init_start_time
+            logger.info(f"PaddleOCR initialization completed in {init_time:.2f} seconds")
             
             # Warm up the model
             self._warmup_model()
@@ -192,19 +207,31 @@ class PaddleOCRWrapper:
         try:
             # Check if we're using TensorRT and need proper warmup
             if self.config.use_tensorrt:
+                # Check if TensorRT shape files already exist
+                shape_files_exist = self._check_tensorrt_shape_files()
+                if shape_files_exist:
+                    logger.info("TensorRT shape files already exist, skipping intensive warmup")
+                    # Do a minimal warmup just to load models
+                    dummy_img = np.ones((480, 640, 3), dtype=np.uint8) * 255
+                    _ = self.ocr.ocr(dummy_img, cls=self.config.use_angle_cls)
+                    return
+                
                 # Try to use a real PDF for warmup if available
                 warmup_pdf_path = "/app/tests/startup/DOC734S3110.pdf"
                 if os.path.exists(warmup_pdf_path):
                     logger.info("Using real PDF for TensorRT warmup to collect accurate shapes")
+                    logger.info("This is a one-time process that may take 2-3 minutes...")
                     try:
                         import fitz  # PyMuPDF
                         doc = fitz.open(warmup_pdf_path)
                         
-                        # Process first few pages with different sizes
-                        for page_num in range(min(3, len(doc))):
+                        # Process only first page with fewer DPI settings for faster warmup
+                        warmup_count = 0
+                        for page_num in range(min(1, len(doc))):  # Only first page
                             page = doc[page_num]
-                            # Try different DPI settings to generate various image sizes
-                            for dpi in [120, 150, 200]:
+                            # Reduced DPI settings for faster warmup
+                            for dpi in [120, 150]:  # Removed 200 DPI
+                                start_time = time.time()
                                 mat = fitz.Matrix(dpi/72.0, dpi/72.0)
                                 pix = page.get_pixmap(matrix=mat)
                                 img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w, pix.n)
@@ -217,8 +244,13 @@ class PaddleOCRWrapper:
                                 noise = np.random.randint(0, 5, img.shape, dtype=np.uint8)
                                 img = np.clip(img.astype(np.int16) + noise, 0, 255).astype(np.uint8)
                                 
-                                logger.debug(f"Warmup with image size: {img.shape}, DPI: {dpi}")
-                                _ = self.ocr.ocr(img, cls=self.config.use_angle_cls)
+                                logger.info(f"Warmup {warmup_count+1}: Processing image {img.shape} at {dpi} DPI")
+                                result = self.ocr.ocr(img, cls=self.config.use_angle_cls)
+                                
+                                elapsed = time.time() - start_time
+                                detections = len(result[0]) if result and result[0] else 0
+                                logger.info(f"Warmup {warmup_count+1} completed in {elapsed:.2f}s with {detections} detections")
+                                warmup_count += 1
                         
                         doc.close()
                         logger.info("TensorRT warmup with real document completed")
@@ -468,6 +500,27 @@ class PaddleOCRWrapper:
         required_files = ['inference.pdmodel', 'inference.pdiparams']
         for file in required_files:
             if not os.path.exists(os.path.join(model_path, file)):
+                return False
+        
+        return True
+    
+    def _check_tensorrt_shape_files(self) -> bool:
+        """Check if TensorRT shape files already exist"""
+        shape_files = [
+            "/root/.paddleocr/whl/det/en/en_PP-OCRv3_det_infer/det_trt_dynamic_shape.txt",
+            "/root/.paddleocr/whl/rec/en/en_PP-OCRv4_rec_infer/rec_trt_dynamic_shape.txt",
+            "/root/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer/cls_trt_dynamic_shape.txt"
+        ]
+        
+        # Check if all files exist and have content
+        for shape_file in shape_files:
+            if not os.path.exists(shape_file):
+                return False
+            try:
+                # Check if file has content (not empty)
+                if os.path.getsize(shape_file) == 0:
+                    return False
+            except:
                 return False
         
         return True

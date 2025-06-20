@@ -58,6 +58,10 @@ services:
       - FLAGS_enable_gpu_gather=0
       - NVIDIA_TF32_OVERRIDE=0
       - TRT_LOGGER_SEVERITY=VERBOSE
+      # TensorRT engine caching
+      - FLAGS_use_tensorrt_engine_cache=1
+      - FLAGS_tensorrt_engine_cache_dir=/root/.paddleocr/tensorrt_engines
+      - CUDA_CACHE_PATH=/root/.paddleocr/cuda_cache
     
     # Port mapping
     ports:
@@ -75,8 +79,10 @@ services:
       - ocr-logs:/app/logs
       - ocr-uploads:/app/uploads
       
-      # Optional: Mount local models to avoid re-downloading
-      # - ~/.paddleocr:/root/.paddleocr
+      # Mount PaddleOCR directory to persist models and TensorRT shape files
+      - paddleocr-data:/root/.paddleocr
+      # Mount cache directory for paddle and TensorRT caches
+      - paddle-cache:/root/.cache
     
     # Resource limits
     mem_limit: 16g
@@ -175,6 +181,8 @@ volumes:
   redis-data:
   prometheus-data:
   grafana-data:
+  paddleocr-data:
+  paddle-cache:
 
 networks:
   ocr-network:
