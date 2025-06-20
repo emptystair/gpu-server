@@ -1,0 +1,25 @@
+{
+  "test_type": "batch",
+  "batch_size": 30,
+  "total_pdfs": 50,
+  "total_batches": 2,
+  "successful": 0,
+  "failed": 0,
+  "total_test_time": 0.6155967712402344,
+  "avg_batch_processing_time": 0,
+  "throughput_pdfs_per_second": 0.0,
+  "batch_results": [
+    {
+      "batch_size": 30,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.35452842712402344
+    },
+    {
+      "batch_size": 20,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.2503395080566406
+    }
+  ]
+}

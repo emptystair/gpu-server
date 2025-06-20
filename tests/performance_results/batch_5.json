@@ -1,0 +1,73 @@
+{
+  "test_type": "batch",
+  "batch_size": 5,
+  "total_pdfs": 50,
+  "total_batches": 10,
+  "successful": 0,
+  "failed": 0,
+  "total_test_time": 1.016378402709961,
+  "avg_batch_processing_time": 0,
+  "throughput_pdfs_per_second": 0.0,
+  "batch_results": [
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.12063980102539062
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.102996826171875
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.10657310485839844
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.095367431640625
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.09393692016601562
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.09322166442871094
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.09274482727050781
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.09489059448242188
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.095367431640625
+    },
+    {
+      "batch_size": 5,
+      "status": "error",
+      "error": "I/O operation on closed file",
+      "total_time": 0.09036064147949219
+    }
+  ]
+}

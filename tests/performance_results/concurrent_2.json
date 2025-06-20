@@ -1,0 +1,314 @@
+{
+  "test_type": "concurrent_single",
+  "concurrency": 2,
+  "total_pdfs": 50,
+  "successful": 0,
+  "failed": 50,
+  "total_test_time": 15.179634094238281,
+  "avg_processing_time": 0,
+  "median_processing_time": 0,
+  "avg_total_time": 0.4901456832885742,
+  "throughput_pdfs_per_second": 0.0,
+  "results": [
+    {
+      "file": "DOCC111697227_019511-00832.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.6988048553466797
+    },
+    {
+      "file": "DOCC111697216_019511-00753.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5381107330322266
+    },
+    {
+      "file": "DOCC111697476_019511-02298.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5979537963867188
+    },
+    {
+      "file": "DOCC111697350_019511-01720.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.49686431884765625
+    },
+    {
+      "file": "DOCC111697445_019511-02178.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4990100860595703
+    },
+    {
+      "file": "DOCC111697482_019511-02338.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.40459632873535156
+    },
+    {
+      "file": "DOCC111697205_019511-00718.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.484466552734375
+    },
+    {
+      "file": "DOCC111697069_019511-00182.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.400543212890625
+    },
+    {
+      "file": "DOCC111697347_019511-01698.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5066394805908203
+    },
+    {
+      "file": "DOCC111697319_019511-01546.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.423431396484375
+    },
+    {
+      "file": "DOCC111697106_019511-00322.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5114078521728516
+    },
+    {
+      "file": "DOCC111697371_019511-01418.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.41794776916503906
+    },
+    {
+      "file": "DOCC111697204_019511-00717.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5137920379638672
+    },
+    {
+      "file": "DOCC111697114_019511-00332.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.43320655822753906
+    },
+    {
+      "file": "DOCC111697488_019511-02375.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5078315734863281
+    },
+    {
+      "file": "DOCC111697131_019511-00386.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.3998279571533203
+    },
+    {
+      "file": "DOCC111697101_019511-00316.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5156993865966797
+    },
+    {
+      "file": "DOCC111697484_019511-02355.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4107952117919922
+    },
+    {
+      "file": "DOCC111697202_019511-00715.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4985332489013672
+    },
+    {
+      "file": "DOCC111697390_019511-01958.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.39696693420410156
+    },
+    {
+      "file": "DOCC111697427_019511-02115.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4742145538330078
+    },
+    {
+      "file": "DOCC111697213_019511-00726.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.38433074951171875
+    },
+    {
+      "file": "DOCC111697149_019511-00420.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4680156707763672
+    },
+    {
+      "file": "DOCC111697089_019511-00296.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.3657341003417969
+    },
+    {
+      "file": "DOCC111697120_019511-00353.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5080699920654297
+    },
+    {
+      "file": "DOCC111697159_019511-00566.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.39577484130859375
+    },
+    {
+      "file": "DOCC111697247_019511-00932.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4963874816894531
+    },
+    {
+      "file": "DOCC111697414_019511-02053.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4169940948486328
+    },
+    {
+      "file": "DOCC111697277_019511-01093.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4932880401611328
+    },
+    {
+      "file": "DOCC111697124_019511-00359.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.38123130798339844
+    },
+    {
+      "file": "DOCC111697456_019511-02216.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5097389221191406
+    },
+    {
+      "file": "DOCC111697232_019511-00859.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4315376281738281
+    },
+    {
+      "file": "DOCC111697322_019511-01587.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.6041526794433594
+    },
+    {
+      "file": "DOCC111697085_019511-00279.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5052089691162109
+    },
+    {
+      "file": "DOCC111697189_019511-00653.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5087852478027344
+    },
+    {
+      "file": "DOCC111697363_019511-01820.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4107952117919922
+    },
+    {
+      "file": "DOCC111697133_019511-00404.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4725456237792969
+    },
+    {
+      "file": "DOCC111697308_019511-01446.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4353523254394531
+    },
+    {
+      "file": "DOCC111697246_019511-00925.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.6482601165771484
+    },
+    {
+      "file": "DOCC111697338_019511-01659.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5483627319335938
+    },
+    {
+      "file": "DOCC111697102_019511-00317.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5042552947998047
+    },
+    {
+      "file": "DOCC111697244_019511-00913.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4184246063232422
+    },
+    {
+      "file": "DOCC111697405_019511-01998.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5309581756591797
+    },
+    {
+      "file": "DOCC111697163_019511-00574.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4181861877441406
+    },
+    {
+      "file": "DOCC111697136_019511-00418.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5822181701660156
+    },
+    {
+      "file": "DOCC111697292_019511-01311.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.4839897155761719
+    },
+    {
+      "file": "DOCC111697087_019511-00294.pdf",
+      "status": "error",
+      "error": "[Errno 104] Connection reset by peer",
+      "total_time": 0.7815361022949219
+    },
+    {
+      "file": "DOCC111697457_019511-02218.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.5393028259277344
+    },
+    {
+      "file": "DOCC111697465_019511-02268.pdf",
+      "status": "error",
+      "error": "[Errno 32] Broken pipe",
+      "total_time": 0.6055831909179688
+    },
+    {
+      "file": "DOCC111697154_019511-00578.pdf",
+      "status": "error",
+      "error": "[Errno 104] Connection reset by peer",
+      "total_time": 0.5276203155517578
+    }
+  ]
+}
