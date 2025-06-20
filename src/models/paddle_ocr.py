@@ -11,6 +11,7 @@ import time
 from typing import List, Tuple, Optional, Dict, Any
 from dataclasses import dataclass
 import numpy as np
+import cv2
 
 try:
     import paddle
@@ -184,17 +185,60 @@ class PaddleOCRWrapper:
             raise RuntimeError(f"Model initialization failed: {e}")
     
     def _warmup_model(self):
-        """Warm up the model with dummy data for optimal performance"""
+        """Warm up the model with realistic data for optimal TensorRT shape collection"""
         if not self.ocr:
             return
             
         try:
-            # Create dummy image
-            dummy_img = np.ones((100, 200, 3), dtype=np.uint8) * 255
+            # Check if we're using TensorRT and need proper warmup
+            if self.config.use_tensorrt:
+                # Try to use a real PDF for warmup if available
+                warmup_pdf_path = "/app/tests/startup/DOC734S3110.pdf"
+                if os.path.exists(warmup_pdf_path):
+                    logger.info("Using real PDF for TensorRT warmup to collect accurate shapes")
+                    try:
+                        import fitz  # PyMuPDF
+                        doc = fitz.open(warmup_pdf_path)
+                        
+                        # Process first few pages with different sizes
+                        for page_num in range(min(3, len(doc))):
+                            page = doc[page_num]
+                            # Try different DPI settings to generate various image sizes
+                            for dpi in [120, 150, 200]:
+                                mat = fitz.Matrix(dpi/72.0, dpi/72.0)
+                                pix = page.get_pixmap(matrix=mat)
+                                img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w, pix.n)
+                                
+                                # Convert RGBA to RGB if needed
+                                if img.shape[2] == 4:
+                                    img = img[:, :, :3]
+                                
+                                # Add slight noise to avoid exact cache hits
+                                noise = np.random.randint(0, 5, img.shape, dtype=np.uint8)
+                                img = np.clip(img.astype(np.int16) + noise, 0, 255).astype(np.uint8)
+                                
+                                logger.debug(f"Warmup with image size: {img.shape}, DPI: {dpi}")
+                                _ = self.ocr.ocr(img, cls=self.config.use_angle_cls)
+                        
+                        doc.close()
+                        logger.info("TensorRT warmup with real document completed")
+                        return
+                    except Exception as e:
+                        logger.warning(f"Failed to use real PDF for warmup: {e}, falling back to synthetic images")
             
-            # Run warmup iterations
-            logger.info(f"Running {self.config.warmup_iterations} warmup iterations")
+            # Fallback to synthetic images with realistic sizes
+            sizes = [(1280, 720), (1920, 1080), (960, 1280)]  # Common document sizes
+            logger.info(f"Running {self.config.warmup_iterations} warmup iterations with synthetic images")
+            
             for i in range(self.config.warmup_iterations):
+                size = sizes[i % len(sizes)]
+                # Create image with text-like patterns
+                dummy_img = np.ones((size[1], size[0], 3), dtype=np.uint8) * 255
+                # Add some black rectangles to simulate text
+                for j in range(10):
+                    y = int(j * size[1] / 10)
+                    cv2.rectangle(dummy_img, (50, y), (size[0]-50, y+20), (0, 0, 0), -1)
+                
                 _ = self.ocr.ocr(dummy_img, cls=self.config.use_angle_cls)
                 
         except Exception as e:

@@ -45,7 +45,7 @@ services:
       - TENSORRT_PRECISION=FP16
       - GPU_MEMORY_BUFFER_MB=500
       - PYTHONUNBUFFERED=1
-      - LOG_LEVEL=INFO
+      - LOG_LEVEL=DEBUG
       - REDIS_HOST=redis
       # TensorRT settings
       - USE_TENSORRT=true
@@ -53,6 +53,11 @@ services:
       - FLAGS_tensorrt_precision_mode=FP16
       - FLAGS_tensorrt_workspace_size=4096
       - FLAGS_tensorrt_max_batch_size=50
+      # Additional TensorRT debugging
+      - GLOG_v=3
+      - FLAGS_enable_gpu_gather=0
+      - NVIDIA_TF32_OVERRIDE=0
+      - TRT_LOGGER_SEVERITY=VERBOSE
     
     # Port mapping
     ports:

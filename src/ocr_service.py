@@ -355,7 +355,7 @@ class OCRService:
         try:
             # Get available GPU memory
             memory_info = self.gpu_monitor.get_available_memory()
-            available_mb = memory_info.free - self.ocr_config.gpu_memory_buffer_mb
+            available_mb = memory_info.free_mb - self.ocr_config.gpu_memory_buffer_mb
             
             # Estimate memory per image
             width, height = image_dimensions

@@ -577,12 +577,8 @@ async def process_image(
         with open(tmp_path, 'rb') as f:
             file_hash = hashlib.sha256(f.read()).hexdigest()
         
-        cache_key = cache.generate_key(
-            document_hash=file_hash,
-            strategy=ocr_request.strategy.value if ocr_request.strategy else ProcessingStrategy.BALANCED.value,
-            dpi=150,
-            language=ocr_request.language.value
-        )
+        # Generate cache key similar to OCR service
+        cache_key = f"{file_hash}_{ProcessingStrategy.BALANCED.value}_{ocr_request.language.value}"
         
         # Check cache
         cached_result = cache.get(cache_key)
@@ -595,7 +591,7 @@ async def process_image(
         # Process image
         proc_request = ProcessingRequest(
             document_path=str(tmp_path),
-            strategy=ocr_request.strategy or ProcessingStrategy.BALANCED,
+            strategy=ProcessingStrategy.BALANCED,
             language=ocr_request.language.value,
             dpi=150,
             enable_gpu_optimization=True,
@@ -793,8 +789,8 @@ async def process_pdf(
         
         cache_key = cache.generate_key(
             document_hash=file_hash,
-            strategy=pdf_request.strategy.value if pdf_request.strategy else ProcessingStrategy.BALANCED.value,
-            dpi=pdf_request.dpi or 150,
+            strategy=ProcessingStrategy.BALANCED.value,
+            dpi=150,
             language=pdf_request.language.value,
             page_range=pdf_request.page_range
         )
@@ -810,9 +806,9 @@ async def process_pdf(
         # Process PDF
         proc_request = ProcessingRequest(
             document_path=str(tmp_path),
-            strategy=pdf_request.strategy or ProcessingStrategy.BALANCED,
+            strategy=ProcessingStrategy.BALANCED,
             language=pdf_request.language.value,
-            dpi=pdf_request.dpi or 150,
+            dpi=150,
             enable_gpu_optimization=True,
             batch_size=1,
             confidence_threshold=pdf_request.confidence_threshold,
